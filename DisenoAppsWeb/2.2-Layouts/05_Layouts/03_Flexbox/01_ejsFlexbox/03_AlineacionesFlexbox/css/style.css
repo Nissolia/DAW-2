@@ -1,0 +1,81 @@
+/************************* VARIABLES *************************/
+:root {
+  --color1: rgb(227, 192, 67);
+  --color2: rgb(184, 184, 184);
+  --color3: rgb(255, 255, 255);
+}
+/************************** ESTILO **************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url("img/patatas.jpg") ; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  /* width: 100%;
+  height: 100%; */
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: last baseline;
+  padding: 1rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.discount,
+.hastag {
+  background-color: var(--color1);
+ 
+}
+
+.discount {
+  align-self: flex-start;
+  padding: 30px 20px 30px 20px;
+}
+.discount__number {
+  font-size: 40px;
+}
+.hastag {
+  align-self: flex-end;
+  padding: 10px 30px 10px 30px;
+}
+
+.main {
+  text-shadow: 1px 1px 5px black;
+}
+
+.main__h2 {
+  color: var(--color1);
+  font-size: 35px;
+  padding-bottom: 0.5rem;
+  font-variant: small-caps;
+}
+.main__p {
+    color: var(--color2);
+    font-weight: lighter;
+}
+.main__p--street {
+    color:var(--color3);
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+/*********************** MEDIA QUERIES ***********************/
+@media screen and (max-width: 600px) {
+  .discount,
+  .hastag {
+    width: 100%;
+  }
+}

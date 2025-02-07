@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  outline: 2px dashed black;
+  height: 800px;
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+
+  gap: 5px;
+  display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+/* anchura y altura de filas y columnas que se salen de mi grid */
+/* grid-auto-columns: 120px;
+grid-auto-rows: 80px; */
+/* se pone el autoflow para el orden que se quiera poner */
+/* grid-auto-flow: column; */
+/* el dense lo que hace es "rellenar huecos", para aprovechar el espacio */
+grid-auto-flow: dense;
+}
+
+
+.item {
+  /* height: 100px;
+  width: 100px; */
+  color: white;
+  text-align: center;
+}
+
+.item1 {
+  background-color: rgb(46, 167, 70);
+grid-column: 1/3;
+
+}
+
+.item2 {
+  background-color: rgb(60, 170, 163);
+
+}
+
+.item3 {
+  background-color: rgb(77, 52, 167);
+
+}
+
+.item4 {
+  background-color: rgb(184, 55, 98);
+
+}

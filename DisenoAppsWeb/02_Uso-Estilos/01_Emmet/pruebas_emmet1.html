@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas Emmet 1</title>
+</head>
+
+<body>
+    <!-- 1) ol>li*7 -->
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <!-- 2) table>tr*8>td*6 -->
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- 3) ul>li.elemlist$*10 -->
+    <ul>
+        <li class="elemlist1"></li>
+        <li class="elemlist2"></li>
+        <li class="elemlist3"></li>
+        <li class="elemlist4"></li>
+        <li class="elemlist5"></li>
+        <li class="elemlist6"></li>
+        <li class="elemlist7"></li>
+        <li class="elemlist8"></li>
+        <li class="elemlist9"></li>
+        <li class="elemlist10"></li>
+    </ul>
+    <!--4) a[href="https://www.google.com/?hl=es"]{Pinche aquí}+div>(h1.titulares$*2) -->
+    <a href="https://www.google.com/?hl=es">Pinche aquí</a>
+    <div>
+        <h1 class="titulares1"></h1>
+        <h1 class="titulares2"></h1>
+    </div>
+    <!-- 5) form:post[action="procesar.php"]>(label[for="nombre"]+input[name="nombre$"])*3+label[for="envio"]+button[name=envio]+label[for="reset"]+button[name=reset] -->
+    <form action="procesar.php" method="post">
+        <label for="nombre"></label>
+        <input type="text" name="nombre1">
+        <label for="nombre"></label>
+        <input type="text" name="nombre2">
+        <label for="nombre"></label>
+        <input type="text" name="nombre3">
+        <label for="envio"></label>
+        <button name="envio"></button>
+        <label for="reset"></label>
+        <button name="reset"></button>
+    </form>
+
+    <!-- 5.1) form:post[action="procesar.php"]>(label[for="nombre$"]+input[name="nombre$" id="nombre$"])*3+label[for="envio"]+button[name=envio]+label[for="reset"]+button[name=reset] -->
+    <form action="procesar.php" method="post">
+        <label for="nombre1"></label>
+        <input type="text" name="nombre1" id="nombre1">
+        <label for="nombre2"></label>
+        <input type="text" name="nombre2" id="nombre2">
+        <label for="nombre3"></label>
+        <input type="text" name="nombre3" id="nombre3">
+        <label for="envio"></label>
+        <button name="envio"></button>
+        <label for="reset"></label>
+        <button name="reset"></button>
+    </form>
+</body>
+
+</html>

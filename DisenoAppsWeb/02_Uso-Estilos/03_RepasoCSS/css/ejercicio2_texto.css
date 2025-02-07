@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(127, 127, 177);
+    color: black;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+h1,
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-weight: 100;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-variant: small-caps;
+    line-height: 2;
+    text-indent: 32px; 
+    /* Sangría primera frase */
+}
+
+span {
+    font-style: oblique;
+    font-weight: 900;
+    text-decoration: underline;
+}

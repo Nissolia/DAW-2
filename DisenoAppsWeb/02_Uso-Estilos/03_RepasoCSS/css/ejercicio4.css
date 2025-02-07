@@ -1,0 +1,16 @@
+body{
+    margin: 3em;
+    
+}
+
+#definicion {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(82, 63, 134);
+}
+
+#parrafo_especial {
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(223, 137, 24);
+}

@@ -1,0 +1,16 @@
+.google {
+    font-size: 15px;
+    border: 1px dotted orangered;
+}
+
+img[alt*=random] {
+    font-size: 10px;
+    font-style: italic;
+    border: 1px dashed darkred;
+}
+
+img[alt*=logo] {
+    font-size: 11px;
+    font-style: italic;
+    border: 1px dotted green;
+}

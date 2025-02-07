@@ -1,0 +1,20 @@
+/* Colores usados: lawngreen, , darkred, .
+Las filas tienen un borde inferior de 1px, solid. */
+/* Hay que hacerlo con lo de last child y to eso */
+td {
+    border-bottom: 1px solid black;
+
+}
+
+.gris {
+    color: gray;
+}
+
+.verde {
+    background-color: lawngreen;
+}
+
+.rojo {
+    background: darkred;
+    color: white;
+}

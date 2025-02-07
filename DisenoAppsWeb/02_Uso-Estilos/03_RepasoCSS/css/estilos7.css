@@ -1,0 +1,15 @@
+/* Tamaños: primera letra 3em, primera línea 2em.
+La primera letra, la primera línea y el resto del
+párrafo tendrán los colores #111111, #222222 y #333333
+respectivamente. */
+.manifiesto::first-letter{
+font-size: 3em;
+color: #111111;
+}
+.manifiesto::first-line{
+    font-size: 2em;
+    color: #222222;
+}
+.manifiesto{
+    color: #333333;
+}

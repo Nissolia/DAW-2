@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  /* se puede hacer con un padding pero con el relative funciona de la misma forma */
+  font-size: 3rem;
+  position: relative;
+  left: 50px;
+  top: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.sticky-menu {
+  background-color: darkslateblue;
+  position: sticky;
+  top: 0px;
+  padding-left: 50px;
+  /* se le pone así para que el index no nos de problema */
+  z-index: 10;
+}
+
+/* estilo de los enlaces de menú element */
+.menu-element {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+}
+
+.menu-element a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu-element a:hover {
+  color: rgb(188, 188, 255);
+}
+
+/* Para el banner */
+.banner {
+  background-color: #add8e6;
+  height: 200px;
+  width: 80%;
+  margin: 20px auto;
+  /* le añadimos el relative para que lo usen los logos */
+  position: relative;
+}
+
+/* el formato para el primer logo */
+.logo {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+
+.logo1 {
+  background-color: darkolivegreen;
+  top: 50px;
+  left: 50px;
+  /* se pone esto para ponerlo delante del otro elemento */
+  z-index: 2;
+}
+
+.logo2 {
+  background-color: darkorange;
+  top: 30px;
+  left: 100px;
+}
+
+/* apartado contenido */
+.content {
+  background-color: darksalmon;
+  height: 500px;
+  width: 80%;
+  margin: 20px auto;
+  /* tiene que tenerlo el padre */
+  text-align: center;
+  /* para que funcione en centered */
+  position: relative;
+  /* con flex, esto se pone en el padre */
+  /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+/* contenido centrado */
+.centered {
+  background-color: lightgreen;
+  height: 150px;
+  width: 50%;
+  /* para ponerlo en el centro */
+  margin: 0 auto;
+  /* para poner el texto en el centro haciendo trampas */
+  line-height: 150px;
+  /* para centrarlo */
+  position: absolute;
+  margin-top: -75px; /*mitad en negativo el valor de height*/
+  top: 50%;
+  margin-left: 25%;
+}
+
+/* footer */
+.footer {
+  background-color: darkslateblue;
+  position: fixed;
+  bottom: 0px;
+  padding-left: 50px;
+  width: 100%;
+  z-index: 7;
+}

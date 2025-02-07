@@ -1,0 +1,12 @@
+body{
+    background-image: url('../icons/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   
+}
+
+.manifesto{
+    padding: 3em;
+    background-color: #262626ab;
+    color: white;
+}

@@ -1,0 +1,15 @@
+
+*{
+box-sizing: border-box; padding: 0; margin: 0; }
+.picture {
+  width:90%;
+}
+img {
+  /* el 100% del contenedor padre */
+  width: 100%;
+  /* si contenedor tiene mas de anchura de lo que realmente tiene, 
+  la imagen se queda en la anchura que tenga originalmente */
+  /* max-width: 100%; */
+  /* hay que ponerlo para que no se ponga ne linea lo siguiente */
+  display: block;
+}

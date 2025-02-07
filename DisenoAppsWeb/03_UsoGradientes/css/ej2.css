@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  font-size: 20px;
+  padding: 1em;
+  margin: 2em;
+}
+/* ejercicio 2 */
+/* a */
+div.shady4 {
+  box-shadow: 3px 3px 0px rgba(240, 46, 169, 0.9),
+    6px 6px 0px rgba(240, 46, 169, 0.7),
+    9px 9px 0px rgba(240, 46, 169, 0.5),
+    12px 12px 0px rgba(240, 46, 169, 0.3);
+}
+/* b */
+div.shady5{
+box-shadow: 0px 0px 0px 4px rgb(85, 91, 255), 
+0px 0px 0px 8px rgb(31, 193, 27) ,
+0px 0px 0px 12px rgb(255, 217, 19) ,
+0px 0px 0px 16px rgb(255, 156, 85) ,
+0px 0px 0px 20px rgb(255, 85, 85) ;
+
+}
+/* c */
+.shady6{
+    margin-top: 5rem;
+    box-shadow: 
+    0px 0px 0px 4px rgb(85, 91, 255), 
+    6px -6px 0px 4px white,
+    6px -6px 0px 8px rgb(31, 193, 27) ,
+    16px -16px 0px 4px white,
+    16px -16px 0px 8px rgb(255, 217, 19) ,
+    26px -26px 0px 4px white,
+    26px -26px 0px 8px rgb(255, 156, 85) ,
+    36px -36px 0px 4px white,
+    36px -36px 0px 8px rgb(255, 85, 85) ;
+}

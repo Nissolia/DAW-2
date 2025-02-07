@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.container > article {
+  float: left;
+}
+
+.red {
+  background-color: red;
+  width: 20%;
+}
+
+.blue {
+  background-color: blue;
+  width: 50%;
+}
+
+.yellow {
+  background-color: yellow;
+  width: 30%;
+}
+
+article {
+  height: 300px;
+}
+/* Media queries */
+@media screen and (max-width: 992px) {
+  .red,
+  .blue {
+    width: 50%;
+  }
+  .yellow {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .red,
+  .blue,
+  .yellow {
+    width: 100%;
+  }
+}

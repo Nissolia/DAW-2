@@ -1,0 +1,35 @@
+/* Custom */
+:root {
+  --verdeClaro: #51e865;
+  --verdeCesped: #04e824;
+  --verdeMedio: #138a36;
+  --verdeCaceria: #285238;
+  --verdeOscuto: #1d2420;
+  --beige: beige;
+  --fuente: Helvetica, sans-serif;
+}
+/* Changes */
+body {
+  color: var(--beige);
+  margin: 3em;
+  background-color: var(--verdeOscuto);
+  font-family: var(--fuente);
+}
+
+h1 {
+  color: var(--verdeClaro);
+}
+h2 {
+  color: var(--verdeCaceria);
+}
+
+.parrafo_destacado {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--verdeCesped);
+}
+
+.parrafo_estandar {
+  font-size: 1.2rem;
+  color: var(--verdeMedio);
+}

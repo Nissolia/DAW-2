@@ -1,0 +1,27 @@
+ul {
+    display: table;
+    text-decoration: none;
+    padding: 0;
+}
+
+li {
+    text-decoration: none;
+    display: table-cell;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: crosshair;
+}
+
+li:nth-child(odd) {
+    background-color: orange;
+}
+
+li:nth-child(even) {
+    background-color: rgb(30, 167, 89);
+}

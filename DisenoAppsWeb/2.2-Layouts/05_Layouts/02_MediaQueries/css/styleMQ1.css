@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0px auto;
+  width: 90%;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container > * {
+  height: 150px;
+}
+/* Mobile first */
+header {
+  background-color: yellow;
+  padding-top: 3rem;
+  text-align: center;
+}
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+/* Media queries */
+/* Medium width */
+@media screen and (min-width: 576px) {
+  .red,
+  .blue {
+    width: 50%;
+    float: left;
+  }
+
+  .green {
+    width: 100%;
+    float: left;
+  }
+}
+/* Large width */
+@media screen and (min-width: 932px) {
+  .red,
+  .blue,
+  .green {
+    /* así se calcula y nos libramos de hacer los calculos*/
+    width: calc(100% / 3);
+  }
+}
+
+/* En formato horizontal */
+@media screen and (orientation: landscape) {
+  header {
+    background-color: orange;
+    color: darkgreen;
+  }
+}

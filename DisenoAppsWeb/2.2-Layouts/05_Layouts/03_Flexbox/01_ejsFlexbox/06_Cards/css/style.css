@@ -1,0 +1,93 @@
+:root {
+  --col1: rgb(59, 59, 234);
+  --col2: rgb(11, 11, 54);
+  --col3: rgb(101, 101, 101);
+}
+/* Remuestrear */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: var(--col2);
+}
+.link {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  margin: 20px;
+  background-color: var(--col2);
+  border-radius: 15px;
+}
+/*  */
+.content {
+  background: linear-gradient(to top, var(--col2) 50%, white 50%);
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content__card {
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 5px var(--col2);
+
+  margin: 10px;
+  padding: 40px 0;
+
+  max-width: 350px;
+  min-width: 250px;
+  /* flex-basis: 30%; */
+  /* Si hay espacio se agranda 1 y se encoje 1, pero el minimo establecido es 250px */
+  flex: 1 1 250px;
+}
+/*  */
+.content__h3 {
+  font-size: small;
+}
+.content__h2 {
+  font-size: 40px;
+  margin: 10px;
+}
+.content__p,
+.content__li {
+  color: var(--col3);
+}
+.card--blue {
+  background-color: var(--col1);
+  color: white;
+}
+.content__button--blue {
+  background-color: white;
+  color: var(--col2);
+}
+.content__p {
+  margin-bottom: 20px;
+}
+.content__li {
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 911px) {
+  .content {
+    background-image: unset;
+    background-color: white;
+  }
+  .content__card {
+    flex-basis: 45%;
+    margin: 40px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .content__card{
+    flex-basis: 90%;
+  }
+}

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Flexbox</title>
+    <link rel="stylesheet" href="index_form-flex.css">
+</head>
+<body>
+
+    <section class="contact">
+        <form action="#" class="contact__form">
+           
+            <legend class="contact__legend">Contáctanos</legend>
+
+            <div class="contact__field">
+                <label class="contact__label" for="name">Nombre:</label>
+                <input class="contact__input" type="text" name="name" id="name" placeholder="Nombre">
+            </div>
+
+            <div class="contact__field">
+                <label class="contact__label" for="phone">Teléfono:</label>
+                <input class="contact__input" type="tel" name="phone" id="phone" placeholder="Teléfono">
+            </div>
+
+            <div class="contact__field">
+                <label class="contact__label" for="email">Correo:</label>
+                <input class="contact__input" type="mail" name="email" id="email" placeholder="Correo electrónico">
+            </div>
+
+            <div class="contact__field">
+                <label for="message" class="contact__label">Mensaje:</label>
+                <textarea class="contact__textarea" name="message" id="message" placeholder="Escriba su consulta aquí"></textarea>
+            </div>
+
+            <div class="contact__send">
+                <input type="submit" value="Enviar" class="contact__btn">
+            </div>
+
+        </form>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* Ejercicios a */
+* {
+    color: darkred;
+}
+
+h1 {
+    color: darkblue;
+}
+
+h2,
+h3 {
+    color: darkslateblue;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Ejercicios b */
+nav a {
+    text-decoration: none;
+
+}
+
+main p {
+    font-size: 30px;
+    line-height: 1.5em;
+}
+
+section p {
+    font-size: 20px;
+
+}
+
+section>p {
+    font-size: 24px;
+
+}
+
+header h1,
+main h2 {
+    text-align: center;
+}
+
+main+section {
+    border: 2px dotted black;
+}
+
+main ~ * {
+    background-color: lightgray;
+}
+
+h2 + article {
+    background-color: bisque;
+    width: 200px;
+}
+
+/* Ejercicios c */
+img[alt] {
+    width: 200px;
+}
+
+img[alt^=mon] {
+    border-radius: 50%;
+}
+
+img[src*="2"] {
+    width: 300px;
+}
+
+img[alt$=o] {
+    border: 5px solid darkorange;
+}
+img[alt~=mono] {
+    outline: 10px solid blue;
+}
+
+a[href="contacto.html"] {
+    text-decoration: line-through;
+}

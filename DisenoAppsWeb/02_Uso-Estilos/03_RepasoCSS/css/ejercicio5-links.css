@@ -1,0 +1,43 @@
+/* CSS páginas */
+body {
+    color: beige;
+    margin: 3em;
+    background-color: #1d2420;
+
+}
+a{
+    color: #51e865;
+    font-style: italic; margin-right: 1.5em;
+}
+a:hover{
+    color: #009814;
+}
+h1, h2{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h1 {
+    color: #51e865;
+    font-size: 45px;
+}
+
+h2 {
+    color: #285238;
+    font-size: 35px;
+}
+
+p {
+    font-family: Poppins;
+}
+
+.parrafo_destacado {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #04E824;
+
+}
+
+.parrafo_estandar {
+    font-size: 1.2rem;
+    color: #138A36;
+}

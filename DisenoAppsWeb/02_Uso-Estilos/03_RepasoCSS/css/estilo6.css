@@ -1,0 +1,34 @@
+body {
+    color: gray;
+}
+
+h1,
+h2 {
+    color: red;
+}
+
+a {
+    color: red;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:link {
+    color: blue;
+}
+
+a:focus {
+    font-size: 28px;
+    background-color: black;
+}
+.tabla{
+    border: 1px dotted black;
+}

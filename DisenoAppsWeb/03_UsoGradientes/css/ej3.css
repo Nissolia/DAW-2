@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  font-size: 20px;
+  padding: 1em;
+  margin: 2em;
+}
+
+/* Ejercicio 3 */
+.card{
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 2em;
+    overflow: auto;
+    width: 15rem;
+    margin: auto;
+    text-align: center;
+    box-shadow: 8px 8px 10px rgb(72, 72, 72);
+}
+.card h2{
+  margin-bottom: 2rem;
+}
+
+.boton{
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    background-image:linear-gradient(
+      60deg,
+      rgb(73, 10, 63) 80%,
+      rgb(255, 255, 255) 90%)
+}
+
+.card img {
+border-radius: 100%;
+}
