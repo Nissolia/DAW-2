@@ -1,0 +1,44 @@
+<!-- 
+Definir un div con tres párrafos. Luego al presionar un botón mover el div a otro div ubicado debajo del botón.
+Mover un nodo de tipo elemento y clonación de nodos (cloneNode)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 20</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <!-- Primer div que contiene tres párrafos -->
+      <div id="divOriginal">
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+    </div>
+
+    <!-- Botón para mover el div -->
+    <input type="button" value="Mover Div" onclick="moverDiv()">
+
+    <!-- Segundo div donde se moverá el contenido -->
+    <div id="divDestino"></div>
+
+    <script>
+        function moverDiv() {
+            // Obtiene el div original
+            var divOriginal = document.getElementById("divOriginal");
+            
+            // Clona el div original (incluyendo su contenido)
+            var divClon = divOriginal.cloneNode(true);
+            
+            // Obtiene el div destino
+            var divDestino = document.getElementById("divDestino");
+            
+            // Mueve el div clonado al div destino
+            divDestino.appendChild(divClon);
+        }
+    </script>
+
+</body>
+</html>

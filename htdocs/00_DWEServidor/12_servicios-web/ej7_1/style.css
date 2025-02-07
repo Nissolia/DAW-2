@@ -1,0 +1,17 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input, label, select{
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.boton{
+    background-color: rgb(64, 90, 20);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.boton:hover{
+    background-color: rgb(47, 62, 21);
+}

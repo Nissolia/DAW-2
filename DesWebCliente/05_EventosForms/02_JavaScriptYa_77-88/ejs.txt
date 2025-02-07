@@ -1,0 +1,12 @@
+77. Expresiones regulares
+78. Expresiones regulares: (^ principio $ fin) de cadena
+79. Expresiones regulares: [] conjunto de caracteres posibles
+80. Expresiones regulares: cuantificadores o repeticiones {x} {x,y} {x,}
+81. Expresiones regulares: metacaracteres de cuantificadores alternativos * ? +
+82. Expresiones regulares abreviadas: \d \w \s \D \W
+83. Expresiones regulares: alternancia |  (¡Ojo! hay una errata: para la alternancia hay que usar paréntesis () no corchetes)
+84. Expresiones regulares: metacarácter punto
+85. Expresiones regulares: agrupación en subpatrones ()
+86. Expresiones regulares: métodos test y exec del objeto RegExp
+87. Expresiones regulares: modificadores i (insensitive) g (global) m (multiline)
+88. Expresiones regulares: métodos search, replace, split, match del objeto String.

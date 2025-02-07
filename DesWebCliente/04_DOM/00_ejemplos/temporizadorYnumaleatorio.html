@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// generar numero aleatorio
+function generarAleatorio(){
+    console.log(Math.trunc(Math.random()*6)+1);
+}
+// funcion detener temporizador
+function detenerTemporizador(idTemp){
+    clearInterval(idTemp);
+}
+// ponemos en marcha el temporizador
+let temporizador = setInterval(generarAleatorio,500);
+//lo detenemos despues de 10 segundos
+setTimeout(() =>detenerTemporizador(temporizador),10000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Problema</title>
+    <script src="funciones.js"></script>
+  </head>
+
+  <body>
+    <form action="pagina1.php" method="post" id="formulario">
+      Nombre:<input type="text" name="nombre" id="nombre" size="20" /><br />
+      Comentarios:<br />
+      <textarea
+        name="comentarios"
+        id="comentarios"
+        rows="10"
+        cols="50"
+      ></textarea
+      ><br />
+      <input type="submit" value="Enviar" id="enviar" />
+      <div id="resultados"></div>
+      <a href="comentarios.txt">Ver resultados</a>
+    </form>
+  </body>
+</html>

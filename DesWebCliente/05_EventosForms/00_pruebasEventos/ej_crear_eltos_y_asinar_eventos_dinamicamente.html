@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <script>
+        function iniciar(){
+            let contenedor= document.getElementById("contenedor");
+            // Creamos cuatro párrafos de forma dinámica y le asignamos un manejador de eventos compartido
+            for (let i=0 ; i < 4; i++){
+                let parrafo=document.createElement("p");
+                parrafo.appendChild(document.createTextNode(`Párrafo ${i} creado dinámicamente`));
+                parrafo.id=`parrafo${i}`;
+                contenedor.appendChild(parrafo);
+                parrafo.addEventListener('click',manejador); // Añadimos el manejador de eventos al nuevo párrafo creado
+            }
+        }
+
+        //Manejador de eventos compartido por todos los párrafos creado de manera dinámica
+        function manejador(ev){
+            alert(`Control:${ev.target.id} \n Tipo de evento:${ev.type}`);
+        }
+        addEventListener('load',iniciar);
+    </script>
+    <h1>Haz clic sobre los párrafos que han sido creados dinámicamente</h1>
+    <div id="contenedor"></div>
+</body>
+</html>

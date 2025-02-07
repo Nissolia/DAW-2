@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+</head>
+
+<body>
+  <h1>Ejercicios clase String</h1>
+  <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+  <script>
+    // 1. Crea una variable que contenga tu nombre completo.Vuelca a consola el número de caracteres. 
+    console.log(`----------------- EJ1 ----------------------------`);
+    let ej1_nombre = "Noelia Baños Jiménez";
+    let ej1_numeroCaracteres = ej1_nombre.length;
+    console.log('Nombre completo: ', ej1_nombre);
+
+    console.log(`Número caracteres nombre completo:${ej1_numeroCaracteres}`)
+
+
+    // 2. Crear una variable que contenga tu nombre. Crea un bucle que vuelque a consola cada uno de loscaracteres que contiene (un carácter por línea) usando el método charAt.
+    console.log(`----------------- EJ2 ----------------------------`);
+    let ej2_nombre = "Noelia Baños Jiménez";
+    for (let i = 0; i < ej2_nombre.length; i++) {
+      console.log(ej2_nombre.charAt(i));
+
+    }
+
+    // 3. Crear una variable que contenga tu nombre.  Convierte toda la cadena a mayúsculas y vuélcala por consola. Haz lo mismo pero convirtiéndola a minúsculas.
+    console.log(`----------------- EJ3 ----------------------------`);
+    let ej3_nombre = "Noelia Baños";
+    // Convertimos la cadena completa a mayúsculas
+    let ej3_mayus = ej3_nombre.toLocaleUpperCase();
+    // Convertimos la cadena completa a minúsculas
+    let ej3_minus = ej3_nombre.toLocaleLowerCase();
+    console.log('Nombre sin modificar: ', ej3_nombre);
+    console.log('Nombre en mayúsculas: ', ej3_mayus);
+    console.log('Nombre en minúsculas: ', ej3_minus);
+
+
+    //  4. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+    //     Examina la longitud de la cadena y muéstrala por consola. Usando el método indexOf busca la palabra
+    //     ‘Mancha’ e indica en qué posición se encuentra. Usando de nuevo el método indexOf busca la palabra ‘Quijote’,
+    //     indicando que valor ha devuelto el método. Usando lastOf busca la última posición en la que se encuentra la palabra ‘de’.
+    console.log(`----------------- EJ4 ----------------------------`);
+    let ej4_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    //Mostramos la cantidad de caracteres que hay en la frase
+    console.log('Hay un total de ', ej4_frase.length, " caracteres en total.");
+    // Mostramos las variantes que hay usando indexOf
+    console.log('La palabra mancha se encuentra en el indice: ', ej4_frase.indexOf("Mancha"));
+    console.log('La palabra Quijote se encuentra en el indice: ', ej4_frase.indexOf("Quijote"));
+    console.log('La palabra de se encuentra en el indice: ', ej4_frase.lastIndexOf("de"));
+
+    // 5. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”. Usando el método substring debes extraer la palabra ‘lugar’.
+    console.log(`----------------- EJ5 ----------------------------`);
+    let ej5_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    // Mostramos directamente la frase substraída por consola
+    console.log('La frase extraída es: ', ej5_frase.substring(6, 11));
+
+    // 6. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+    // Usando el método includes debes comprobar si la frase contiene la palabra ‘cuyo’. Busca también si contiene
+    // la palabra ‘lugar’ a partir de la posición 12. 
+    console.log(`----------------- EJ6 ----------------------------`);
+    let ej6_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    console.log("Incluye cuyo: ", ej6_frase.includes("cuyo"));
+    console.log("Incluye lugar desde posición 12: ", ej6_frase.includes("lugar", 12));
+
+    // 7. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+    // Usando el método endsWith debes comprobar si la frase termina con la palabra ‘acordarme’.
+    // Comprueba también si termina con la palabra ‘hidalgo’.
+    console.log(`----------------- EJ7 ----------------------------`);
+    let ej7_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    console.log('Acaba en acordarme: ', ej7_frase.endsWith("acordarme"));
+    console.log('Acaba en hidalgo: ', ej7_frase.endsWith("hidalgo"));
+
+    // 8. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+    // Usando el método replace sustituye la palabra ‘Mancha’ por ‘Andalucía’.
+    console.log(`----------------- EJ8 ----------------------------`);
+    let ej8_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    console.log('Frase sin modificar:', ej8_frase);
+    console.log('Frase modificada:', ej8_frase.replace("Mancha", "Andalucía"));
+
+    // 9. Crea una variable que contenga “Cebollas;Patatas;Pimientos;Tomates”. Usando el método split y
+    // como separador el punto y coma debes crear un array que contenga [‘Cebollas’, ’Patatas’, ’Pimientos’, ‘Tomates’]
+    console.log(`----------------- EJ9 ----------------------------`);
+    ej9_palabras = "Cebollas;Patatas;Pimientos;Tomates";
+    ej9_array = ej9_palabras.split(";");
+    console.log('Tenemos: ', ej9_array);
+
+    // 10. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”. Usando el
+    // método startsWith debes comprobar si la frase comienza por ‘En’. Comprueba también si comienza por ‘lugar’.
+    console.log(`----------------- EJ10 ----------------------------`);
+    let ej10_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    console.log('Empieza por en: ', ej10_frase.startsWith("En"));
+    console.log('Empieza por lugar: ', ej10_frase.startsWith("lugar"));
+
+    // 11. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”. Usando el método substr
+    // debes extraer la palabra ‘lugar’. Extrae también de la frase la palabra ‘lugar’ pero usando el método substring.
+    console.log(`----------------- EJ11 ----------------------------`);
+    let ej11_frase = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+    let ej11_substr = ej11_frase.substr(6, 5);
+    let ej11_substring = ej11_frase.substring(6, 11);
+    console.log('Método substr: ', ej11_substr);
+    console.log('Método substring: ', ej11_substring);
+
+    // 12. Crea una variable con el texto “   Javier Soldado   “. Usando el método trim debes obtener la palabra “Javier Soldado”
+    // (debes quitar todos espacios anteriores y posteriores).
+    console.log(`----------------- EJ12 ----------------------------`);
+    let ej12_frase = "   Javier Soldado   ";
+    let ej12_sinEspacio = ej12_frase.trim();
+    console.log(ej12_sinEspacio);
+
+    // 13. Crea una variable con el contenido ‘JavaScript’. Usando el método adecuado rellena al final de la variable con asteriscos
+    //  de manera que la nueva palabra tenga 15 caracteres. Posteriormente rellena al principio de la variable las almohadillas necesarias 
+    //  para que la palabra resultante tenga 20 caracteres.
+    console.log(`----------------- EJ13 ----------------------------`);
+    // Declaramos la variable con el contenido 'JavaScript'
+    let ej13_js = "JavaScript";
+    // Usamos padEnd para rellenar al final con asteriscos hasta que tenga 15 caracteres
+    let ej13_modificada = ej13_js.padEnd(15, "*");
+    console.log("Primera modificación:", ej13_modificada, "| Tamaño:", ej13_modificada.length);
+    // Ahora usamos padStart para rellenar al principio con almohadillas hasta que tenga 20 caracteres
+    ej13_modificada = ej13_modificada.padStart(20, "#");
+    console.log("Segunda modificación:", ej13_modificada, "| Tamaño:", ej13_modificada.length);
+  </script>
+
+</body>
+
+</html>

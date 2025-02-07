@@ -1,0 +1,51 @@
+<!-- 
+ Se debe crear una página que contenga un div con 5 párrafos. Al presionar un botón insertar un nuevo párrafo al principio del div que contiene los 5 párrafos.
+ Agregar un nodo de tipo elemento en medio (insertBefore - createElement)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 14</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Agregar Párrafo al Principio</h1>
+
+    <!-- Div con 5 párrafos -->
+    <div id="miDiv">
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+        <p>Párrafo 4</p>
+        <p>Párrafo 5</p>
+    </div>
+
+    <!-- Botón para agregar un nuevo párrafo al principio -->
+    <button onclick="insertarPárrafo()">Insertar Párrafo</button>
+
+    <script>
+        function insertarPárrafo() {
+            // Selecciona el div donde están los párrafos
+            var div = document.getElementById("miDiv");
+
+            // Crea un nuevo párrafo
+            var nuevoPárrafo = document.createElement("p");
+
+            // Crea un nodo de texto para el nuevo párrafo
+            var texto = document.createTextNode("Nuevo párrafo al principio");
+
+            // Añade el texto al nuevo párrafo
+            nuevoPárrafo.appendChild(texto);
+
+            // Obtiene el primer párrafo (será el nodo de referencia)
+            var primerPárrafo = div.getElementsByTagName("p")[0];
+
+            // Inserta el nuevo párrafo antes del primer párrafo
+            div.insertBefore(nuevoPárrafo, primerPárrafo);
+        }
+    </script>
+
+</body>
+</html>

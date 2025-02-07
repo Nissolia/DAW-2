@@ -1,0 +1,47 @@
+<!-- 
+Se cuenta con un vector con los siguiente valores:
+
+const dias=['lunes','martes','miércoles','jueves','viernes','sábado','domingo']
+Crear una lista ordenada cuando se presiona un botón.
+Propiedad innerHTML
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 21</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <!-- Botón para crear la lista ordenada -->
+    <input type="button" value="Crear lista ordenada" onclick="crearLista()">
+
+    <!-- Contenedor donde se insertará la lista ordenada -->
+    <div id="contenedorLista"></div>
+
+    <script>
+        // Vector con los días de la semana
+        const dias = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'];
+
+        // Función que crea y agrega la lista ordenada
+        function crearLista() {
+            // Crear la lista ordenada
+            let lista = '<ol>';
+
+            // Recorrer el array de días y agregar cada día como un item en la lista
+            for (let i = 0; i < dias.length; i++) {
+                lista += `<li>${dias[i]}</li>`;
+            }
+
+            // Cerrar la lista ordenada
+            lista += '</ol>';
+
+            // Insertar la lista dentro del contenedor
+            document.getElementById('contenedorLista').innerHTML = lista;
+        }
+    </script>
+
+</body>
+</html>

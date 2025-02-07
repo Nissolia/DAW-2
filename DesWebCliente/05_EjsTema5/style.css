@@ -1,0 +1,83 @@
+/* Estilo general */
+body {
+  margin: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos para los inputs */
+input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+
+/* Estilos para el botón */
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #4e4bdb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del formulario */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Asegura que el formulario no sea demasiado ancho */
+  margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  color: #6c63ff;
+}
+
+/* Área de resultados */
+#resultado {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo para divs (si se usan) */
+#div1,
+#div2 {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}

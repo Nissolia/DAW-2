@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Event Example</title>
+
+    <style>
+        #t {
+            border: 1px solid red
+        }
+
+        #t1 {
+            background-color: pink;
+        }
+    </style>
+
+    <script>
+
+        // Function to change the content of t2
+        function modifyText(evt, new_text) {
+            alert(evt.target + " " + evt.type);
+            var t2 = document.getElementById("t2");
+            t2.firstChild.nodeValue = new_text;
+        }
+
+        // Function to add event listener to t
+        function load() {
+            var el = document.getElementById("t");
+            el.addEventListener("click", function (evt) { modifyText(evt, "four") }, false);
+        }
+    </script>
+
+</head>
+
+<body onload="load();">
+
+    <table id="t">
+        <tr>
+            <td id="t1">one</td>
+        </tr>
+        <tr>
+            <td id="t2">two</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

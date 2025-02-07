@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  //clase dado
+  class Dado {
+
+    constructor(v=1) {
+      this._valor=v;
+    }
+    
+    get valor() {
+      return this._valor;
+    }
+    
+    set valor(v) {
+      if(v>=1 && v<=6) this._valor=v;
+      else throw new Error("Valor no válido");
+    }
+    
+    toString() {
+      return `Dado con valor ${this._valor}`;
+    }
+  }
+  //creacion de dado
+  let dado1=new Dado();
+  try {
+    dado1.valor=5;   // La asignación de esta propiedad puede generar un error si el número está fuera del rango 1-6
+  } catch (error) {
+    alert("Se ha producido el error " + error);  
+  }
+  alert("dado1: " + dado1.toString());
+
+  try {
+    dado1.valor=8;   // La asignación de esta propiedad puede generar un error si el número está fuera del rango 1-6
+  } catch (error) {
+    alert("Se ha producido el error " + error);  
+  }
+  alert("dado1: " + dado1.toString());
+  
+  
+  
+  
+  
+</script>
+
+</body>
+</html>

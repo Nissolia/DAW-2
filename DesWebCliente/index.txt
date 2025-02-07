@@ -1,0 +1,81 @@
+02_EjPrueba
+    juegoAzar: juego de apuestas con dados - con saldo y con bandera de salida - todo se hace con alert y solo se muestra el final con volcarTextoWeb
+    multiplicar: muestra una tabla de multiplicar por consola
+
+03_ObjPredefinidos
+    01_Ejercicios : array, date, math, string, pruebas
+    02_FuncionesTesteos
+    04_JasmineBonoloto : spec y src para comprobaciones
+    05_PruebaCreaObjetos : objetos con herencia base
+    06_EjObjetos : 
+        cuenta bancaria - transferir a otra cuenta, crear objetos, try, sort incluido tmb
+        pilotos - get, set, mostrar x funcion
+        herencia - toString, ordenar objetos
+        jarra - get set, llenar desde otra jarra, compararlas, fun(...jarras)
+    06.2_ejsPruebas : prueba1 - como se introudce array x funcion
+
+03.2_BoletinEjercicios : Jasmine
+    funciones: filter de array si algo se cumple - filtrar numeros mayores de 11 y que cumplan una condicion
+
+04_DOM
+    hospital: seguro medico, activar/desactivar especialidad, validar formulario, validar dni, validar seguro medico, validar especialista, fecha, hota
+    ejemplos: temporizador (temp y num aleatorio) ventana movimientos (movimientos d ventana)
+        biblioteca - ejemplo de form 
+        ejsPrueba - mirar nombres
+    01_DHTMLYa
+        ej3 - cambiar tamaño fuente
+        ej9 - cambiar color de parrafos
+        ej10 - ocultar parrafo - meter parrafos en array
+        ej11 - añadir texto a elementos de lista
+        ej13 - agregar elementos a lista - createElement appendChild
+        ej14 - agregar p al inicio
+        ej15 - eliminar parrafo
+        ej16 - borde de la primera tabla
+        ej17 - borde tabla + borrar borde tabla
+        ej18 - coger atributo de un enlace y pasarlo a otro
+        ej20 - clonar un nodo a otro lado
+        ej21 - lista ordenada de dias de la semana
+        ej22 - obtener elementos de la lista y poner un punto final al final
+        ej23 - boton cambiar estilo lista y cambiar partes del css
+        ej24 - valores en select, crear inputs segun los seleccionados
+    01_EjsDOM
+        ej4-18 - visibilidad de un elemento
+        ej4-22 - crear elementos con element y createElement
+        ej4-23 - Crea un documento HTML que permita insertar, borrar, copiar y reemplazar el texto introducido en cuadro de texto.
+        ej4-24 - agregarTarea, insertarTarea, reemplazarTarea, clonarTarea, eliminarTarea
+
+05_EjsTema5
+    5a1 - manejador eventos, addeventlistener, click y mouseenter
+    5a2 - añadir texto al momento sin tener que darle a un boton
+    5a3 - localidad seleccionada 
+    5b1 - formulario largo de persona y un checkbox visible segun lo que queremos hacer, mirar la fecha que sea la correcta
+    5c1 - validarCp, extraerCP, sustituir, validar codigo postal completo
+    5c2 - si termina en vocal acentuada, validar palabra
+    5c3 - expresiones regulares, validar dni, mostrar si es o no valido
+    5c4 - validar num entero
+    5c5 - validar num decimal
+    5c6 - validar una hora
+    5c7 - extraer posiciones de emails, extraer y mostrar posiciones
+    5c8 - codigo cliente, numero dias estancia, modificar entradas, coste estancia, validar fecha
+    5c9 - validar numeros separados
+    5c10 - extraer expresiones matematicas, extraerlas y mostrarlas
+
+05_EventosForms
+    00_pruebasEventos -- mirar nombres
+    00_pruebasFormularios -- mirar nombres
+    00_validacionesFormulario -- mirar nombres
+    01_JavaScriptYa_31-71
+        31 - verificar control de contraseña
+        32 - se pinta cuando el raton pasa por encima
+        33 - mostramos pagina si está cargada
+        62 - cargamos pagina, tomamos elementos de los eventos
+        63 - duplicar el valor ?
+        64 - raton encima y quitado, cambia segun evento
+        65 - raton encima y fiera - cambia color
+        66 - mover el raton y pasar contenido 
+        67 - caracteres disponibles y cambian si cambia
+        68 - si cambia algo se activa o desactiva
+        69 - focus y blur, color cambia x foco
+        70 - 3 en raya
+        71 - claves iguales
+

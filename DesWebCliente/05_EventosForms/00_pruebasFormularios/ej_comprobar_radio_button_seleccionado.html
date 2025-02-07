@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ver salida en la consola de depuración (F12)</h1>
+    <form action="">
+        <input type="radio" value="si" name="pregunta" id="pregunta_si" /> <label for="pregunta_si">Sí</label><br>
+        <input type="radio" value="no" name="pregunta" id="pregunta_no" /> <label for="pregunta_no">No</label><br>
+        <input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc" /> <label
+            for="pregunta_nsnc">NS/NC</label><br>
+    </form>
+    <br>
+    <input type="button" id="boton1" value="Comprobar radio seleccionado">
+    <script>
+        function iniciar() {
+            document.getElementById("boton1").addEventListener('click', rescatarContenido);
+        }
+
+        function rescatarContenido() {
+            let elementos = document.getElementsByName("pregunta");
+            for (var i = 0; i < elementos.length; i++) {
+                console.log(`Elemento "${elementos[i].value}" seleccionado:  ${elementos[i].checked}`);
+                if (elementos[i].checked) alert(`El radio button seleccionado es ${elementos[i].value}`);
+            }
+        }
+
+        addEventListener('load', iniciar);
+    </script>
+</body>
+
+</html>

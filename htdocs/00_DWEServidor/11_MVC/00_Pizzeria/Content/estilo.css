@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* var */
+:root {
+  --color: rgb(91, 24, 24);
+}
+
+/* oferteo */
+body {
+  margin: 20px auto;
+  width: 95%;
+}
+
+a,
+.boton {
+  text-decoration: none;
+  padding: 15px;
+  background-color: var(--color);
+  border-radius: 10px;
+  margin: 10px;
+  display: inline-block;
+  color: white;
+}
+input,
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+}
+hr,
+h3,
+h1 {
+  margin: 10px;
+}

@@ -1,0 +1,50 @@
+completo: human
+perone
+vertebrascervicales
+pelvis
+metacarpos
+tibia
+vertebraslumbares
+tarsos
+metatarsos
+falanges
+craneo
+escapula
+humero
+radio
+cubito
+carpos
+metacarpos_2
+falanges_2
+costilla
+manubrio-esternon
+clavicula
+clavicula_2
+femur
+rotula
+
+
+
+Peroné: Hueso largo y delgado de la pierna, ubicado junto a la tibia.
+Vértebras cervicales: Siete vértebras que forman la parte superior de la columna, en el cuello.
+Pelvis: Conjunto óseo que conecta la columna con las extremidades inferiores.
+Metacarpos: Huesos de la mano ubicados entre los carpos y las falanges.
+Tibia: Hueso grueso de la pierna que soporta la mayor parte del peso corporal.
+Vértebras lumbares: Cinco vértebras en la parte baja de la espalda, soportan peso y permiten movilidad.
+Tarsos: Conjunto de huesos en el pie que forman el tobillo.
+Metatarsos: Huesos del pie ubicados entre los tarsos y las falanges.
+Falanges: Pequeños huesos que forman los dedos de manos y pies.
+Cráneo: Estructura ósea que protege el cerebro y da forma al rostro.
+Escápula: Hueso plano y triangular en la parte posterior del hombro.
+Húmero: Hueso largo del brazo que conecta el hombro con el codo.
+Radio: Hueso del antebrazo ubicado en el lado del pulgar.
+Cúbito: Hueso del antebrazo ubicado en el lado del meñique.
+Carpos: Conjunto de ocho huesos que forman la muñeca.
+Metacarpos (2): Huesos de la mano entre los carpos y las falanges (igual que el anterior).
+Falanges (2): Huesos de los dedos de manos y pies (igual que el anterior).
+Costilla: Huesos curvados que protegen los órganos del tórax.
+Manubrio (esternón): Parte superior del esternón, conecta con clavículas y costillas.
+Clavícula: Hueso largo y delgado que une el esternón con la escápula.
+Clavícula (2): Mismo hueso mencionado nuevamente.
+Fémur: Hueso más largo y fuerte del cuerpo, ubicado en el muslo.
+Rótula: Hueso redondeado en la rodilla que protege la articulación.

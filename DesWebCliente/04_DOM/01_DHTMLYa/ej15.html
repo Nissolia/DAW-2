@@ -1,0 +1,50 @@
+<!-- 
+Disponer un div con tres párrafos. Ingresar en un control de tipo text un valor entero entre 0 y 2. Luego borrar el párrafo que coincida con el valor ingresado (el valor ingresado representa la posición del nodo elemento a borrar).
+Eliminar un nodo de tipo elemento (removeChild)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 15</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Eliminar un Párrafo</h1>
+
+    <!-- Div con tres párrafos -->
+    <div id="miDiv">
+        <p>Párrafo 0</p>
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+    </div>
+
+    <!-- Control de texto e interfaz -->
+    <input type="text" id="inputPosicion">
+    <button onclick="eliminarParrafo()">Eliminar Párrafo</button>
+
+    <script>
+        function eliminarParrafo() {
+            // Obtiene el valor ingresado por el usuario
+            let posicion = parseInt(document.getElementById("inputPosicion").value);
+
+            // Selecciona el div que contiene los párrafos
+            let div = document.getElementById("miDiv");
+
+            // Obtiene todos los párrafos dentro del div
+            let parrafos = div.getElementsByTagName("p");
+
+            // Verifica si la posición es válida
+            if (isNaN(posicion) || posicion < 0 || posicion >= parrafos.length) {
+                alert("Por favor, ingrese un número válido entre 0 y " + (parrafos.length - 1));
+                return;
+            }
+
+            // Elimina el párrafo correspondiente a la posición ingresada
+            div.removeChild(parrafos[posicion]);
+        }
+    </script>
+
+</body>
+</html>

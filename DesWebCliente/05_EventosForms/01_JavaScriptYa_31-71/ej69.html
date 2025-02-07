@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 69</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input type="text" id="text1" name="text1" size="30" />
+    <br />
+    <input type="text" id="text2" name="text2" size="30" />
+
+    <script>
+      document.getElementById("text1").addEventListener("focus", tomarfoco1);
+      document.getElementById("text2").addEventListener("focus", tomarfoco2);
+      document.getElementById("text1").addEventListener("blur", perderfoco1);
+      document.getElementById("text2").addEventListener("blur", perderfoco2);
+
+      function tomarfoco1() {
+        document.getElementById("text1").style.color = "#ff0000";
+      }
+
+      function tomarfoco2() {
+        document.getElementById("text2").style.color = "#ff0000";
+      }
+
+      function perderfoco1() {
+        document.getElementById("text1").style.color = "#000000";
+      }
+
+      function perderfoco2() {
+        document.getElementById("text2").style.color = "#000000";
+      }
+    </script>
+  </body>
+</html>

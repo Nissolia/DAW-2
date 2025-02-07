@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Validación de Números Separados</h1>
+    <div class="form-container">
+      <label for="dato">Introduce el dato a validar:</label>
+      <input type="text" id="dato" placeholder="Ejemplo: 3-8-5 o 3.8.5" />
+      <button onclick="validarDato()">Validar</button>
+      <div id="resultado" class="result"></div>
+    </div>
+
+    <script>
+      // Función para validar el formato de números separados por el mismo separador
+      function validaNumerosSeparados(dato) {
+        // Expresión regular que valida números separados por el mismo tipo de separador
+        const patron = /^(\d)-(\d)-(\d)$|^(\d)\.(\d)\.(\d)$/;
+        return patron.test(dato);
+      }
+
+      // Función que se ejecuta al hacer clic en el botón
+      function validarDato() {
+        const datoInput = document.getElementById("dato").value.trim();
+        const resultadoDiv = document.getElementById("resultado");
+
+        // Validamos el dato
+        if (validaNumerosSeparados(datoInput)) {
+          resultadoDiv.textContent = `¡El formato "${datoInput}" es válido!`;
+          resultadoDiv.className = "result success";
+        } else {
+          resultadoDiv.textContent = `El formato "${datoInput}" no es válido.`;
+          resultadoDiv.className = "result error";
+        }
+      }
+    </script>
+  </body>
+</html>

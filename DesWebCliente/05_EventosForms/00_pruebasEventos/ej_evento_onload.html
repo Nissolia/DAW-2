@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="parrafo1">Este es el párrafo1</p>
+    <script>
+        //const parrafo1 = document.querySelector('#parrafo1');
+        //alert(parrafo1.innerHTML);
+
+        //const parrafo2 = document.querySelector('#parrafo2');//devuelve null porque el script se ejecuta antes de que se cargue el párrafo2 en el DOM por eso se utiliza el evento load
+        //alert(parrafo2.innerHTML);
+
+
+        // Manejador de eventos del evento onload
+        function iniciar(){
+            alert("Página web cargada!");
+
+        const parrafo1 = document.querySelector('#parrafo1');
+        alert(parrafo1.innerHTML);
+
+        const parrafo2 = document.querySelector('#parrafo2');
+        alert(parrafo2.innerHTML);
+        }
+
+
+        // Añadimos el manejador de eventos iniciar() para que se ejecute cuando se cargue la página
+        addEventListener('load', iniciar);
+    </script>
+    <p id="parrafo2">Este es el párrafo2</p>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+Queremos gestionar la venta de entradas (no numeradas) del Circo del Sol, que tiene 3 zonas, la zona principal
+con 1000 entradas disponibles a un precio de 20€, la zona de compra-venta con 200 entradas disponibles a un
+precio de 35€, y la zona vip con 25 entradas disponibles a un precio de 50€. Define la clase Zona con sus
+atributos y métodos correspondientes, de manera que permita tener información del ingreso total de ventas de
+todas las entradas (hay que controlar que existen entradas disponibles antes de venderlas), y crea un programa
+que permita vender las entradas. En la pantalla principal debe aparecer información sobre las entradas
+disponibles en cada zona, así como su precio y un formulario para vender entradas de la zona seleccionada.
+Debemos indicar para qué zona queremos las entradas y la cantidad de ellas. Lógicamente, el programa debe
+controlar que no se puedan vender más entradas de la cuenta.

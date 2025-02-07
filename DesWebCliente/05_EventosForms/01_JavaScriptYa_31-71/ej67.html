@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 67</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input type="text" id="texto" maxlength="140" size="140" />
+    <br>
+    <p>
+      Máxima cantidad de caracteres disponibles:<span id="cantidad">140</span>
+    </p>
+
+    <script>
+      document.getElementById("texto").addEventListener("keyup", presion);
+
+      function presion() {
+        let canti = document.getElementById("texto").value.length;
+        let disponibles = 140 - parseInt(canti);
+        document.getElementById("cantidad").innerHTML = disponibles;
+      }
+    </script>
+  </body>
+</html>

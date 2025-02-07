@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 63</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="numero">2</div>
+
+    <script>
+      document.getElementById("numero").addEventListener("dblclick", duplicar);
+
+      function duplicar() {
+        let valor = document.getElementById("numero").innerHTML;
+        valor = parseInt(valor);
+        let resultado = valor * 2;
+        document.getElementById("numero").innerHTML = resultado;
+      }
+    </script>
+  </body>
+</html>

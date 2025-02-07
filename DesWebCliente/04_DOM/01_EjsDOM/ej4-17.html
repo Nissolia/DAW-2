@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 17</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2>Modificación de color de texto</h2>
+    <div id="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+    </div>
+    <select name="color" id="colorSelec">
+      <option value="red">rojo</option>
+      <option value="green">verde</option>
+      <option value="blue">azul</option>
+    </select>
+    <button onclick="cambiarColor()">Cambiar letra</button>
+    <!-- Parte javascript -->
+    <script>
+      function cambiarColor() {
+        console.log("Entra en cambiarColor");
+        let contenedor = document.getElementById("container");
+        let colorSelec = document.getElementById("colorSelec").value;
+        console.log("Valor seleccionado:", colorSelec);
+
+        contenedor.style.color = colorSelec;
+      }
+    </script>
+  </body>
+</html>

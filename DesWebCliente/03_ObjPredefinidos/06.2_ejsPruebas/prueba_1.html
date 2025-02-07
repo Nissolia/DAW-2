@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 1</title>
+</head>
+
+<body>
+    <script>
+        // a la forma de introducir datos (...) los usa como si fuera un array
+        function promedio(...num) {
+            let suma = 0;
+            for (let i = 0; i < num.length; i++) {
+                suma += num[i];
+            }
+            return suma / num.length;
+        }
+        //entra como si fuera un array
+        let r1 = promedio(4, 5, 7, 8);
+        let r2 = promedio(7, 8);
+        // se muestra por consola
+        console.log(r1);
+        console.log(r2);
+        // for of es como for each
+        for (let item of [5, 6, 7, 8]) {
+            console.log(item);
+        }
+    </script>
+</body>
+
+</html>

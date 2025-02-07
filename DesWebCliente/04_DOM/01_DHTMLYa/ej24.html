@@ -1,0 +1,58 @@
+<!-- 
+Disponer un control de tipo select con los valores enteros entre 0 y 5. Crear tantos controles de tipo input tipo text como indique el control select. Efectuar dicha creación cuando se dispara el evento onChange.
+Creación de controles de tipo input dinámicamente.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!-- Control select con valores de 0 a 5 -->
+     <label for="cantidadInputs">Selecciona la cantidad de inputs: </label>
+     <select id="cantidadInputs" onchange="crearInputs()">
+         <option value="0">0</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+     </select>
+ 
+     <div id="contenedorInputs">
+         <!-- Los inputs dinámicos serán agregados aquí -->
+     </div>
+ 
+     <script>
+         function crearInputs() {
+             // Obtener el valor seleccionado en el select
+             var cantidad = document.getElementById('cantidadInputs').value;
+ 
+             // Obtener el contenedor donde se agregarán los inputs
+             var contenedor = document.getElementById('contenedorInputs');
+ 
+             // Limpiar los inputs previos (si los hay)
+             contenedor.innerHTML = '';
+ 
+             // Crear los inputs dinámicamente según la cantidad seleccionada
+             for (var i = 0; i < cantidad; i++) {
+                 // Crear un nuevo input de tipo texto
+                 var nuevoInput = document.createElement('input');
+                 nuevoInput.type = 'text';
+                 nuevoInput.placeholder = 'Input ' + (i + 1);
+                 
+                 // Agregar el input al contenedor
+                 contenedor.appendChild(nuevoInput);
+                 
+                 // Opcional: Agregar un salto de línea para separar los inputs
+                 contenedor.appendChild(document.createElement('br'));
+             }
+         }
+     </script>
+ 
+ </body>
+ </html>
+ Explicación d

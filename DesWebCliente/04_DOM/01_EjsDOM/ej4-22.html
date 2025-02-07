@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 22</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Crea un documento HTML que contenga un cuadro de texto y dos botones de manera que permita añadir elementos de forma dinámica al DOM. Uno de los botones permitirá añadir elementos mediante insertAdjacentHTML y otro botón mediante createElement. -->
+    <h1>Lista dinámica</h1>
+    <ul id="listaPrincipal">
+      <li>Noelia Baños</li>
+      <li>Sandra Pérez</li>
+    </ul>
+    <hr />
+    <label for="">Nuevo texto</label><input type="text" id="textoNuevo" />
+    <button onclick="insertar()" id="insertar">
+      Añadir elemento con insertAdjacentHTML
+    </button>
+    <button onclick="crear()" id="crear">
+      Añadir elemento con createElement
+    </button>
+    <script>
+      function insertar() {
+        let contenedor = document.getElementById("listaPrincipal");
+        let elto = document.getElementById("textoNuevo").value;
+        contenedor.insertAdjacentElement = elto;
+      }
+      function crear() {
+        let contenedor = document.getElementById("listaPrincipal");
+        let parrafo = document.createElement("li");
+        let elto = document.getElementById("textoNuevo").value;
+      parrafo.innerHTML = elto;
+
+      }
+    </script>
+  </body>
+</html>

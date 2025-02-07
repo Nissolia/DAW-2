@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 5a2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Evento</h1>
+    <form action="" method="post">
+      Nombre:
+      <input type="text" id="nombre" />
+    </form>
+    <h2 id="container"></h2>
+    <script>
+        // elementos a usar
+        let nombre = document.getElementById("nombre");
+        let container = document.getElementById("container");
+  
+        // función del evento
+        function manejadorEventos(event) {
+          // Actualiza el contenido del párrafo con el texto ingresado
+          container.innerHTML = "Hola " + event.target.value;
+        }
+  
+        // Asigna el manejador al evento 'input' para actualizaciones en tiempo real
+        nombre.addEventListener("input", manejadorEventos);
+      </script>
+  </body>
+</html>

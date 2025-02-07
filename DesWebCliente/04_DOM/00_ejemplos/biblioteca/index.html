@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl text-center text-blue-600 mb-8">Registro de Socio de Biblioteca</h1>
+        
+        <!-- Formulario -->
+        <!-- Formulario -->
+        <form class="bg-white p-6 rounded shadow-md max-w-md mx-auto">
+            <div class="flex mb-4">
+                <label class="flex-1 mr-2">
+                    <span class="text-gray-700">Nombre</span>
+                    <input type="text" id="txtNombre" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Introduce tu nombre">
+                </label>
+
+                <label class="flex-1 ml-2">
+                    <span class="text-gray-700">Fecha de Nacimiento</span>
+                    <input type="date" id="txtFechaNac" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+                </label>
+            </div>
+
+            <label class="inline-flex items-center mb-4">
+                <input type="checkbox" id="chkSocioBiblioteca" class="form-checkbox text-blue-500">
+                <span class="ml-2 text-gray-700">¿Eres socio de la biblioteca?</span>
+            </label>
+
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Enviar</button>
+        </form>
+
+        <!-- Tabla de Libros -->
+        <div class="bg-white p-6 mt-8 rounded shadow-md">
+            <h2 class="text-2xl text-gray-800 mb-4">Lista de Libros</h2>
+            <table id="tblLibros" class="min-w-full border">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700">
+                        <th class="py-2 px-4 border-b">Título</th>
+                        <th class="py-2 px-4 border-b">Foto</th>
+                        <th class="py-2 px-4 border-b">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">Dune</td>
+                        <td class="py-2 px-4 border-b"><img src="foto1.jpg" height="100" width="80" alt="Foto Libro 1" class="w-16 h-16 rounded"></td>
+                        <td class="py-2 px-4 border-b">Paul Atreides debe sobrevivir en el hostil planeta desértico de Arrakis y convertirse en líder de los Fremen.</td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                        <td class="py-2 px-4 border-b">La historia interminable</td>
+                        <td class="py-2 px-4 border-b"><img src="foto2.jpg" height="100" width="80" alt="Foto Libro 2" class="w-16 h-16 rounded"></td>
+                        <td class="py-2 px-4 border-b">Bastian, un niño que al leer un libro mágico se adentra en el reino de Fantasía donde debe salvarlo de la destrucción.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Enlaces a Tiendas -->
+        <div class="text-center mt-8">
+            <h3 class="text-xl text-gray-700 mb-4 m-3">Compra libros en línea:</h3>
+            <a href="https://www.amazon.es" class="text-blue-500 hover:underline mr-4">Amazon</a>
+            <a href="https://www.fnac.es" class="text-blue-500 hover:underline mr-4">FNAC</a>
+            <a href="https://www.casadellibro.com" class="text-blue-500 hover:underline">Casa del Libro</a>
+        </div>
+    </div>
+</body>
+</html>

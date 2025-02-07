@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 100px auto;
+}
+
+input {
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: white;
+}
+h1 {
+  padding: 10px;
+}
+table {
+  margin: 20px auto;
+}
+td {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.boton {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+#recuadro1 {
+  width: 200px;
+  height: 200px;
+  background: #ff0000;
+}
+#recuadro2{
+    width: 200px; height: 200px; background: #0000ff
+}
+.boton{
+    border: 1px solid grey;
+    background-color: grey;
+    box-shadow: 1px 1px 3px grey;
+    border-radius: 10px;
+}
+.boton:hover{
+    border: 1px solid rgb(176, 176, 176);
+    background-color: rgb(176, 176, 176);
+    
+    box-shadow: 1px 1px 10px black;
+}

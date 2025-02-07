@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="contenedor"></div>
+
+    <p>
+      Mueve el ratón sobre el rectángulo superior y obtendrás las coordenadas
+      del puntero del ratón.
+    </p>
+
+    <p>
+      Cuando el ratón se mueve sobre el div el elemento p mostrará las
+      coordenadas horizontal y vertical del puntero del ratón, las cuales se
+      obtendrán mediante la lectura de las propiedades clientX y clientY del
+      evento.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function iniciar() {
+        document
+          .getElementById("contenedor")
+          .addEventListener("mousemove", myFunction);
+        document
+          .getElementById("contenedor")
+          .addEventListener("mouseout", clearCoor);
+      }
+
+      // Manejador de eventos
+      function myFunction(evt) {
+        // evt contiene información relativa al evento
+        var x = evt.clientX;
+        var y = evt.clientY;
+        var coor = "Coordenadas: (" + x + "," + y + ")";
+        document.getElementById("demo").innerHTML = coor;
+      }
+
+      function clearCoor() {
+        document.getElementById("demo").innerHTML = "";
+      }
+
+      addEventListener("load", iniciar);
+    </script>
+  </body>
+</html>

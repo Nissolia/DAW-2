@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Bancaria</title>
+</head>
+
+<body>
+    <script>
+        // Clase para crear y usar una cuenta bancaria
+        class Cuenta {
+            // Constructor que define al titular de la cuenta y su saldo inicial
+            constructor(titular, saldo) {
+                this._titular = titular;
+                this._saldo = saldo;
+            }
+
+            // Método para ingresar dinero en la cuenta
+            ingresar(cantidad) {
+                // Aumenta el saldo en la cantidad ingresada
+                this._saldo += cantidad;
+            }
+
+            // Método para extraer dinero de la cuenta
+            extraer(cantidad) {
+                // Verifica si hay suficiente saldo para la extracción
+                if (cantidad > this._saldo) {
+                    throw new Error('La cantidad no puede ser mayor al saldo');
+                    // console.log("Saldo insuficiente");
+                } else {
+                    // Resta la cantidad del saldo
+                    this._saldo -= cantidad;
+                }
+            }
+
+            // Método para transferir dinero a otra cuenta
+            transferir(cuenta, cantidad) {
+                // Verifica si hay suficiente saldo para la transferencia
+                if (cantidad > this._saldo) {
+                    throw new Error('Saldo insuficiente para la transferencia');
+                    // console.log("Saldo insuficiente para la transferencia");
+                } else {
+                    // Reduce el saldo de esta cuenta y añade la cantidad a la otra cuenta
+                    this._saldo -= cantidad;
+                    cuenta.ingresar(cantidad);
+                }
+            }
+
+            // Método para mostrar la información de la cuenta (titular y saldo)
+            toString() {
+                return `Titular: ${this._titular}, Saldo: ${this._saldo}`;
+            }
+        }
+
+        // Crea dos cuentas con nombres y saldos iniciales
+        const cuenta1 = new Cuenta("Javier", 3000);
+        const cuenta2 = new Cuenta("Rocío", 5000);
+
+        // Transfiere 500 de cuenta1 a cuenta2
+        try {
+            cuenta1.extraer(400);
+        } catch (e) {
+            alert(e.message);
+        }
+
+        // cuenta1.transferir(cuenta2, 500);
+        try {
+            cuenta1.transferir(cuenta2, 300);
+        } catch (e) {
+            alert(e.message);
+        }
+
+        // Muestra los detalles de ambas cuentas después de la transferencia
+        console.log(cuenta1.toString());
+        console.log(cuenta2.toString());
+
+        // Crea un array con varias cuentas y sus saldos
+        const cuentas = [
+            new Cuenta("Carlos", 10000),
+            new Cuenta("Lidia", 12500),
+            new Cuenta("Alicia", 8500),
+            new Cuenta("Felipe", 9000)
+        ];
+
+        // para duplicar el array, se pone el () vacio para duplicarlo completamente
+        let cuentas2 = cuentas.slice();
+        let cuentas3 = cuentas.slice();
+        // Ordena las cuentas en el arreglo de menor a mayor saldo
+        cuentas2.sort((c1, c2) => c1.saldo - c2.saldo);
+
+        // Muestra la lista de cuentas ordenada por saldo
+        console.log("Cuentas ordenadas por saldo:");
+        cuentas2.forEach(cuenta => console.log(cuenta.toString()));
+
+        // Para ordenar alfabeticamente es mejor el localeCompare
+        cuentas3.sort((c1, c2) => c1.titular.localeCompare(c2.titular));
+
+        // Muestra la lista de cuentas ordenada por saldo
+        console.log("Cuentas ordenadas por titular:");
+        cuentas3.forEach(cuenta => console.log(cuenta.toString()));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="checkbox" value="condiciones" name="condiciones" id="condiciones" /> <label for="pregunta_si">He
+            leído y acepto las condiciones</label><br>
+        <input type="checkbox" value="privacidad" name="privacidad" id="privacidad" /> <label for="pregunta_no">He leído
+            la política de privacidad</label><br>
+    </form>
+    <br>
+    <input type="button" id="boton1" value="Comprobar checkbox seleccionados">
+    <script>
+        function iniciar() {
+            document.getElementById("boton1").addEventListener('click', rescatarContenido);
+        }
+
+        function rescatarContenido() {
+            let texto = "";
+            let checkbox_condiciones = document.getElementById("condiciones");
+            let checkbox_privacidad = document.getElementById("privacidad");
+            texto = " Elemento: " + checkbox_condiciones.value + " => Seleccionado: " + checkbox_condiciones.checked;
+            texto += "\n" + " Elemento: " + checkbox_privacidad.value + " => Seleccionado: " + checkbox_privacidad.checked;
+
+            alert(texto);
+        }
+
+        addEventListener('load', iniciar);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+:root {
+  --fondoClaro: #fffbf2;
+  --fondoMedio: #faf1df;
+  --fondoNeutro: #f4eacc;
+  --fondoOscuro: #a07731;
+  --cModificar: #ffcb77;
+  --cEliminar: #fe6d73;
+  --cAnadir: #17c3b2;
+  --cNuevo: #227c9d;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  width: 100%;
+}
+figure {
+  width: 250px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+td,
+th,
+tr,
+table {
+  padding: 10px;
+  border-bottom: 2px solid var(--fondoMedio);
+  border-collapse: collapse;
+  text-align: center;
+}
+td:nth-child(2n) {
+  background-color: var(--fondoMedio);
+}
+th {
+  background-color: var(--fondoNeutro);
+  color: black;
+}
+th:nth-child(odd) {
+  background-color: var(--fondoMedio);
+}
+a,
+input.boton {
+  color: black;
+  background-color: var(--cModificar);
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+input.boton {
+  border: none;
+  font-size: 16px;
+}
+
+input.boton:hover,
+a:hover {
+  box-shadow: 1px 1px 5px black;
+}
+.rellenarDatos {
+  width: 350px;
+  margin: 20px auto;
+}
+input {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+input.modificar {
+  background-color: var(--cModificar);
+}
+input.eliminar,
+.eliminar {
+  background-color: var(--cEliminar);
+}
+.error {
+  color: var(--cEliminar);
+}
+input.anadir,
+.anadir {
+  background-color: var(--cAnadir);
+}
+.nuevo {
+  background-color: var(--cNuevo);
+}
+.conjuntoBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}

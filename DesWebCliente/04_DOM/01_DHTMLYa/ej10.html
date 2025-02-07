@@ -1,0 +1,46 @@
+<!-- Confeccionar una página que muestre dos div que contengan 3 párrafos cada uno. Cuando se presione un botón ocultar todos los párrafos del segundo div.
+ Accediendo a un conjunto de marcas HTML similares a partir de un Nodo (getElementsByTagName) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 10</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Ocultar Párrafos del Segundo Div</h1>
+
+    <div id="div1">
+      <h2>Primer Div</h2>
+      <p>Párrafo 1 del primer div.</p>
+      <p>Párrafo 2 del primer div.</p>
+      <p>Párrafo 3 del primer div.</p>
+    </div>
+
+    <div id="div2">
+      <h2>Segundo Div</h2>
+      <p>Párrafo 1 del segundo div.</p>
+      <p>Párrafo 2 del segundo div.</p>
+      <p>Párrafo 3 del segundo div.</p>
+    </div>
+
+    <button onclick="ocultarParrafosSegundoDiv()">Ocultar Párrafos del Segundo Div</button>
+
+    <script>
+      function ocultarParrafosSegundoDiv() {
+        // Selecciselecciona el segundo div por su ID
+        let segundoDiv = document.getElementById("div2");
+
+        // obtiene todos los párrafos dentro del segundo div
+        let parrafos = segundoDiv.getElementsByTagName("p");
+
+        // va entre los parrafos
+        for (let i = 0; i < parrafos.length; i++) {
+          parrafos[i].style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

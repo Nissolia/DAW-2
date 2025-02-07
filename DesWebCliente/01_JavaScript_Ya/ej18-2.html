@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <style>
+    body {
+      margin: 3em;
+      /* Espacio externo */
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #f8f9fa;
+    }
+
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      color: #fff;
+      background-color: #0056b3;
+      border-color: #004085;
+      text-decoration: none;
+    }
+
+
+    #contenido {
+      border: 1px solid lightgray;
+      /* Borde gris claro */
+      background-color: lightyellow;
+      /* Fondo amarillo claro */
+      border-radius: 10px;
+      /* Bordes redondeados */
+      min-height: 50px;
+      /* Altura mínima de 50 píxeles */
+      padding: 10px;
+      /* Espacio interno */
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Plantilla JavaScript v2</h1>
+  <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+  <!-- Con el atributo onclick indicamos qué función de JS queremos que se ejecute al pulsar el botón-->
+  <input type="button" class="btn" onclick="calculo()" value="Pulsar">
+  <br><br>
+  <div id="contenido"></div>
+  <!-- 18. Apartado 2) Crea otra función a la que se le pase el
+   radio y la altura de un cilindro y devuelva el volumen. -->
+  <script>
+    // Dentro de la etiqueta script va el código en JavaScript
+    function calculo() {
+      // Creamos variables
+      let lado;
+      let perimetro;
+      let elecc;
+      // Le preguntamos al usuario si quiere calcular un cuadrado o un cilindtro
+      elecc = parseInt(prompt(
+        '¿Que quieres hacer? 1) Calcular el perimetro de un cuadrado, 2) Calcular el volumen de un cilindro'));
+      switch (elecc) {
+        case 1:
+          // Pedimos al usuario lo que necesitamos
+          lado = parseInt(prompt('Dame el lado para darte el perímetro: '));
+          // Volcamos en la variable de perimetro lo que nos devuelve la funcion del perimetro
+          perimetro = perimetroCuadrado(lado);
+          // Mostramos el perímetro por pantalla
+          volcarTextoWeb('El perímetro del cuadrado es: ' + perimetro);
+          // En consola mostramos el lado y el perimetro
+          console.log('Lado: ' + lado);
+          console.log('Perímetro: ' + perimetro);
+          break;
+        case 2:
+          // Creamos variables
+          let radio;
+          let altura;
+          let volumen;
+          // Pedimos la información al usuario
+          radio = parseInt(prompt('Dame el radio para darte el volumen: '));
+          altura = parseInt(prompt('Dame la altura para darte el volumen: '));
+          // Hacemos la llamada a la función y se completa el calculo
+          volumen = volumenCilindro(radio, altura);
+          // Mostramos el volumen por pantalla
+          volcarTextoWeb('El volumen del cilindro es: ' + volumen);
+          // En consola mostramos las variables
+          console.log('radio: ' + radio);
+          console.log('altura: ' + altura);
+          console.log('volumen: ' + volumen);
+          break;
+        default:
+          volcarTextoWeb('Información incorrecta.');
+          break;
+      }
+    }
+    // Función que nos calculará el perimetro de un cuadrado
+    function perimetroCuadrado(lado) {
+      return lado * 4;
+    }
+    // Función que nos calcula el volumen del cilindro
+    function volumenCilindro(radio, altura) {
+      const pi = Math.PI;
+      return pi * Math.pow(radio, 2) * altura;
+    }
+    // Función para volvar contenido a la página web
+    function volcarTextoWeb(texto) {
+      document.querySelector("#contenido").insertAdjacentHTML('beforeend', `<p>${texto}</p>`);
+    }
+  </script>
+
+</body>
+
+</html>

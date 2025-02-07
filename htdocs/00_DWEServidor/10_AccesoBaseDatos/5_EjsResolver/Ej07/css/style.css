@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+.tabla {
+  background-color: rgb(125, 125, 222);
+  padding: 10px;
+  text-align: center;
+}
+.cesta {
+  font-size: 2rem;
+}
+.titulo_tabla {
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+.subtitulo_tabla {
+  color: rgb(6, 6, 48);
+}
+.producto_tabla {
+  border: 1px solid rgb(125, 125, 222);
+  padding: 10px;
+}
+.boton {
+  background-color: rgb(6, 6, 48);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+img {
+  object-fit: cover;
+  height: fit-content;
+  width: 250px;
+}
+a{
+  margin: 5px;
+  text-decoration: none;
+  color: rgb(125, 125, 222);
+}

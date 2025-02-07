@@ -1,0 +1,45 @@
+<!-- 
+ Confeccionar una página que contenga una lista de tipo (ul) y no defina marcas de tipo (li) inicialmente. Luego al presionar un botón agregar dos marcas de tipo (li) con sus respectivos textos. Luego de presionar una vez el botón no permitir agregar más elementos (li).
+Crear y agregar un nodo de tipo elemento (createElement - appendChild)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 13</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Agregar Elementos a una Lista</h1>
+
+    <!-- Lista desordenada inicialmente vacía -->
+    <ul id="miLista"></ul>
+
+    <!-- Botón para agregar elementos -->
+    <button id="btnAgregar" onclick="agregarElementos()">Agregar Elementos</button>
+
+    <script>
+        function agregarElementos() {
+            // Selecciona la lista por su ID
+            let lista = document.getElementById("miLista");
+
+            // Crear dos elementos de lista li con texto
+            let li1 = document.createElement("li");
+            let li2 = document.createElement("li");
+
+            // Crear los nodos de texto y agregarlos a los elementos <li>
+            li1.appendChild(document.createTextNode("Primer elemento"));
+            li2.appendChild(document.createTextNode("Segundo elemento"));
+
+            // Agregar los elementos <li> a la lista ul
+            lista.appendChild(li1);
+            lista.appendChild(li2);
+
+            // Deshabilitar el botón después de agregar los elementos
+            document.getElementById("btnAgregar").disabled = true;
+        }
+    </script>
+
+</body>
+</html>

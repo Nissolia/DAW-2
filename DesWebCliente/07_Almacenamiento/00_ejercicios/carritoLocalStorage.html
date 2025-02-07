@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito localStorage</title>
+    <style>
+       body, input{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+        td, th, input{
+            padding: 5px;
+        }
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrito usando localStorage</h1>
+    <p>Añade artículos en el carrito:</p>
+    <p style="color: darkgreen;">Cierra y abre la página para ver el resultado.</p>
+    <form action="">
+        Artículo:
+        <input type="text" id="nombre" required><br>
+        Cantidad
+        <input type="number" id="cantidad" min="1" required> 
+        <input onclick="anadir()" type="button" value="Añadir">
+        <input onclick="borrar()" type="button" value="Vaciar Carrito">
+    </form> <br>
+    <!-- tabla en la que haremos las modificaciones -->
+    <table id="tabla">
+
+    </table>
+    <hr>
+    <p>&copy Noelia Baños</p>
+    <script>
+        // definimos la variable global
+        let articulos = [];
+     
+        // cargamos los artículos desde localStorage si existen
+        if (localStorage.articulos) {
+            articulos = JSON.parse(localStorage.articulos);
+        }
+        // función para vaciar el carrito
+        function borrar() {
+            articulos = [];
+            // lo guardamos vacío en el localStorage
+            localStorage.articulos = JSON.stringify(articulos);
+            renderizarTabla();
+        }
+
+        // función para añadir artículos al carrito
+        function anadir() {
+            // tomamos el valor para tener lo que hay dentro del input
+            let nom = document.getElementById("nombre").value;
+            let cant = document.getElementById("cantidad").value;
+            // miramos si el nombre tiene contenido y lo mismo con cantidad
+            if (nom !== "" && cant !== "") {
+                // creamos la variable que añadiremos en el array principal
+                let texto = { nombre: nom, cantidad: cant };
+                //añadimos array de articulos
+                articulos.push(texto);
+                // guardamos el array en el localStorage
+                localStorage.articulos = JSON.stringify(articulos);
+                // la renderizamos cada vez que añadimos algo
+                renderizarTabla();
+
+            }
+        }
+        // funcion para renderizar la tabla
+        function renderizarTabla() {
+            // probando a sumar articulos si se llaman de la misma forma
+            articulos.forEach(items => {
+                
+            });
+            let ubiTabla = document.getElementById('tabla');
+            ubiTabla.innerHTML = "<tr><th>Artículo</th><th>Cantidad</th></tr>"; 
+
+            articulos.forEach(art => {
+                let fila = "<tr><td>" + art.nombre + "</td><td>" + art.cantidad + "</td></tr>";
+                // añadimos cada articulo a la tabla
+                ubiTabla.innerHTML += fila;
+            });
+        }
+        // renderizamos la tabla al cargar la página
+        renderizarTabla();
+    </script>
+</body>
+
+</html>

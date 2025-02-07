@@ -1,0 +1,38 @@
+<!-- 
+Disponer dos enlaces a distintos sitios. Recuperar la propiedad href del primer enlace y fijar el segundo enlace con dicho valor.
+Recuperar un atributo de un elemento (getAttribute)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 18</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Dos enlaces a distintos sitios -->
+    <a id="enlace1" href="https://www.google.com" target="_blank">Ir a Google</a><br>
+    <a id="enlace2" href="#" target="_blank">Enlace 2 (será actualizado)</a><br>
+
+    <!-- Botón para copiar el href del primer enlace al segundo -->
+    <input type="button" value="Copiar enlace 1 a enlace 2" onclick="copiarEnlace()">
+
+    <script>
+        function copiarEnlace() {
+            // Recupera el valor del atributo 'href' del primer enlace
+            var enlace1 = document.getElementById("enlace1");
+            var hrefEnlace1 = enlace1.getAttribute("href");
+
+            // Establece el valor de 'href' del segundo enlace con el valor recuperado
+            var enlace2 = document.getElementById("enlace2");
+            enlace2.setAttribute("href", hrefEnlace1);
+
+            // Actualiza el texto del segundo enlace para reflejar el cambio
+            enlace2.textContent = "Ir a Google (actualizado)";
+        }
+    </script>
+
+</body>
+</html>

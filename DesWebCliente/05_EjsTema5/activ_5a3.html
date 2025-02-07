@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5a3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Eventos</h1>
+    <form action="" method="post">
+      Localidad:
+      <select name="localidad" id="localidad">
+        <option value="utrera">Utrera</option>
+        <option value="los palacios">Los Palacios</option>
+        <option value="dos hermanas">Dos hermanas</option>
+      </select>
+    </form>
+    <h2 id="container"></h2>
+    <script>
+        // elementos a usar
+        let localidad = document.getElementById("localidad");
+        let container = document.getElementById("container");
+  
+        // función del evento
+        function manejadorEventos(event) {
+          // Actualiza el contenido del párrafo con el texto ingresado
+          container.innerHTML = "Localidad seleccionada: " + event.target.value;
+        }
+  
+        // Asigna el manejador al evento 'input' para actualizaciones en tiempo real
+        localidad.addEventListener("click", manejadorEventos);
+      </script>
+</body>
+</html>

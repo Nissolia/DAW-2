@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 64</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+   
+    <div id="recuadro1">
+    </div>
+    <script>
+        document.getElementById('recuadro1').addEventListener('mousedown', funcPrimera);
+        document.getElementById('recuadro1').addEventListener('mouseup', funcSegunda);
+
+        function funcPrimera() {
+            document.getElementById('recuadro1').style.backgroundColor = '#ffff00';
+        }
+
+        function funcSegunda() {
+            document.getElementById('recuadro1').style.backgroundColor = '#ff0000';
+        }
+    </script>
+</body>
+</html>

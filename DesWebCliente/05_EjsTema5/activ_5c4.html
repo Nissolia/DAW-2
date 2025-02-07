@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <body>
+        <h1>Validador de Número Entero</h1>
+        <div class="form-container">
+          <label for="numero">Introduce un número entero:</label>
+          <input
+            type="text"
+            id="numero"
+            placeholder="Ejemplo: 123, -25, +4882"
+          />
+          <button onclick="validarNumero()">Validar Número</button>
+          <div id="resultado" class="result"></div>
+        </div>
+    
+        <script>
+          // Función para validar un número entero
+          function validaNumeroEntero(numero) {
+            // Expresión regular para validar números enteros con signo opcional
+            const regex = /^[+-]?\d+$/;
+            return regex.test(numero);
+          }
+    
+          // Función que se ejecuta al hacer clic en el botón
+          function validarNumero() {
+            const numeroInput = document.getElementById("numero").value.trim();
+            const resultadoDiv = document.getElementById("resultado");
+    
+            if (validaNumeroEntero(numeroInput)) {
+              resultadoDiv.textContent = `El número "${numeroInput}" es válido.`;
+              resultadoDiv.className = "result success";
+            } else {
+              resultadoDiv.textContent = `El número "${numeroInput}" no es válido.`;
+              resultadoDiv.className = "result error";
+            }
+          }
+    
+         </script>
+      </body>
+    </html>
+</html>

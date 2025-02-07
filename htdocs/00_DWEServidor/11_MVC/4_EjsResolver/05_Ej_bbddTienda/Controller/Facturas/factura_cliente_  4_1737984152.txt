@@ -1,0 +1,11 @@
+Factura para el cliente ID:   4
+
+Producto: Mando | Cantidad: 1 | Precio Unitario: 20.99 | Subtotal: 20.99
+Producto: Pantalla | Cantidad: 1 | Precio Unitario: 89.00 | Subtotal: 89.00
+Producto: Silla | Cantidad: 1 | Precio Unitario: 64.00 | Subtotal: 64.00
+
+----------------------------------
+Total sin IVA: 173.99
+IVA (21%): 36.54
+Total con IVA: 210.53
+----------------------------------

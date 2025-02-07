@@ -1,0 +1,19 @@
+Factura generada: 2025-01-09 11:47:50
+
+Código: h546
+Descripción: Palo de madera
+Precio sin IVA: 26 EUR
+Precio con IVA: 31.46 EUR
+-------------------------
+Código: b987
+Descripción: Clavos galvanizados
+Precio sin IVA: 18 EUR
+Precio con IVA: 21.78 EUR
+-------------------------
+Código: a234
+Descripción: Tornillos
+Precio sin IVA: 15 EUR
+Precio con IVA: 18.15 EUR
+-------------------------
+
+Total factura con IVA: 71.39 EUR

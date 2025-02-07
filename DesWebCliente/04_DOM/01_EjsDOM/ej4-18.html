@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 17</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2>Modificación de visibilidad de texto</h2>
+    <div id="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+      <p id="segundoP">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+    </div>
+    <h3>Visibilidad del segundo párrafo</h3>
+    <select name="visibilidad" id="visibilidad">
+      <option value="visible">Mostrar</option>
+      <option value="hidden">Oculto</option>
+    </select>
+    <button onclick="mostrarVisibilidad()">Display</button>
+
+    <h3>Propiedad Display</h3>
+    <select name="displayP" id="displayP">
+      <option value="block">Block</option>
+      <option value="inline">Inline</option>
+      <option value="inline-block">Inline block</option>
+    </select>
+    <button onclick="propDisplay()">Display</button>
+    <!-- Parte javascript -->
+    <script>
+      function mostrarVisibilidad() {
+        console.log("Entra en mostrarVisibilidad");
+        let contenedor = document.getElementById("segundoP");
+        let visibilidad = document.getElementById("visibilidad").value;
+        console.log("Valor seleccionado:", visibilidad);
+
+        contenedor.style.visibility = visibilidad;
+      }
+      function propDisplay() {
+        console.log("Entra en mostrar Visibilidad");
+        let contenedor = document.getElementById("container");
+        let dispItem = document.getElementById("displayP").value;
+        console.log("Valor seleccionado:", dispItem);
+
+        contenedor.style.display = dispItem;
+      }
+    </script>
+  </body>
+</html>

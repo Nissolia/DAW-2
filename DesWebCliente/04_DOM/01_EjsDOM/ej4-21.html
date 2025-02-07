@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 21</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+      <!-- Partiendo del siguiente documento HTML inserta texto en cada uno de los párrafos de manera que estén numerados y además aplica a los párrafos el color especificado en la caja de texto.
+   Por ejemplo, si escribimos “blue” en la caja de texto y pulsamos el botón debe aparecer: -->
+  
+  
+  <p></p>      
+  <p></p>    
+  <p></p>    
+  <p></p>    
+  <label>Color del párrafo</label><input type="text" id="txtColor"/></br>    
+  <button onclick="addParagraph()">Añadir párrafos </button>
+  <script>    
+    let contador = 1;
+      function addParagraph(){    
+        let contenido = document.getElementsByName("p");
+           let colorElegido = document.getElementById("txtColor").value;
+               contenido.style.color=colorElegido;
+               contenido.innerHTML = "Párrafo "+contador;
+               contador++;
+              }    
+      </script>  
+  </body>
+</html>

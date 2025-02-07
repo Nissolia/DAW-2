@@ -1,0 +1,29 @@
+.contenedor {
+    width: 800px;
+    margin: 10px auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#datos {
+    background-color: #ffc;
+    text-align: left;
+    font-family: verdana;
+    border-width: 0;
+    padding: 5px;
+    border: 1px dotted #fa0;
+    margin: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #aaa;
+    width: 200px;
+    height: 50px;
+}

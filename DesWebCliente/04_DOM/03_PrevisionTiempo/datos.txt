@@ -1,0 +1,25 @@
+       let encabezados=["Horas", "Previsión", "Viento", "Velocidad", "Lluvias"];         
+        let datos=[
+            {
+            hora:"19:00",
+            prevision:{ temperatura: "33º", icono:"dia" },
+            viento:"oeste",
+            velocidad:"15 km/h",
+            lluvias:"0 mm"
+            },
+            {
+            hora:"20:00",
+            prevision:{ temperatura: "30º", icono:"dia" },
+            viento:"norte",
+            velocidad:"5 km/h",
+            lluvias:"10 mm"
+            },
+            {
+            hora:"21:00",
+            prevision:{ temperatura: "28º", icono:"noche" },
+            viento:"sur",
+            velocidad:"0 km/h",
+            lluvias:"5 mm"
+            },
+
+        ];

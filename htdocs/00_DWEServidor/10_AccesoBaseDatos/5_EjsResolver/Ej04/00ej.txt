@@ -1,0 +1,16 @@
+Crea el programa GESTISIMAL (GESTIón SIMplifcada de ALmacén) para llevar el control de los artículos
+de un almacén. De cada artículo se debe saber el código, la descripción, el precio de compra, el precio de venta
+y el stock (número de unidades). La entrada y salida de mercancía supone respectivamente el incremento y
+decremento de stock de un determinado artículo. Hay que controlar que no se pueda sacar más mercancía de la
+que hay en el almacén. El programa debe tener, al menos, las siguientes funcionalidades: listado, alta, baja,
+modificación, entrada de mercancía y salida de mercancía.
+
+
+
+Modifica el programa anterior añadiendo las siguientes mejoras:
+• Comprueba la existencia del código en el alta, la baja y la modificación de artículos para evitar errores.
+• Añade un botón comprar para añadir el código del producto a una cesta o carrito almacenado en una sesión.
+• Añade un botón ‘procesar pedido’ para crear un fichero de factura de la venta, donde se incluya un listado
+con los datos de los productos vendidos (los que estaban en la cesta) mostrando su precio con iva de 21%
+añadido. También se incluirá al final del fichero el total de la factura con iva. Mostrar un enlace al fichero
+generado para consultar la factura.

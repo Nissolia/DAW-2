@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    div {background-color: gray;}
+    
+    </style>
+    <script>
+        var contador=1;
+        function insertarCodigoHTML(){
+                var posicion=document.getElementById('selectposicion').value;
+                if(posicion=="beforebegin")  alert("Se va a insertar un hermano mayor a la sección div");
+                else if(posicion=="afterend")  alert("Se va a insertar un hermano menor a la sección div");
+                else if(posicion=="afterbegin")  alert("Se va a insertar un hijo primogénito en la sección div");
+                else if(posicion=="beforeend")  alert("Se va a insertar un hijo benjamín en la sección div");
+               
+                var refdiv=document.getElementById('bloque');
+                refdiv.insertAdjacentHTML(posicion,"<p> Párrafo " + contador + "</p>");
+                contador++;
+        }
+    </script>
+    <h1>Ejemplo uso insertAdjacentHTML</h1>
+    <div id="bloque">
+        <p>Sección div</p>
+    </div>
+    <label for="selectposicion">Posición:</label>
+    <select  id="selectposicion">
+        <option value="beforebegin">beforebegin: (hermano mayor)</option>
+        <option value="afterend">afterend: (hermano menor)</option>
+        <option value="afterbegin">afterbegin: (hijo primogénito)</option>
+        <option value="beforeend">beforeend: (hijo benjamín)</option>
+    </select>
+    <input type="button" onclick="insertarCodigoHTML();" value="Insertar">
+</body>
+</html>

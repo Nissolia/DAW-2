@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="bloque">
+        <p>Este es el primer párrafo</p>
+        <p>Este es el segundo párrafo</p>
+        <p>Este es el tercer párrafo</p>
+    </div>
+
+    <input type="button" value="Cantidad de Hijos del DIV (Nodes)" onClick="cantidadHijosNodes()">
+    <input type="button" value="Cantidad de Hijos del DIV (Elements)" onClick="cantidadHijosElements()">
+
+
+    <script>
+        //En este ejemplo accedemos a los hijos del div mediante childNodes
+        function cantidadHijosNodes() { 
+            var lista = document.getElementById('bloque');
+            alert('La cantidad de hijos "childNodes" del nodo div es:' + lista.childNodes.length); 
+            var cadena = "";
+            for (var x = 0; x < lista.childNodes.length; x++) {
+                if (lista.childNodes[x].nodeType == Node.TEXT_NODE)
+                    cadena = cadena + "Nodo tipo Texto\n";
+                if (lista.childNodes[x].nodeType == Node.ELEMENT_NODE){
+                    cadena = cadena + "Nodo tipo Elemento\n";
+                    lista.childNodes[x].style.backgroundColor="red";
+                }
+                    
+            }
+            alert(cadena);
+        }
+
+        //En este ejemplo accedemos a los hijos del div mediante children
+        function cantidadHijosElements() {
+            var lista = document.getElementById('bloque');
+            alert('La cantidad de hijos "children" del nodo div es:' + lista.children.length);
+            var cadena = "";
+            for (var x = 0; x < lista.children.length; x++) {
+                    cadena = cadena + "Nodo tipo Elemento\n";
+                    lista.children[x].style.backgroundColor="blue";
+            }
+            alert(cadena);
+        }
+    </script>
+</body>
+
+</html>

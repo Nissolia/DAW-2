@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 70</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+    <div>
+        <input type="button" id="boton1" name="boton1" value=" " class="boton">
+        <input type="button" id="boton2" name="boton2" value=" " class="boton">
+        <input type="button" id="boton3" name="boton3" value=" " class="boton">
+    </div>
+    <div>
+        <input type="button" id="boton4" name="boton4" value=" " class="boton">
+        <input type="button" id="boton5" name="boton5" value=" " class="boton">
+        <input type="button" id="boton6" name="boton6" value=" " class="boton">
+    </div>
+    <div>
+        <input type="button" id="boton7" name="boton7" value=" " class="boton">
+        <input type="button" id="boton8" name="boton8" value=" " class="boton">
+        <input type="button" id="boton9" name="boton9" value=" " class="boton">
+    </div>
+    <script>
+        let jugador = 'X';
+
+        for (let x = 1; x <= 9; x++) {
+            document.getElementById('boton' + x).addEventListener('click', presion);
+        }
+
+        function presion(evt) {
+            evt.target.value = jugador;
+            if (jugador == 'X')
+                jugador = 'O';
+            else
+                jugador = 'X';
+            verificarGanador();
+        }
+
+        function verificarGanador() {
+            let b1 = document.getElementById('boton1').value;
+            let b2 = document.getElementById('boton2').value;
+            let b3 = document.getElementById('boton3').value;
+            let b4 = document.getElementById('boton4').value;
+            let b5 = document.getElementById('boton5').value;
+            let b6 = document.getElementById('boton6').value;
+            let b7 = document.getElementById('boton7').value;
+            let b8 = document.getElementById('boton8').value;
+            let b9 = document.getElementById('boton9').value;
+
+            if (b1 == 'X' && b2 == 'X' && b3 == 'X')
+                alert('Gano la X');
+            if (b4 == 'X' && b5 == 'X' && b6 == 'X')
+                alert('Gano la X');
+            if (b7 == 'X' && b8 == 'X' && b9 == 'X')
+                alert('Gano la X');
+            if (b1 == 'X' && b4 == 'X' && b7 == 'X')
+                alert('Gano la X');
+            if (b2 == 'X' && b5 == 'X' && b8 == 'X')
+                alert('Gano la X');
+            if (b3 == 'X' && b6 == 'X' && b9 == 'X')
+                alert('Gano la X');
+            if (b1 == 'X' && b5 == 'X' && b9 == 'X')
+                alert('Gano la X');
+            if (b3 == 'X' && b5 == 'X' && b7 == 'X')
+                alert('Gano la X');
+
+            if (b1 == 'O' && b2 == 'O' && b3 == 'O')
+                alert('Gano la O');
+            if (b4 == 'O' && b5 == 'O' && b6 == 'O')
+                alert('Gano la O');
+            if (b7 == 'O' && b8 == 'O' && b9 == 'O')
+                alert('Gano la O');
+            if (b1 == 'O' && b4 == 'O' && b7 == 'O')
+                alert('Gano la O');
+            if (b2 == 'O' && b5 == 'O' && b8 == 'O')
+                alert('Gano la O');
+            if (b3 == 'O' && b6 == 'O' && b9 == 'O')
+                alert('Gano la O');
+            if (b1 == 'O' && b5 == 'O' && b9 == 'O')
+                alert('Gano la O');
+            if (b3 == 'O' && b5 == 'O' && b7 == 'O')
+                alert('Gano la O');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demostración de Selectores en JavaScript</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demostración de Selectores en JavaScript</h1>
+    
+    <!-- Elemento con ID -->
+    <div id="uniqueElement">Elemento único con ID</div>
+    <button onclick="highlightById()">Resaltar por ID</button>
+
+    <!-- Elementos con Tag Name -->
+    <p>Primer párrafo.</p>
+    <p>Segundo párrafo.</p>
+    <button onclick="highlightByTagName()">Resaltar por Tag Name</button>
+
+    <!-- Elementos con Name -->
+    <input type="text" name="example" placeholder="Campo de texto 1">
+    <input type="text" name="example" placeholder="Campo de texto 2">
+    <button onclick="highlightByName()">Resaltar por Name</button>
+
+    <!-- Elementos con Class Name -->
+    <div class="highlightable">Elemento 1 con clase 'highlightable'</div>
+    <div class="highlightable">Elemento 2 con clase 'highlightable'</div>
+    <button onclick="highlightByClassName()">Resaltar por Class Name</button>
+
+    <!-- Elemento seleccionado por querySelector -->
+    <div id="container">
+        <p class="query-example">Primer elemento con clase 'query-example' dentro de #container</p>
+        <p class="query-example">Segundo elemento con clase 'query-example' dentro de #container</p>
+    </div>
+    <button onclick="highlightByQuerySelector()">Resaltar por Query Selector</button>
+
+    <!-- Elementos seleccionados por querySelectorAll -->
+    <div class="multiple-query">
+        <p>Elemento 1 dentro de .multiple-query</p>
+    </div>
+    <div class="multiple-query">
+        <p>Elemento 2 dentro de .multiple-query</p>
+    </div>
+    <button onclick="highlightByQuerySelectorAll()">Resaltar por Query Selector All</button>
+
+    <script>
+        // Resaltar elemento por ID
+        function highlightById() {
+            const element = document.getElementById("uniqueElement");
+            element.classList.toggle("highlight");
+        }
+
+        // Resaltar elementos por Tag Name
+        function highlightByTagName() {
+            const elements = document.getElementsByTagName("p");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle("highlight");
+            }
+        }
+
+        // Resaltar elementos por Name
+        function highlightByName() {
+            const elements = document.getElementsByName("example");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle("highlight");
+            }
+        }
+
+        // Resaltar elementos por Class Name
+        function highlightByClassName() {
+            const elements = document.getElementsByClassName("highlightable");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle("highlight");
+            }
+        }
+
+        // Resaltar primer elemento con querySelector
+        function highlightByQuerySelector() {
+            const element = document.querySelector("#container .query-example");
+            element.classList.toggle("highlight");
+        }
+
+        // Resaltar todos los elementos con querySelectorAll
+        function highlightByQuerySelectorAll() {
+            const elements = document.querySelectorAll(".multiple-query p");
+            elements.forEach(element => {
+                element.classList.toggle("highlight");
+            });
+        }
+    </script>
+</body>
+</html>

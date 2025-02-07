@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>Ejercicios clase Math</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+    <script>
+        //1. Calcula el valor absoluto de los siguientes números: 3, -5, 8, -3.5, 12.2
+        console.log('----------------- EJ1 ----------------------------');
+        let ej1_array = [3, -5, 8, -3.5, 12.2];
+        let ej1_array_valores_absolutos = ej1_array.map((n) => Math.abs(n));
+        console.log('Valores absolutos:${ej1_array_valores_absolutos.toString()}');
+
+        //2. Muestra por la consola el valor de la constante PI definida en la clase Math. 
+        console.log('----------------- EJ2 ----------------------------');
+        console.log('Constante PI:${Math.PI}');
+
+        // 3. Calcula el coseno de 30º. Haz el mismo cálculo usando la calculadora de Windows. Compara ambos resultados y
+        // si no coinciden investiga el motivo y corrige tu código de JS.
+        // Calcula el seno de 45º en JS y con la calculadora y comprueba que coincidan. Calcula
+        // el coseno de /3 radianes y comprueba con la calculadora que es correcto.
+        // *********************** revisar este
+        console.log('----------------- EJ3 ----------------------------');
+        let ej3_1 = Math.cos(grados2radianes(30)); // Coseno de 30 grados
+        let ej3_2 = Math.cos(grados2radianes(45)); // Coseno de 45 grados
+        let ej3_3 = Math.sin(grados2radianes(45)); // Seno de 45 grados
+        let ej3_4 = Math.cos(Math.PI / 3); // Coseno de π/3 radianes
+
+        console.log('Coseno de 30º: ' + ej3_1);
+        console.log('Coseno de 45º: ' + ej3_2);
+        console.log('Seno de 45º: ' + ej3_3);
+        console.log('Coseno de π/3 radianes: ' + ej3_4);
+
+        //4.Calcula e^3
+        console.log('----------------- EJ4 ----------------------------');
+        let ej4 = Math.exp(3);
+        console.log('Resultado: ' + ej4);
+
+        //5. Calcula  log 12.5 ( logaritmo en base 10). Calcula ln 15.7 (logaritmo neperiano). Compara ambos resultados con la calculadora.
+        console.log('----------------- EJ5 ----------------------------');
+        let ej5_1 = Math.log10(12.5);
+        let ej5_2 = Math.log(15.7);
+        console.log('Log 1: ' + ej5_1);
+        console.log('Log 2: ' + ej5_2);
+
+        //6.Calcula 128.12 comparando con la calculadora que el resultado es correcto.
+        console.log('----------------- EJ6 ----------------------------');
+        let ej6 = Math.sqrt(128.12);
+        ej6 = redondearDecimales(ej6, 3);
+        console.log('El resultado es: ' + ej6);
+
+        //7. Redondea los siguientes números al entero más cercano: 2.7, -2.7, 12.4, 12.5, -0.6, 0.6
+        console.log('----------------- EJ7 ----------------------------');
+        let ej7_1 = Math.round(2.7);
+        let ej7_2 = Math.round(-2.7);
+        let ej7_3 = Math.round(12.4);
+        let ej7_4 = Math.round(12.5);
+        let ej7_5 = Math.round(0.6);
+        let ej7_6 = Math.round(-0.6);
+        console.log('Funcion round()');
+        console.log('Num 1: ' + ej7_1);
+        console.log('Num 2: ' + ej7_2);
+        console.log('Num 3: ' + ej7_3);
+        console.log('Num 4: ' + ej7_4);
+        console.log('Num 5: ' + ej7_5);
+        console.log('Num 6: ' + ej7_6);
+        // 8. Calcula el techo (ceil) de los siguientes números: 2.7, -2.7, 12.4, 12.5, -0.6, 0.6
+        console.log('----------------- EJ8 ----------------------------');
+        let ej8_1 = Math.ceil(2.7);
+        let ej8_2 = Math.ceil(-2.7);
+        let ej8_3 = Math.ceil(12.4);
+        let ej8_4 = Math.ceil(12.5);
+        let ej8_5 = Math.ceil(0.6);
+        let ej8_6 = Math.ceil(-0.6);
+        console.log('Funcion ceil()');
+        console.log('Num 1: ' + ej7_1);
+        console.log('Num 2: ' + ej7_2);
+        console.log('Num 3: ' + ej7_3);
+        console.log('Num 4: ' + ej7_4);
+        console.log('Num 5: ' + ej7_5);
+        console.log('Num 6: ' + ej7_6);
+
+        //9. Calcula el suelo (floor) de los siguientes números: 2.7, -2.7, 12.4, 12.5, -0.6, 0.6
+        console.log('----------------- EJ9 ----------------------------');
+        let ej9_1 = Math.floor(2.7);
+        let ej9_2 = Math.floor(-2.7);
+        let ej9_3 = Math.floor(12.4);
+        let ej9_4 = Math.floor(12.5);
+        let ej9_5 = Math.floor(0.6);
+        let ej9_6 = Math.floor(-0.6);
+        console.log('Funcion floor()');
+        console.log('Num 1: ' + ej7_1);
+        console.log('Num 2: ' + ej7_2);
+        console.log('Num 3: ' + ej7_3);
+        console.log('Num 4: ' + ej7_4);
+        console.log('Num 5: ' + ej7_5);
+        console.log('Num 6: ' + ej7_6);
+
+        //10. Calcula el menor de los valores de estos pares de números: (-8, 7), (12, 5), (-12, 5)
+        console.log('----------------- EJ10 ----------------------------');
+        let ej10 = Math.max((-8, 7), (12, 5), (-12, 5));
+        console.log('El valor max es: ' + ej10);
+
+        //11.Calcula el mayor de los valores de estos pares de números: (-8, 7), (12, 5), (-12, 5)
+        console.log('----------------- EJ11 ----------------------------');
+        let ej11 = Math.min((-8, 7), (12, 5), (-12, 5));
+        console.log('El valor min es: ' + ej11);
+
+        // 12. Queremos simular el lanzamiento de un dado. Genera un número aleatorio entre 1 y 6.
+        console.log('----------------- EJ12 ----------------------------');
+        let ej12 = Math.random() * 6 + 1;
+        console.log('Dado: ' + ej12);
+
+        // 13. Genera un número aleatorio entre 26 y 79.
+        console.log('----------------- EJ13 ----------------------------');
+        let ej13 = Math.random() * (79 - 26) + 26;
+        console.log('Número aleatorio: ' + ej13);
+
+        // 14. Redondea la constante Math.PI a dos decimales. Haz lo mismo pero redondeando a tres, cuatro y cinco decimales.
+        console.log('----------------- EJ14 ----------------------------');
+        let ej14_1 = redondearDecimales(Math.PI, 2);
+        let ej14_2 = redondearDecimales(Math.PI, 3);
+        let ej14_3 = redondearDecimales(Math.PI, 4);
+        let ej14_4 = redondearDecimales(Math.PI, 5);
+        console.log('Redondeo a 2: ' + ej14_1);
+        console.log('Redondeo a 3: ' + ej14_2);
+        console.log('Redondeo a 4: ' + ej14_3);
+        console.log('Redondeo a 5: ' + ej14_4);
+
+        /********************* FUNCIONES *********************/
+        // Función para redondear decimales
+        function redondearDecimales(numero, decimales) {
+            return Math.round(numero * Math.pow(10, decimales)) / Math.pow(10, decimales);
+
+        }
+        // Función para convertir grados a radianes
+        function grados2radianes(grados) {
+            return grados / 180 * Math.PI;
+        }
+    </script>
+
+</body>
+
+</html>

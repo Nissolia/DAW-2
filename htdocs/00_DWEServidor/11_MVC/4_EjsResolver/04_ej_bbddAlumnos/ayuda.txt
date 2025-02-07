@@ -1,0 +1,22 @@
+Realizar una aplicación web en php siguiendo el MVC. La aplicación muestra en su página principal un listado
+de alumnos (matricula, nombre, apellidos, curso). Debe existir un botón “Añadir Alumno” para dirigirnos a un
+formulario de alta de un nuevo alumno. También debe haber un botón “Asignaturas” que dirija hacia otra
+página con el listado de asignaturas (código autonumérico y nombre) y que ofrezca la posibilidad de añadir y
+eliminar asignaturas.
+En la página principal junto a cada alumno debe aparecer un botón detalles, que abrirá una página con las
+asignaturas en las que está matriculado. Junto a cada una de ellas debe aparecer un botón para desmatricular al
+alumno de esa asignatura. También habrá un formulario con un desplegable que incluya todas las asignaturas
+disponibles para poder matricular al alumno en una nueva asignatura.
+
+
+
+HECHO: 
+Crear una BD “escuela” que permita almacenar la información de la aplicación con las tablas alumno
+(matricula, nombre, apellidos, curso), asignatura (código autonumérico y nombre) y alumno-asignatura
+(matricula y código-asignatura).
+
+---------------------------------
+guia view
+index modificar y eliminar alumno
+al darle a aseignatiras listado ver alumnos y eliminar, nueva asignatura - se borra matriculaciones
+- puedes desmatricularlo

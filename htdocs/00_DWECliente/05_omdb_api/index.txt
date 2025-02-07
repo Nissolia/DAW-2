@@ -1,0 +1,4 @@
+http://www.omdbapi.com/?apikey=ddd5430f
+http://www.omdbapi.com/?apikey=ddd5430f&s(busquedaNonbre)
+http://www.omdbapi.com/?apikey=ddd5430f&type(movie, series,episode)
+http://www.omdbapi.com/?apikey=ddd5430f&r(json)

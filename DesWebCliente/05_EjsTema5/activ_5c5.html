@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numero decimal o entero</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Validador de Número Decimal o Entero</h1>
+    <div class="form-container">
+      <label for="numero">Introduce un número (entero o decimal):</label>
+      <input
+        type="text"
+        id="numero"
+        placeholder="Ejemplo: 123, -25, +4882, 25,99"
+      />
+      <button onclick="validarNumero()">Validar Número</button>
+      <div id="resultado" class="result"></div>
+    </div>
+
+    <script>
+      // Función para validar un número decimal o entero
+      function validaNumeroDecimal(numero) {
+        // Expresión regular para validar números con coma como separador decimal
+        const regex = /^[+-]?\d+(,\d+)?$/;
+        return regex.test(numero);
+      }
+
+      // Función que se ejecuta al hacer clic en el botón
+      function validarNumero() {
+        const numeroInput = document.getElementById("numero").value.trim();
+        const resultadoDiv = document.getElementById("resultado");
+
+        if (validaNumeroDecimal(numeroInput)) {
+          resultadoDiv.textContent = `El número "${numeroInput}" es válido.`;
+          resultadoDiv.className = "result success";
+        } else {
+          resultadoDiv.textContent = `El número "${numeroInput}" no es válido.`;
+          resultadoDiv.className = "result error";
+        }
+      }
+
+  </script>
+  </body>
+</html>
+
+</html>

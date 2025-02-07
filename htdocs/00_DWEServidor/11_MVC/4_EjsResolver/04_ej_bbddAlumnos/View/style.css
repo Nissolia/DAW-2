@@ -1,0 +1,41 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td,
+th,
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.boton {
+    display: inline-block;
+    border: none;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.modificar {
+    background-color: orange;
+}
+
+.eliminar {
+    background-color: red;
+}
+
+.detalle {
+    background-color: darkcyan;
+}
+a{
+    text-decoration: none;
+    background-color:darkslategray;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}

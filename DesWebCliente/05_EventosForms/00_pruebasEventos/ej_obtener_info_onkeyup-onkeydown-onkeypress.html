@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Pulse alguna tecla ...</p>
+    <script>
+        window.onload = function() {
+            document.onkeydown = muestraInformacion;
+            document.onkeyup = muestraInformacion;
+            document.onkeypress = muestraInformacion;
+          }
+
+        // Manejador de eventos compartido por varios eventos (onkeydown, onkeyup, onkeypress)
+        function muestraInformacion(ev) {
+            let mensaje = "Tipo de evento: " + ev.type + "<br>" +  // Con ev.type podemos rescatar qué evento se ha producido (recordemos que es un manejador de eventos compartido)
+                            "Propiedad keyCode: " + ev.keyCode + "<br>" +
+                            "Propiedad charCode: " + ev.charCode + "<br>" +
+                            "Carácter pulsado: " + String.fromCharCode(ev.charCode);
+
+            document.getElementById("info").innerHTML += "<br>--------------------------------------<br>" + mensaje
+        }
+    </script>
+    <div id="info"></div>
+</body>
+</html>

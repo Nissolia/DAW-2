@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación de Palabra</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Formulario de Validación de Palabra</h1>
+
+    <!-- Formulario de entrada -->
+    <form id="formulario">
+      <label for="palabra">Introduce una palabra:</label>
+      <input type="text" id="palabra" placeholder="Palabra a validar" required /><br /><br />
+      <button type="button" onclick="validarPalabra()">Validar Palabra</button>
+    </form>
+
+    <!-- Área para mostrar el resultado -->
+    <div id="resultado"></div>
+
+    <script>
+      // Función para validar si una palabra termina en una vocal acentuada
+      function terminaVocalAcentuada(palabra) {
+        // Expresión regular que busca si la palabra termina en una vocal acentuada
+        const regex = /[áéíóúÁÉÍÓÚ]$/;
+        return regex.test(palabra);
+      }
+
+      // Función para validar la palabra introducida
+      function validarPalabra() {
+        const palabra = document.getElementById('palabra').value;
+        const esValida = terminaVocalAcentuada(palabra);
+        const resultado = document.getElementById('resultado');
+
+        if (esValida) {
+          resultado.innerHTML = `La palabra "${palabra}" termina con una vocal acentuada.`;
+        } else {
+          resultado.innerHTML = `La palabra "${palabra}" NO termina con una vocal acentuada.`;
+        }
+      }
+      
+      </script>
+  </body>
+</html>

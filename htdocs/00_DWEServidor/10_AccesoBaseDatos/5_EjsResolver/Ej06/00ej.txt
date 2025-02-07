@@ -1,0 +1,13 @@
+Diseñar una aplicación web para consultar y actualizar tu horario de clase. Nada más cargar la página debe
+mostrar una tabla con tu horario semanal recuperado de la base de datos. Cada asignatura mostrada en la tabla
+es realmente un botón y al pulsar el botón de cada asignatura abre otra página que contiene un formulario con
+un desplegable que incluye todas las asignaturas posibles, y al elegir una y darle a grabar, actualizará el horario
+y volverá a la página principal.
+Crear una base de datos llamada escuela y una tabla llamada horario con los siguientes campos: 'dia', 'primera',
+'segunda', 'tercera', 'cuarta', 'quinta', 'sexta'. Los campos se corresponden con la información del día de la
+semana, y sus seis horas de clase, por lo que en la tabla habrá una fila por cada día de la semana. Todos los
+campos son de tipo varchar y la clave de la tabla es 'dia', ya que no se puede repetir.
+
+select * from modulos
+
+se puede poner que llame a otra tabla de la bbdd

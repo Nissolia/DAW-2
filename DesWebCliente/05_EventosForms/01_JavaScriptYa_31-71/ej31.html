@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 31</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <form>
+        Ingrese nombre de usuario:
+        <input type="text" id="usuario"><br>
+        <!-- onBlur sirve para controlar la información -->
+        Ingrese clave:
+        <input type="password" id="clave" onBlur="verificar(this)"><br>
+        <input type="button" value="Confirmar">
+    </form>
+
+    <script>
+        function verificar(control) {
+            if (control.value.length < 7 || control.value.length > 20) {
+                alert('La clave debe tener 7-20 caracteres.)');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación de DNI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Validación de DNI</h1>
+
+      <form id="dniForm">
+        <label for="dniInput">Introduce tu DNI:</label>
+        <input type="text" id="dniInput" placeholder="Ejemplo: 12345678Z" />
+        <button type="submit">Validar</button>
+        <div id="resultado" class="resultado"></div>
+      </form>
+
+      <script>
+        // Función para validar un DNI
+        function validaDNI(dni) {
+          // Expresión regular para validar la estructura del DNI
+          const regex =
+            /^(\d{8})(-?)([trwagmyfpdxbnjzsqvhlckeTRWAGMYFPDXBNJZSQVHLCKE])$/;
+          const match = dni.match(regex);
+
+          // Si no cumple con la expresión regular, el DNI no es válido
+          if (!match) return false;
+
+          // Extraer el número y la letra del DNI
+          const numero = parseInt(match[1]); // Los 8 dígitos del DNI
+          const letra = match[3].toUpperCase(); // La letra del DNI, convertida a mayúscula
+
+          // Letras válidas del DNI
+          const letrasValidas = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+          // Calcular la letra correcta en base al número
+          const letraCorrecta = letrasValidas[numero % 23];
+
+          // Validar si la letra proporcionada coincide con la calculada
+          return letra === letraCorrecta;
+        }
+
+        // Función para manejar el envío del formulario
+        document.getElementById('dniForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const dniInput = document.getElementById('dniInput').value;
+          const resultado = document.getElementById('resultado');
+          if (validaDNI(dniInput)) {
+            resultado.textContent = '¡DNI válido!';
+            resultado.style.color = 'green';
+          } else {
+            resultado.textContent = 'DNI no válido. Inténtalo de nuevo.';
+            resultado.style.color = 'red';
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

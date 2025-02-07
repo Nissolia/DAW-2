@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        header {
+          background-color: teal;
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        form {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          background-color: #f9f9f9;
+        }
+        label {
+          display: block;
+          margin: 10px 0 5px;
+        }
+        input, select, button {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .error {
+          color: red;
+          font-size: 0.9em;
+        }
+        button {
+          cursor: pointer;
+          background-color: teal;
+          color: white;
+          border: none;
+        }
+        button:hover {
+          background-color: darkcyan;
+        }
+        .servicios {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .servicio {
+          width: 30%;
+          height: 100px;
+          text-align: center;
+          line-height: 100px;
+          color: white;
+          border-radius: 5px;
+        }
+        .servicio1 { background-color: blue; }
+        .servicio2 { background-color: green; }
+        .servicio3 { background-color: orange; }
+      </style>
+</head>
+<body>
+    <form id="formulario-cita">
+        <div>
+          <label for="nombre">Nombre(*)</label>
+          <input type="text" id="nombre" name="nombre" />
+          <span id="error-nombre" class="error"></span>
+        </div>
+      
+        <div>
+          <label for="apellidos">Apellidos(*)</label>
+          <input type="text" id="apellidos" name="apellidos" />
+          <span id="error-apellidos" class="error"></span>
+        </div>
+      
+        <div>
+          <label for="dni">DNI(*)</label>
+          <input type="text" id="dni" name="dni" />
+          <span id="error-dni" class="error"></span>
+        </div>
+      
+        <div>
+          <label for="seguro-medico">Seguro Médico(*)</label>
+          <select id="seguro-medico" name="seguro-medico"></select>
+          <span id="error-seguro" class="error"></span>
+        </div>
+      
+        <div>
+          <label>Médico(*)</label>
+          <input type="radio" id="medico-familia" name="medico" value="familia" /> Médico de familia
+          <input type="radio" id="medico-especialista" name="medico" value="especialista" /> Médico especialista
+        </div>
+      
+        <div>
+          <label for="especialidad">Especialidad</label>
+          <select id="especialidad" name="especialidad" disabled>
+            <option value="">Seleccionar</option>
+            <option value="cardiologia">Cardiología</option>
+            <option value="dermatologia">Dermatología</option>
+            <option value="traumatologia">Traumatología</option>
+          </select>
+          <span id="error-especialidad" class="error"></span>
+        </div>
+      
+        <div>
+          <label for="fecha">Fecha de la cita(*)</label>
+          <input type="date" id="fecha" name="fecha" />
+          <span id="error-fecha" class="error"></span>
+        </div>
+      
+        <div>
+          <label for="hora">Hora de la cita(*)</label>
+          <input type="time" id="hora" name="hora" />
+          <span id="error-hora" class="error"></span>
+        </div>
+      
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+      </form>
+      <script src="funciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": -5.9761,
+        "lat": 37.3824
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 284.94,
+        "feels_like": 284.37,
+        "temp_min": 284.3,
+        "temp_max": 285.21,
+        "pressure": 1020,
+        "humidity": 84,
+        "sea_level": 1020,
+        "grnd_level": 1017
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.17,
+        "deg": 260
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1738184197,
+    "sys": {
+        "type": 2,
+        "id": 2002047,
+        "country": "ES",
+        "sunrise": 1738135770,
+        "sunset": 1738172664
+    },
+    "timezone": 3600,
+    "id": 2510911,
+    "name": "Seville",
+    "cod": 200
+}

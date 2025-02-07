@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios funciones</title>
+</head>
+
+<body>
+    <h1>Ejercicios funciones</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+    <!-- Botones para ejecutar los diferentes ejercicios -->
+    <input type="button" class="btn" onclick="ej1()" value="Ejercicio 1">
+    <input type="button" class="btn" onclick="ej2()" value="Ejercicio 2">
+    <input type="button" class="btn" onclick="ej3()" value="Ejercicio 3">
+    <input type="button" class="btn" onclick="ej4()" value="Ejercicio 4">
+    <input type="button" class="btn" onclick="ej5()" value="Ejercicio 5">
+    <input type="button" class="btn" onclick="ej6()" value="Ejercicio 6">
+    <br><br>
+
+    <div id="contenido"></div>
+
+    <footer>
+        <script src="funciones.js"></script>
+        <script>
+            function ej1() {
+                let resultado = comprobarEsPar(prompt('Dame un número y te muestro si es par'));
+                alert('Mira en la consola.');
+            }
+
+            function ej2() {
+                let resultado = verCalificacion(prompt('Dame tu nota y te muestro tu calificación (nota entera)'));
+                alert('Resultado: ' + resultado);
+            }
+
+            function ej3() {
+                let resultado = verCalificacionDecimal(prompt('Dame tu nota decimal y te muestro tu calificación'));
+                alert('Resultado: ' + resultado);
+            }
+
+            function ej4() {
+                let radio = prompt('Introduce el radio de la circunferencia');
+                let { area, perimetro } = parametrosCircunferencia(radio);
+                alert(`Perímetro: ${perimetro}, Área: ${area}`);
+            }
+
+            function ej5() {
+                let anio = prompt('Introduce un año para saber si es bisiesto');
+                let resultado = esBisiesto(anio);
+                alert(resultado ? 'Es bisiesto' : 'No es bisiesto');
+            }
+
+            function ej6() {
+                let cadena = prompt('Introduce un número hexadecimal para convertirlo a decimal');
+                let resultado = hexa2decimal(cadena);
+                alert(`El valor decimal es: ${resultado}`);
+            }
+        </script>
+    </footer>
+</body>
+
+</html>

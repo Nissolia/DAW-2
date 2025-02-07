@@ -1,0 +1,29 @@
+<!-- Confeccionar una página que fije el color rojo a todos los párrafos.
+ Accediendo a un conjunto de marcas HTML similares (getElementsByTagName) -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 9</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Cambiar el Color de los Párrafos</h1>
+    <p>Este es el primer párrafo.</p>
+    <p>Este es el segundo párrafo.</p>
+    <p>Este es el tercer párrafo.</p>
+    <button onclick="cambiarColorParrafos()">Cambiar a Rojo</button>
+    <script>
+      function cambiarColorParrafos() {
+        // Seleccionamos todos los elementos p
+        let parrafos = document.getElementsByTagName("p");
+
+        for (let i = 0; i < parrafos.length; i++) {
+          parrafos[i].style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

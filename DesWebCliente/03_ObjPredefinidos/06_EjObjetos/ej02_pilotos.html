@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piloto y Aeroplano</title>
+</head>
+<body>
+    <script>
+        // Clase para crear pilotos
+        class Piloto {
+            // Constructor que recibe el nombre del piloto
+            constructor(nombre) {
+                // Guarda el nombre en una propiedad interna
+                this._nombre = nombre; 
+            }
+
+            // Getter para obtener el nombre del piloto
+            get nombre() {
+                return this._nombre;
+            }
+
+            // Setter para cambiar el nombre del piloto
+            set nombre(nombre) {
+                this._nombre = nombre;
+            }
+        }
+
+        // Clase para crear un aeroplano que tiene un modelo, un piloto y un copiloto
+        class Aeroplano {
+            // Constructor que recibe el modelo del aeroplano, el piloto y el copiloto
+            constructor(modelo, piloto, copiloto) {
+                this._modelo = modelo;
+                this._piloto = piloto;
+                this._copiloto = copiloto; 
+            }
+
+            // Getter para obtener el modelo del aeroplano
+            get modelo() {
+                return this._modelo;
+            }
+
+            // Setter para cambiar el modelo del aeroplano
+            set modelo(modelo) {
+                this._modelo = modelo;
+            }
+
+            // Método para mostrar un mensaje que indica que el aeroplano está volando
+            volar() {
+                return `Volando ${this._modelo} con ${this._piloto.nombre} como piloto y ${this._copiloto.nombre} como copiloto`;
+            }
+        }
+
+        // Crea dos pilotos con nombres específicos
+        const piloto1 = new Piloto("Hans Solo");
+        const piloto2 = new Piloto("Murdock");
+
+        // Crea un aeroplano especificando el modelo, el piloto y el copiloto
+        const avioneta = new Aeroplano("Airbus C295", piloto1, piloto2);
+
+        // Muestra un mensaje en la consola indicando que el aeroplano está volando con los nombres del piloto y copiloto
+        console.log(avioneta.volar());
+    </script>
+</body>
+</html>

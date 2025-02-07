@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Códigos Postales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario de Validación de Códigos Postales</h1>
+
+    <!-- Formulario de entrada -->
+    <form id="formulario">
+        <label for="codigoPostal">Introduce un código postal:</label>
+        <input type="text" id="codigoPostal" placeholder="Código Postal" required><br><br>
+
+        <label for="frase">Introduce una frase con códigos postales:</label>
+        <textarea id="frase" placeholder="Frase con códigos postales" required></textarea><br><br>
+
+        <button type="button" onclick="validarCodigoPostal()">Validar Código Postal</button>
+        <button type="button" onclick="extraerCPs()">Extraer Códigos Postales</button>
+        <button type="button" onclick="sustituirCPs()">Sustituir Códigos Postales</button>
+    </form>
+
+    <!-- Área para mostrar los resultados -->
+    <div id="resultados"></div>
+
+    <script>
+        // Función para validar un código postal
+        function validaCP(cp) {
+            // Elimina espacios al inicio y al final del string
+            const trimmedCP = cp.trim();
+            // Expresión regular para un CP válido (5 dígitos)
+            const regex = /^\d{5}$/;
+            return regex.test(trimmedCP);
+        }
+
+        // Función para extraer todos los códigos postales de una frase
+        function extraeCPs(frase) {
+            // Expresión regular para encontrar códigos postales (5 dígitos)
+            const regex = /\b\d{5}\b/g;
+            // Ejecuta la búsqueda y devuelve un array con los CPs encontrados
+            return frase.match(regex) || [];
+        }
+
+        // Función para sustituir todos los códigos postales en una frase
+        function sustituyeCPs(frase) {
+            // Expresión regular para encontrar códigos postales (5 dígitos)
+            const regex = /\b\d{5}\b/g;
+            // Sustituye cada CP encontrado por "C.P."
+            return frase.replace(regex, "C.P.");
+        }
+
+        // Función para validar el código postal introducido
+        function validarCodigoPostal() {
+            const cp = document.getElementById('codigoPostal').value;
+            const esValido = validaCP(cp);
+            const resultado = document.getElementById('resultados');
+            if (esValido) {
+                resultado.innerHTML = `El código postal ${cp} es válido.`;
+            } else {
+                resultado.innerHTML = `El código postal ${cp} NO es válido.`;
+            }
+        }
+
+        // Función para extraer los códigos postales de la frase
+        function extraerCPs() {
+            const frase = document.getElementById('frase').value;
+            const cps = extraeCPs(frase);
+            const resultado = document.getElementById('resultados');
+            if (cps.length > 0) {
+                resultado.innerHTML = `Códigos postales encontrados: ${cps.join(", ")}`;
+            } else {
+                resultado.innerHTML = `No se han encontrado códigos postales en la frase.`;
+            }
+        }
+
+        // Función para sustituir los códigos postales en la frase
+        function sustituirCPs() {
+            const frase = document.getElementById('frase').value;
+            const nuevaFrase = sustituyeCPs(frase);
+            const resultado = document.getElementById('resultados');
+            resultado.innerHTML = `Frase con códigos postales sustituidos: ${nuevaFrase}`;
+        }
+    </script>
+</body>
+</html>

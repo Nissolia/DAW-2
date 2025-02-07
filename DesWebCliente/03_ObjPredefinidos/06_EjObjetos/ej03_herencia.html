@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia Persona y Empleado</title>
+</head>
+<body>
+    <script>
+        // Clase para crear una persona con nombre y edad
+        class Persona {
+            constructor(nombre, edad) {
+                this._nombre = nombre;
+                this._edad = edad;     
+            }
+
+            // Getter para obtener el nombre
+            get nombre() {
+                return this._nombre;
+            }
+
+            // Setter para cambiar el nombre
+            set nombre(nombre) {
+                this._nombre = nombre;
+            }
+
+            // Getter para obtener la edad
+            get edad() {
+                return this._edad;
+            }
+
+            // Setter para cambiar la edad
+            set edad(edad) {
+                this._edad = edad;
+            }
+
+            // Método para mostrar la información de la persona
+            toString() {
+                return `Nombre: ${this._nombre}, Edad: ${this._edad}`;
+            }
+        }
+
+        // Clase Empleado que extiende la clase Persona, agregando sueldo
+        class Empleado extends Persona {
+            constructor(nombre, edad, sueldo) {
+                super(nombre, edad); 
+                this._sueldo = sueldo;
+            }
+
+            // Getter para obtener el sueldo
+            get sueldo() {
+                return this._sueldo;
+            }
+
+            // Setter para cambiar el sueldo
+            set sueldo(sueldo) {
+                this._sueldo = sueldo;
+            }
+
+            // Método para mostrar toda la información del empleado, incluyendo el sueldo
+            toString() {
+                return `${super.toString()}, Sueldo: ${this._sueldo}`;
+            }
+        }
+
+        // Creación de una persona
+        const persona = new Persona("Juan", 30);
+        console.log(persona.toString()); // Muestra el nombre y edad de la persona
+
+        // Creación de un empleado
+        const empleado = new Empleado("María", 40, 3000);
+        console.log(empleado.toString()); // Muestra nombre, edad y sueldo del empleado
+
+        // Lista de empleados
+        const empleados = [
+            new Empleado("Juan", 18, 1250),
+            new Empleado("Ana", 15, 870),
+            new Empleado("Zamudio", 21, 1320),
+            new Empleado("María", 19, 1650)
+        ];
+
+        // Ordena la lista de empleados por edad, sueldo y nombre
+        let empleadosPorEdad = empleados.sort((e1, e2) => e1.edad - e2.edad); 
+        let empleadosPorSueldo = empleados.sort((e1, e2) => e1.sueldo - e2.sueldo); 
+        let empleadosPorNombre = empleados.sort((e1, e2) => e1.nombre.localeCompare(e2.nombre)); 
+
+        // Muestra el resultado de los empleados ordenados por edad
+        console.log("Ordenados por edad:");
+        empleadosPorEdad.forEach(emp => console.log(emp.toString()));
+
+        // Muestra el resultado de los empleados ordenados por sueldo
+        console.log("Ordenados por sueldo:");
+        empleadosPorSueldo.forEach(emp => console.log(emp.toString()));
+
+        // Muestra el resultado de los empleados ordenados por nombre
+        console.log("Ordenados por nombre:");
+        empleadosPorNombre.forEach(emp => console.log(emp.toString()));
+    </script>
+</body>
+</html>

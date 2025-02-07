@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotería primitiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Diseñar una web para jugar a la lotería primitiva.
+    En un formulario se pedirá introducir la combinación de 6
+    números entre 1 y 49 y el número de serie entre 1 y 999.
+    Mostrar la combinación generada y la introducida por
+    el usuario en dos filas de una tabla. -->
+    <h1>Lotería primitiva</h1>
+    <form action="ej02.php" method="post">
+        1: <input class="input" type="number" name="n1" min="1" max="49" required>
+        2: <input class="input" type="number" name="n2" min="1" max="49" required>
+        3: <input class="input" type="number" name="n3" min="1" max="49" required><br>
+        4: <input class="input" type="number" name="n4" min="1" max="49" required>
+        5: <input class="input" type="number" name="n5" min="1" max="49" required>
+        6: <input class="input" type="number" name="n6" min="1" max="49" required> <br>
+        Número de serie: <input class="input" type="number" name="serie" min="1" max="999" required>
+        <input class="boton" type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>

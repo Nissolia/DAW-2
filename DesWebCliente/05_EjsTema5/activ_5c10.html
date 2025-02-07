@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Extracción de Expresiones Matemáticas</h1>
+
+    <div class="form-container">
+        <div class="input-container">
+            <label for="texto">Introduce el texto con expresiones matemáticas:</label>
+            <textarea id="texto" rows="5" placeholder="Escribe el texto aquí..."></textarea>
+            <button onclick="extraerYMostrarExpresiones()">Extraer Expresiones</button>
+        </div>
+
+        <div id="resultado" class="result empty">
+            <p>No se han encontrado expresiones.</p>
+        </div>
+    </div>
+
+    <script>
+        function extraeExpresionesMatemáticas(texto) {
+            // Expresión regular para encontrar lo que está entre llaves
+            const regex = /{([^}]+?)}/g;
+
+            // Array para almacenar las expresiones encontradas
+            let expresiones = [];
+
+            // Buscar todas las coincidencias en el texto
+            let match;
+            while ((match = regex.exec(texto)) !== null) {
+                // Agregar la expresión matemática al array
+                expresiones.push(match[0]);
+            }
+
+            return expresiones;
+        }
+
+        function extraerYMostrarExpresiones() {
+            const texto = document.getElementById("texto").value;
+            const resultadoDiv = document.getElementById("resultado");
+
+            const expresiones = extraeExpresionesMatemáticas(texto);
+
+            // Mostrar las expresiones encontradas o un mensaje de vacío
+            if (expresiones.length > 0) {
+                resultadoDiv.innerHTML = "<ul>" + expresiones.map(exp => `<li>${exp}</li>`).join('') + "</ul>";
+                resultadoDiv.className = "result";
+            } else {
+                resultadoDiv.innerHTML = "<p>No se han encontrado expresiones.</p>";
+                resultadoDiv.className = "result empty";
+            }
+        }
+    </script>
+</body>
+</html>

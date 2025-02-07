@@ -1,0 +1,11 @@
+api de eeuu da info de presidiarios
+
+
+psoible ejercicio tocho: 
+https://developers.artsy.net/v2/docs/http
+o alguna de aqui
+https://apileague.com/articles/best-art-api/
+
+
+Hol1Wowo987_
+https://openweathermap.org/api/one-call-3

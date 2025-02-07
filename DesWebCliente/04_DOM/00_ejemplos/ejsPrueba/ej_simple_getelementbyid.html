@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myP">Soy un párrafo</p>
+    <p>Haz clic en el botón para rescatar el contenido de un elemento p</p>
+    <button onclick="myFunction()">Ejecutar</button>
+    <!--Aquí volcaremos el contenido rescatado del elemento con id "myP"-->
+    <p id="demo">-</p>
+    <script>
+        function myFunction() {
+            let x = document.getElementById("myP").innerHTML; // Rescatamos el contenido del elemento con id "myP"
+            document.getElementById("demo").innerHTML = x; // Escribimos en el interior del elemento con id "demo"
+        }
+    </script>
+</body>
+
+</html>

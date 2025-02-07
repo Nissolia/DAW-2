@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo de AJAX</title>
+</head>
+<body>
+    <h1>Actualización del reloj con Ajax</h1>
+    <h2>(Pulsa F12 para ver la salida de la consola)</h2>
+    <div id="contenido"></div>
+    <input type="button" onclick="enviarPeticionAJAX();" value="Actualizar">
+    <script>
+        var xhr;
+        function enviarPeticionAJAX(){
+            xhr=new XMLHttpRequest();
+            xhr.addEventListener('readystatechange',gestionarRespuesta); // gestionarRespuesta es un callback
+            xhr.open('GET','hora.php',true); // El tercer parámetro con valor true indica que la petición sea asíncrona
+            xhr.send(); // El método send() realiza la petición al servidor
+            console.log("Petición AJAX realizada");
+        }
+        function gestionarRespuesta(evt){
+            console.log(`readyState:${evt.target.readyState}`);
+            // Cuando readyState tiene valor 4 han llegado los datos completamente del servidor
+            // Al comprobar el status 200 nos aseguramos que los datos han llegado sin errores
+            if(evt.target.readyState == 4 && evt.target.status == 200){
+                document.getElementById('contenido').innerHTML = evt.target.responseText;
+            }
+        }
+    </script>
+</body>
+</html>

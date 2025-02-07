@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H3>Pruebas</H3>
+    <script src="clase_factura.js">
+
+class Factura {
+    // Escribe aquí tu código
+    constructor(codigo, fecha, ...cliente) {
+        this._codigo = codigo;
+        this._fecha = fecha;
+        this._nombre = cliente.nombre;
+        this._dni = cliente.dni;
+        this._articulo = [];
+    }
+    // Get para conseguir la letra del cliente
+    get letraDNICliente() {
+        let dni = this._dni;
+        return dni.charAt(dni.length - 1);
+    }
+    // get para conseguir el nombre del cliente
+    get nombreCliente() {
+        let nombreCliente = this._nombre;
+        return nombreCliente;
+    }
+    // creamos añadir articulo
+    añadirArticulo(items) {
+        for (let i = 0; i < items.length; i++) {
+            items.forEach(elto => {
+                this._articulo.push(elto[i]);
+            });
+        }
+
+    }
+    // totalFactura
+    totalFactura(){
+        let cantidad = 0;
+        let precio = 0;
+        let total = 0;
+        for (let i = 0; i < this._articulo.length; i++) {
+
+              cantidad =  this._articulo[i].cantidad;
+              precio =  this._articulo[i].precio;
+            
+              total += cantidad * precio;
+              cantidad = 0;
+              precio = 0;
+        }
+        return total;
+    }
+
+}
+
+let factura1;
+let cliente1 = { nombre: "Javier Soldado", dni: "72772334J" };
+let articulos1 = [
+    { codigo: "A732", descripcion: "Grifo fregadero", cantidad: 2, precio: 29.19 },
+    { codigo: "A735", descripcion: "Grifo eléctrico baño", cantidad: 3, precio: 32.92 },
+    { codigo: "A730", descripcion: "Termo eléctrico 80 litros", cantidad: 1, precio: 152.22 },
+    { codigo: "A735", descripcion: "Termo eléctrico 40 litros", cantidad: 2, precio: 88.12 },
+];
+let totalFactura1 = 0;
+articulos1.forEach(
+    (item) => { totalFactura1 += item.cantidad * item.precio; }
+);
+
+    factura1 = new Factura("B1233", "17/4/2024", cliente1);
+    // Añadimos los artículos
+    articulos1.forEach(
+        (item) => { factura1.añadirArticulo(item); }
+    );
+    console.log("HOLA")
+    console.log(cliente1.nombre);
+console.log(factura1.nombreCliente+" "+cliente1.nombre);
+console.log(factura1.letraDNICliente +"  "+cliente1.dni.at(-1));
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  class Persona {
+    constructor(nombre, edad) {
+      this.nombre = nombre;
+      this.edad = edad;
+    }
+
+    imprimir() {
+      document.write(`Nombre: ${this.nombre}<br>`);
+      document.write(`Edad: ${this.edad}<br>`);
+    }    
+  }
+
+  class Empleado extends Persona {
+    constructor(nombre, edad, sueldo) {
+      super(nombre, edad);
+      this.sueldo = sueldo;
+    }
+
+    imprimir() {
+      super.imprimir();
+      document.write(`Sueldo: ${this.sueldo}<br>`);      
+    }
+
+    pagaImpuestos() {
+      if (this.sueldo>5000)
+        document.write(`${this.nombre} debe pagar impuestos<br>`);
+      else
+        document.write(`${this.nombre} no debe pagar impuestos<br>`);      
+    }
+  }
+
+
+  const persona1=new Persona('Juan', 44);
+  persona1.imprimir();
+  document.write('<hr>');
+
+  const empleado1=new Empleado('Juan', 44, 7000);
+  empleado1.imprimir();
+  empleado1.pagaImpuestos();
+
+</script>
+
+</body>
+</html>

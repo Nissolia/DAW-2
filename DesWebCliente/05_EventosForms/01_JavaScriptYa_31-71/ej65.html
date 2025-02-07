@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 65</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 id="titulo">Título</h1>
+
+    <script>
+      document.getElementById("titulo").addEventListener("mouseover", entrada);
+      document.getElementById("titulo").addEventListener("mouseout", salida);
+
+      function entrada() {
+        document.getElementById("titulo").style.color = "#ff0000";
+        document.getElementById("titulo").style.backgroundColor = "#ffff00";
+      }
+
+      function salida() {
+        document.getElementById("titulo").style.color = "#000000";
+        document.getElementById("titulo").style.backgroundColor = "#ffffff";
+      }
+    </script>
+  </body>
+</html>

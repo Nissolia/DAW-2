@@ -1,0 +1,30 @@
+tener en cuenta:
+si no hay stock poner sin stock pero sin boton comprar
+
+baja, añadir unidades, codigo, prodcuto, precio, imagen, stock disponible, comprar/sin stock
+
+añadir nuevo prodcuto
+*********************
+genera factura al generar compra, la factura con iba incluido
+
+tema sesion cesta - se hace modo sesion y tmb en la cookie
+
+en la cesta lo imporntante sera el id y la cantidad que la persona añade
+
+
+
+
+--- stock tiene lo de bbdd y lo que tienes en la cesta, no se toca en la bbdd
+
+
+
+*************************
+en producto
+
+
+añade y vender meter los nuevos
+
+añadir(cat) - se le suma
+
+
+stock - controlar que no se metan mas stock en la cesta

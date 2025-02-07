@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de uso de objeto window</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 20px auto;
+            /* Espacio externo */
+        }
+
+        #contenido {
+            border: 1px solid lightgray;
+            /* Borde gris claro */
+            background-color: lightyellow;
+            /* Fondo amarillo claro */
+            border-radius: 10px;
+            /* Bordes redondeados */
+            height: 500px;
+            /* Altura mínima de 50 píxeles */
+            width: 800px;
+            padding: 10px;
+            /* Espacio interno */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Objeto window</h1>
+
+    <button onclick="refrescar()">Refrescar</button>
+    <button onclick="openWin()">Crear una ventana</button>
+    <button onclick="resizeWin()">Redimensionar ventana</button>
+    <button onclick="moveWin()">Move window</button>
+
+    <h2>Propiedades:</h2>
+
+    <div id="contenido"></div>
+
+    <script>
+        function refrescar() {
+            let text =
+                "<p>innerWidth: " + window.innerWidth + "</p>" +
+                "<p>innerHeight: " + window.innerHeight + "</p>" +
+                "<p>outerHeight: " + window.outerHeight + "</p>" +
+                "<p>outerWidth: " + window.outerWidth + "</p>" +
+                "<p>scrollX: " + window.scrollX + "</p>" +
+                "<p>scrollY: " + window.scrollY + "</p>";
+
+            document.getElementById("contenido").innerHTML = text;
+        }
+
+
+        let myWindow;
+
+        function openWin() {
+            myWindow = window.open("", "", "width=200, height=100");
+        }
+
+        function resizeWin() {
+            if (!myWindow) {
+                alert("Debes crear previamente una ventana");
+                return;
+            }
+            myWindow.resizeTo(300, 300);
+        }
+
+        function moveWin() {
+            if (!myWindow) {
+                alert("Debes crear previamente una ventana");
+                return;
+            }
+            myWindow.moveBy(50, 20);
+        }
+
+    </script>
+</body>
+
+</html>

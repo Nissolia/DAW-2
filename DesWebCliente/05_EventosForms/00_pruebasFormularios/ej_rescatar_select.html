@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <select id="opciones" name="opciones">
+            <option value="valor1">Primer valor</option>
+            <option value="valor2">Segundo valor</option>
+            <option value="valor3">Tercer valor</option>
+            <option value="valor4">Cuarto valor</option>
+        </select>
+    </form>
+    <script>
+        function iniciar() {
+            document.getElementById("opciones").addEventListener('change', rescatarContenido);
+        }
+
+        function rescatarContenido() {
+            let inputselect = document.getElementById("opciones");
+            // Si solo queremos rescatar el value podemos usar el siguiente código
+            alert(`La opción seleccionada es "${inputselect.value}"`);
+            // Con la colección options del objeto select podemos obtener más información
+            let lista = inputselect.options;
+            let indiceSeleccionado = inputselect.selectedIndex;
+            let valueDelSelect = lista[indiceSeleccionado].value;
+            let textoDelSelect = lista[indiceSeleccionado].text;
+            alert(`Indice seleccionado: ${indiceSeleccionado} \n value: "${valueDelSelect}"" \n texto: "${textoDelSelect}"`);
+        }
+
+        addEventListener('load', iniciar);
+    </script>
+</body>
+
+</html>

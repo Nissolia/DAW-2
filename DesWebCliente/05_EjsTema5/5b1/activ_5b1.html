@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta Paciente</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>Alta Paciente</h1>
+    <form action="procesa.php" method="post" id="formPaciente">
+        <div class="field">
+            <label for="nombre">Nombre(*):</label>
+            <input type="text" id="nombre" name="nombre" maxlength="30" required>
+        </div>
+
+        <div class="field">
+            <label>Sexo(*):</label>
+            <input type="radio" id="hombre" name="sexo" value="Hombre" required>
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="sexo" value="Mujer" required>
+            <label for="mujer">Mujer</label>
+        </div>
+
+        <div class="field">
+            <label for="altura">Altura (50-210cm)(*):</label>
+            <input type="number" id="altura" name="altura" min="50" max="210" required>
+        </div>
+
+        <div class="field">
+            <label for="fecha_nacimiento">Fecha de nacimiento(*):</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        </div>
+
+        <div class="field">
+            <label for="semana">Semana preferente para la cita:</label>
+            <input type="date" id="semana" name="semana">
+        </div>
+
+        <div class="field">
+            <label>
+                <input type="checkbox" id="fumador" name="fumador">
+                Fumador
+            </label>
+            <label for="cigarrillos">Nº Cigarrillos:</label>
+            <select name="cigarrillos" id="cigarrillos" disabled required>
+                <option value="">Seleccionar</option>
+                <option value="1-5">1-5</option>
+                <option value="6-10">6-10</option>
+                <option value="10+">Más de 10</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones"></textarea>
+        </div>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+
+    <script>
+        // Habilitar/Deshabilitar lista de cigarrillos según fumador
+        const fumadorCheckbox = document.getElementById('fumador');
+        const cigarrillosSelect = document.getElementById('cigarrillos');
+
+        fumadorCheckbox.addEventListener('change', () => {
+            if (fumadorCheckbox.checked) {
+                cigarrillosSelect.disabled = false;
+                cigarrillosSelect.required = true;
+            } else {
+                cigarrillosSelect.disabled = true;
+                cigarrillosSelect.required = false;
+                cigarrillosSelect.value = '';
+            }
+        });
+
+        // Validación de mayor de edad
+        const form = document.getElementById('formPaciente');
+        form.addEventListener('submit', (event) => {
+            const fechaNacimiento = new Date(document.getElementById('fecha_nacimiento').value);
+            const hoy = new Date();
+            const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+            const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+                edad--;
+            }
+            if (edad < 18) {
+                event.preventDefault();
+                alert('El paciente debe ser mayor de edad.');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+        // Clase que representa una jarra con capacidad máxima y cantidad actual de agua
+        class Jarra {
+            constructor(capacidad, cantidad) {
+                this._capacidad = capacidad; 
+                this._cantidad = cantidad;  
+            }
+
+            // Obtener la capacidad máxima de la jarra
+            get capacidad() {
+                return this._capacidad;
+            }
+
+            // Cambiar la capacidad máxima de la jarra
+            set capacidad(capacidad) {
+                this._capacidad = capacidad;
+            }
+
+            // Obtener la cantidad actual de agua en la jarra
+            get cantidad() {
+                return this._cantidad;
+            }
+
+            // Cambiar la cantidad actual de agua en la jarra (se asegura que no sea negativa y que no supere la capacidad)
+            set cantidad(cantidad) {
+                if (cantidad < 0) throw new Error("La cantidad debe ser un número positivo");
+                this._cantidad = Math.min(cantidad, this._capacidad); 
+            }
+
+            // Método para llenar la jarra hasta su capacidad máxima
+            llenar() {
+                this._cantidad = this._capacidad;
+            }
+
+            // Método para vaciar completamente la jarra
+            vaciar() {
+                this._cantidad = 0;
+            }
+
+            // Método para transferir agua desde otra jarra hasta llenar esta jarra o agotar el agua de la otra
+            llenarDesde(otraJarra) {
+                // Calcula el espacio disponible en esta jarra
+                const espacioDisponible = this._capacidad - this._cantidad; 
+                 // Calcula la cantidad que se puede transferir
+                const cantidadTransferible = Math.min(espacioDisponible, otraJarra.cantidad);
+                // Añade el agua transferida
+                this._cantidad += cantidadTransferible; 
+                 // Resta la cantidad transferida de la otra jarra
+                otraJarra.cantidad -= cantidadTransferible;
+            }
+
+            // Método estático para comparar dos jarras y devolver la que tiene más agua
+            static comparar(jarra1, jarra2) {
+                return jarra1.cantidad > jarra2.cantidad ? jarra1 : jarra2;
+            }
+
+            // Método que devuelve un listado de jarras que tienen más agua que esta jarra
+            jarrasConMasCantidad(...jarras) {
+                return jarras.filter(jarra => jarra.cantidad > this._cantidad);
+            }
+
+            // Método para mostrar la capacidad y cantidad actual de agua en la jarra
+            toString() {
+                return `Capacidad: ${this._capacidad}, Cantidad: ${this._cantidad}`;
+            }
+        }
+
+        // Crear dos jarras con diferentes capacidades y cantidades de agua
+        let jarra1 = new Jarra(10, 4);
+        let jarra2 = new Jarra(15, 8);
+
+        // Comparar cuál de las dos jarras tiene más agua
+        let jarraConMasCantidad = Jarra.comparar(jarra1, jarra2);
+        console.log(`Jarra con más cantidad: ${jarraConMasCantidad.toString()}`);
+
+        // Transferir agua de jarra2 a jarra1 hasta llenar jarra1 o agotar jarra2
+        jarra1.llenarDesde(jarra2);
+        console.log(`Cantidad jarra1: ${jarra1.cantidad}`);
+        console.log(`Cantidad jarra2: ${jarra2.cantidad}`);
+
+        // Llenar completamente jarra2
+        jarra2.llenar();
+        console.log(`Cantidad jarra2: ${jarra2.cantidad}`);
+
+        // Vaciar completamente jarra2
+        jarra2.vaciar();
+        console.log(`Cantidad jarra2: ${jarra2.cantidad}`);
+
+        // Intentar llenar jarra2 con más cantidad de la que permite su capacidad
+        jarra2.cantidad = 30; // Solo se llenará hasta la capacidad máxima
+        console.log(`Cantidad jarra2: ${jarra2.cantidad}`);
+
+        // Intentar establecer una cantidad negativa para verificar el control de errores
+        try {
+            jarra2.cantidad = -10; // Esto producirá un error
+        } catch (error) {
+            console.log(`Se produjo el error: "${error.message}"`);
+        }

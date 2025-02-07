@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobar paridad</title>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+h2{
+    color: blue;
+}
+        .btn {
+            border: none;
+            padding: 1em;
+            background-color: blue;
+            color: white;
+            margin: 0.2em;
+            border-radius: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicios funciones</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+    <!-- Botones para ejecutar los diferentes ejercicios -->
+    <input type="button" class="btn" onclick="test1()" value="Test 1">
+    <input type="button" class="btn" onclick="test1_2()" value="Test 1_2"> <br>
+    <input type="button" class="btn" onclick="test2()" value="Test 2">
+    <input type="button" class="btn" onclick="test3()" value="Test 3">
+    <input type="button" class="btn" onclick="ej4()" value="Test 4">
+    <input type="button" class="btn" onclick="ej5()" value="Test 5">
+    <input type="button" class="btn" onclick="ej6()" value="Test 6">
+    <br><br>
+
+    <div id="contenido"></div>
+
+    <footer>
+        <script src="funciones.js"></script>
+        <script>
+            //////////////////////////////////////////////// ej test 1
+            function test1() {
+                let valoresEntrada = [1, 2, 5, 8, 9, 12, 16];
+                let valoresEsperados = [false, true, false, true, false, true, true];
+
+                for (let i = 0; i < valoresEntrada.length; i++) {
+                    console.log("El número " + valoresEntrada[i] + " : es " + comprobarEsPar(valoresEntrada[i]) +
+                        ", debe de dar: " + valoresEsperados[i]);
+                }
+
+
+            }
+            //////////////////////////////////////////////// ej test 1_2
+            // lo ideal es poner esta forma, crear objetos para comprobar el estado de los objetos
+            function test1_2() {
+                let datos = [{
+                    entrada: 0,
+                    salidaEsperada: true
+                }, {
+                    entrada: 3,
+                    salidaEsperada: false
+                }, {
+                    entrada: 4,
+                    salidaEsperada: true
+                }, {
+                    entrada: 7,
+                    salidaEsperada: false
+                }, ];
+                for (let i = 0; i < datos.length; i++) {
+                    // asi llamamos a una variable dentro d eun objeto
+                    let salida = comprobarEsPar(datos[i].entrada);
+                    //esto lo miramos para que sea correcto
+                    if (salida == datos[i].salidaEsperada) console.log("Correcto");
+                    else console.log("Para la entrada " + datos[i].entrada + ", el valor esperado era: " + datos[i]
+                        .salidaEsperada);
+                }
+            }
+            //////////////////////////////////////////////// ej test 2
+            function test2() {
+                for (let i = -2; i < 12; i++) {
+                    let calificacion = verCalificacion(i);
+                    console.log("Para la nota " + i + " => " + calificacion);
+                }
+            }
+            //test 2.2
+            function test2_2() {
+                datos = [{
+                    entrada: -1,
+                    salidaEsperada: "Valor incorrecto",
+                }, {
+                    entrada: 0,
+                    salidaEsperada: "insuficiente",
+                }, {
+                    entrada: 4,
+                    salidaEsperada: "insuficiente",
+                }, {
+                    entrada: 6,
+                    salidaEsperada: "bien",
+                }, {
+                    entrada: 10,
+                    salidaEsperada: "sobresaliente",
+                }, ];
+                for (let i = 0; i < datos.length; i++) {
+                    // asi llamamos a una variable dentro d eun objeto
+                    let salida = verCalificacion(datos[i].entrada);
+                    //esto lo miramos para que sea correcto
+                    if (salida == datos[i].salidaEsperada) console.log("Correcto");
+                    else console.log("Para la entrada " + datos[i].entrada + ", el valor esperado era: " + datos[i]
+                        .salidaEsperada);
+                }
+                
+            }
+            //////////////////////////////////////////////// ej test 2
+            function test3() {
+                datos = [{
+                    entrada: -1.4,
+                    salidaEsperada: "Valor incorrecto",
+                }, {
+                    entrada: 4.9,
+                    salidaEsperada: "insuficiente",
+                }, {
+                    entrada: 5.0,
+                    salidaEsperada: "suficiente",
+                }, {
+                    entrada: 6.9,
+                    salidaEsperada: "bien",
+                }, {
+                    entrada: 10.9,
+                    salidaEsperada: "Valor incorrecto",
+                }, ];
+                for (let i = 0; i < datos.length; i++) {
+                    // asi llamamos a una variable dentro d eun objeto
+                    let salida = verCalificacionDecimal(datos[i].entrada);
+                    //esto lo miramos para que sea correcto
+                    if (salida == datos[i].salidaEsperada) console.log("Correcto");
+                    else console.log("Para la entrada " + datos[i].entrada + ", el valor esperado era: " + datos[i]
+                        .salidaEsperada);
+                }
+
+            }
+            //////////////////////////////////////////////// ej test 2
+            function ej4() {
+                let radio = prompt('Introduce el radio de la circunferencia');
+                let {
+                    area,
+                    perimetro
+                } = parametrosCircunferencia(radio);
+                alert(`Perímetro: ${perimetro}, Área: ${area}`);
+            }
+            //////////////////////////////////////////////// ej test 2
+            function ej5() {
+                let anio = prompt('Introduce un año para saber si es bisiesto');
+                let resultado = esBisiesto(anio);
+                alert(resultado ? 'Es bisiesto' : 'No es bisiesto');
+            }
+            //////////////////////////////////////////////// ej test 2
+            function ej6() {
+                let cadena = prompt('Introduce un número hexadecimal para convertirlo a decimal');
+                let resultado = hexa2decimal(cadena);
+                alert(`El valor decimal es: ${resultado}`);
+            }
+        </script>
+    </footer>
+</body>
+
+</html>

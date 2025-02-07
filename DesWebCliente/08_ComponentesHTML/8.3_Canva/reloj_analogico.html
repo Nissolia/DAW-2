@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Reloj analógico</h1>
+    <canvas
+      id="canvas"
+      style="border: 1px solid"
+      width="200px"
+      height="200"
+    ></canvas>
+    <script>
+      class AgujaSecundero {
+        constructor(radio) {
+          this._sg = 0;
+          this._radio = radio;
+        }
+
+        get sg() {
+          return this._sg;
+        }
+
+        set sg(valor) {
+          if (valor >= 0 && valor <= 59) this._sg = valor;
+          else throw new Error("El valor debe estar en el rango 0-59");
+        }
+
+        get radio() {
+          return this._radios;
+        }
+
+        set radio(valor) {
+          this._radio = valor;
+        }
+
+        // Devuelve el ángulo de la aguja en grados
+        get angulo() {
+          // Convertimos los sg al ángulo equivalente.
+          // Como la circunferencia tiene 360º y hay 60sg, cada sg estará espaciado 360/60=6º
+          // Cuando los sg son 0, la aguja estará arriba del todo, lo que equivale a 90º
+          // Observación: un ángulo negativo de por ejemplo -10º equivale a 350º
+          return 90 - (this._sg * 360) / 60;
+        }
+          // Devuelve el ángulo de la aguja en grados
+          get anguloHoras() {
+          // Convertimos los sg al ángulo equivalente.
+          // Como la circunferencia tiene 360º y hay 60sg, cada sg estará espaciado 360/60=6º
+          // Cuando los sg son 0, la aguja estará arriba del todo, lo que equivale a 90º
+          // Observación: un ángulo negativo de por ejemplo -10º equivale a 350º
+          return 90 - (this._sg * 360) / 12;
+        }
+
+        get coordenadasCartesianas() {
+          // Realizamos una conversión de coordenadas polares (radio, angulo) a coordenadas cartesianas (x,y)
+          return {
+            x: this._radio * Math.cos(grad2rad(this.angulo)),
+            y: this._radio * Math.sin(grad2rad(this.angulo)),
+          };
+        }
+      }
+
+      let secundero = new AgujaSecundero(80);
+      let minutos = new AgujaSecundero(70);
+      let horas = new AgujaSecundero(50);
+      let hora;
+      addEventListener("load", iniciar);
+
+      function iniciar() {
+        setInterval(dibujar, 1000);
+      }
+
+      function grad2rad(grados) {
+        return (grados / 180) * Math.PI;
+      }
+
+      function dibujar() {
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        hora = new Date();
+        secundero.sg = hora.getSeconds();
+        minutos.sg = hora.getMinutes();
+        horas.sg = hora.getHours();
+
+        // Reseteamos las transformaciones previas (translate, scale, rotate, etc.)
+        ctx.resetTransform();
+
+        // Limpiamos el canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Trasladamos el origen de coordenadas al centro horizontal y vertical del canvas
+        ctx.translate(100, 100);
+        // Invertimos el sentido del eje vertical para que la referencias sean similares a las usadas en matemáticas:
+        // X crece hacia la derecha. Y crece hacia arriba
+        ctx.scale(1, -1);
+
+        //ctx.rotate(angulo * Math.PI / 180)
+
+        // Dibujamos la aguja de los segundos
+        ctx.beginPath();
+        ctx.strokeStyle = "blue";
+        // Dibujamos una línea desde el origen de coordenadas (0,0) a la conversión a cartesinas de la aguja de los segundos
+        ctx.moveTo(0, 0);
+        ctx.lineTo(
+          secundero.coordenadasCartesianas.x,
+          secundero.coordenadasCartesianas.y
+        );
+        ctx.stroke();
+
+        // Dibujamos los sg en formato digital en las coordenadas (0,90)
+        ctx.save(); // Almacenamos el estado actual del origen de coordenadas
+        ctx.translate(30, 90); // Trasladamos el origen de coordendas a la posición donde queremos dibujar el texto (90 píxeles hacia arriba)
+        ctx.scale(1, -1); // Tenemos que volver a invertir el origen de coordenadas para que el texto no salga invertido
+        ctx.font = "15px serif";
+        ctx.textAlign = "center";
+        ctx.fillText(hora.getSeconds().toString(), 0, 0); // Dibujamos el texto en la posición 0,0 tras la operación translate
+        ctx.restore(); // Restauramos la operaciones previas para que el origen de coordenadas vuelva a estar en el centro del cavnvas
+
+        // minutos
+        // Trasladamos el origen de coordenadas al centro horizontal y vertical del canvas
+
+        // Invertimos el sentido del eje vertical para que la referencias sean similares a las usadas en matemáticas:
+        // X crece hacia la derecha. Y crece hacia arriba
+        ctx.scale(1, -1);
+
+        //ctx.rotate(angulo * Math.PI / 180)
+
+        // Dibujamos la aguja de los minutos
+        ctx.beginPath();
+        ctx.strokeStyle = "red";
+        // Dibujamos una línea desde el origen de coordenadas (0,0) a la conversión a cartesinas de la aguja de los segundos
+        ctx.moveTo(0, 0);
+        ctx.lineTo(
+          minutos.coordenadasCartesianas.x,
+          minutos.coordenadasCartesianas.y
+        );
+        ctx.stroke();
+
+        // Dibujamos los sg en formato digital en las coordenadas (0,90)
+        ctx.save(); // Almacenamos el estado actual del origen de coordenadas
+        ctx.translate(0, -90); // Trasladamos el origen de coordendas a la posición donde queremos dibujar el texto (90 píxeles hacia arriba)
+        // ctx.scale(1, -1); // Tenemos que volver a invertir el origen de coordenadas para que el texto no salga invertido
+        ctx.font = "15px serif";
+        ctx.textAlign = "center";
+        ctx.fillText(hora.getMinutes().toString(), 0, 0); // Dibujamos el texto en la posición 0,0 tras la operación translate
+        ctx.restore(); // Restauramos la operaciones previas para que el origen de coordenadas vuelva a estar en el centro del cavnvas
+     // horas
+        // Trasladamos el origen de coordenadas al centro horizontal y vertical del canvas
+
+        // Invertimos el sentido del eje vertical para que la referencias sean similares a las usadas en matemáticas:
+        // X crece hacia la derecha. Y crece hacia arriba
+        ctx.scale(1, -1);
+
+        //ctx.rotate(angulo * Math.PI / 180)
+
+        // Dibujamos la aguja de los minutos
+        ctx.beginPath();
+        ctx.strokeStyle = "green";
+        // Dibujamos una línea desde el origen de coordenadas (0,0) a la conversión a cartesinas de la aguja de los segundos
+        ctx.moveTo(0, 0);
+        ctx.lineTo(
+          horas.coordenadasCartesianas.x,
+          horas.coordenadasCartesianas.y
+        );
+        ctx.stroke();
+
+        // Dibujamos los sg en formato digital en las coordenadas (0,90)
+        ctx.save(); // Almacenamos el estado actual del origen de coordenadas
+        ctx.translate(-30, 90); // Trasladamos el origen de coordendas a la posición donde queremos dibujar el texto (90 píxeles hacia arriba)
+        ctx.scale(1, -1); // Tenemos que volver a invertir el origen de coordenadas para que el texto no salga invertido
+        ctx.font = "15px serif";
+        ctx.textAlign = "center";
+        ctx.fillText(hora.getHours().toString(), 0, 0); // Dibujamos el texto en la posición 0,0 tras la operación translate
+        ctx.restore(); // Restauramos la operaciones previas para que el origen de coordenadas vuelva a estar en el centro del cavnvas
+    
+    }
+
+      //ctx.fillStyle = 'red';
+      //ctx.fillRect(0, 0, 50, 50);
+      console.log(
+        `canvas.width:${canvas.width} canvas.height:${canvas.height}`
+      );
+
+      // Reset current transformation matrix to the identity matrix
+    </script>
+  </body>
+</html>

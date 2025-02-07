@@ -1,0 +1,59 @@
+<!-- 
+Se tiene una tabla sin borde. Confeccionar una función que inicialice la propiedad border de la tabla con el valor 5.
+El archivo html es el siguiente:
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+    <table id="tabla1">
+        <tr>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>22</td>
+        </tr>
+    </table>
+    <input type="button" value="definir la propiedad border de la tabla" onClick="definirAtributo()">
+    <script src="funciones.js"></script>
+</body>
+
+</html>
+Crear un atributo y agregárselo a un nodo de tipo elemento (setAttribute)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- Tabla sin borde -->
+   <table id="tabla1">
+    <tr>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>22</td>
+    </tr>
+</table>
+
+<!-- Botón para definir la propiedad border -->
+<input type="button" value="Definir la propiedad border de la tabla" onClick="definirAtributo()">
+
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="ej16.js"></script>
+</body>
+</html>

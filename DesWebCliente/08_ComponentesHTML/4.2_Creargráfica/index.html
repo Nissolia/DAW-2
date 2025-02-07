@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ventas de Series de Brandon Sanderson</title>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      // información necesaria para usar los gráficos de google
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawVisualization);
+      // leyenda que usaremos
+      const leyenda = "Ventas de Series de Brandon Sanderson";
+      // datos que usaremos
+      const datos = [
+        {
+          año: 2024,
+          libros: [
+            { serie: "El Archivo de las Tormentas", ventas: 150000 },
+            { serie: "Nacidos de la Bruma", ventas: 120000 },
+            { serie: "Elantris", ventas: 70000 },
+            { serie: "El Aliento de los Dioses", ventas: 65000 },
+          ],
+        },
+        {
+          año: 2023,
+          libros: [
+            { serie: "El Archivo de las Tormentas", ventas: 100000 },
+            { serie: "Nacidos de la Bruma", ventas: 110000 },
+            { serie: "Elantris", ventas: 80000 },
+            { serie: "El Aliento de los Dioses", ventas: 60000 },
+          ],
+        },
+      ];
+      // funcion para dibujar el gráfico
+      function drawVisualization() {
+        // Procesar dos tados de manera dinamica
+        const encabezados = ["Año"];
+        // recorremos el apartado de libros para tomar los nombres que se verán en las tablas
+        for (let i = 0; i < datos[0].libros.length; i++) {
+          encabezados.push(datos[0].libros[i].serie);
+        }
+        // usamos tambien promedio como media de ventas
+        encabezados.push("Promedio");
+
+        const filas = [];
+        for (let i = 0; i < datos.length; i++) {
+          // datos que se van a tomar para las ventas
+          const dato = datos[i];
+          const fila = [dato.año.toString()];
+          let suma = 0;
+          let contador = 0;
+          for (let j = 0; j < dato.libros.length; j++) {
+            const ventas = dato.libros[j].ventas;
+            fila.push(ventas);
+
+            suma += ventas;
+            contador++;
+          }
+          //   el promedio lo guardamos para mostrarlo después
+          const promedio = suma / contador;
+          fila.push(promedio);
+          filas.push(fila);
+        }
+
+        // convertir datos para Google Charts
+        const data = google.visualization.arrayToDataTable([
+          encabezados,
+          ...filas,
+        ]);
+        // informacion que habrá en la zona exterior del gráfico
+        const options = {
+          title: leyenda,
+          vAxis: { title: "Ventas" },
+          hAxis: { title: "Año" },
+          seriesType: "bars",
+          series: { [encabezados.length - 2]: { type: "line" } }, // Última columna como línea
+        };
+        // informacion para actualizarlo y poder divisar donde ponerlo
+        const chart = new google.visualization.ComboChart(
+          document.getElementById("chart_div")
+        );
+        // "dibujando" la tabla de los gráficos
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px"></div>
+  </body>
+</html>

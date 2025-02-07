@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table,
+th,
+tr,
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+th,
+tr,
+td {
+    padding: 10px;
+}
+
+.eliminar {
+  
+    background-color: red;
+}
+
+.modificar {
+
+    background-color: orange;
+}
+.nuevoCliente{
+background-color: green;
+}.modificar,
+.eliminar, .nuevoCliente {
+    color: white;
+    
+}
+input {
+    box-shadow: 1px 1px 5px grey;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 5px;
+}
+a{
+    text-decoration: none;
+    color: green;
+}

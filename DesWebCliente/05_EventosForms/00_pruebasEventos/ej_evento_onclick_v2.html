@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo de evento onclik sobre un botón</h1>
+    <p>(El evento se ha añadido desde JavaScript con addEventListener)</p>
+    <br>
+    <input type="button" id="btnDecirHola" value="Púlsame"><!--es mejor esta forma, ya que es dinámica-->
+    <input type="button" onclick="decirHola()" id="btnDecirHola" value="PúlsameV2">
+    <script>
+        // La siguiente función se ejecutará cuando se cargue completamente la página web
+        // Desde aquí agregaremos el evento onclick mediante el método addEventListener
+        function iniciar(){
+            const boton= document.querySelector("#btnDecirHola");
+            boton.addEventListener('click', decirHola);//Mas recomendable,si comentamos esta linea no captura el evento, y si pulsa el boton no hace nada
+            //boton.onclick=decirHola;  //esta es otra forma de hacerlo
+        }
+
+        // Manejador de eventos de onclik en el botón
+        function decirHola(){
+            alert("Hola!");
+        }
+
+        addEventListener('load',iniciar); // Añadimos el evento onload para se ejecuter iniciar() al cargar la página
+    </script>
+</body>
+</html>

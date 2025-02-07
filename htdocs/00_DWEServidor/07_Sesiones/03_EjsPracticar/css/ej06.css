@@ -1,0 +1,70 @@
+body {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+img {
+    margin: 5px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+button {
+    color: white;
+    background-color: darkblue;
+    padding: 8px;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+   font-size: 20px;
+}
+.unidades{
+    color: grey;
+}
+.total{
+    font-size: 40px;
+    font-weight: bold;
+}
+.catalogo {
+    width: 300px;
+}
+
+div.detalle {
+    margin: auto;
+    width: 650px;
+   border: 10px solid darkblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.detalle>img {
+    width: 650px;
+}
+
+.carrito {
+    width: 150px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.producto,
+.carrito {
+    width: 45%;
+    vertical-align: top;
+}
+
+h2 {
+    text-align: center;
+}

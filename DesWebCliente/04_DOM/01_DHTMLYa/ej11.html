@@ -1,0 +1,46 @@
+<!-- 
+Confeccionar una página que contenga una lista de tipo (ul) y definir tres marcas de tipo (li) sin texto. Luego al presionar un botón agregar un nodo de texto a cada marca (li).
+Agregar un nodo de texto (appendChild - createTextNode)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+    <h1>Agregar Texto a Elementos de Lista</h1>
+
+    <!-- lista desordenada con tres elementos de lista vacíos -->
+    <ul id="miLista">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <br>
+    <button onclick="agregarTextoALi()">Agregar Texto</button>
+
+    <script>
+        function agregarTextoALi() {
+            let listaItems = document.getElementById("miLista").getElementsByTagName("li");
+            
+            // Define el texto que se agregará a cada li
+            const textos = ["Primer elemento", "Segundo elemento", "Tercer elemento"];
+
+            // Itera sobre cada <li> y agrega el texto correspondiente
+            for (let i = 0; i < listaItems.length; i++) {
+                // Verifica si el <li> ya tiene texto para evitar duplicados
+                if (listaItems[i].textContent === "") {
+                    let textoNodo = document.createTextNode(textos[i]);
+                    listaItems[i].appendChild(textoNodo);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

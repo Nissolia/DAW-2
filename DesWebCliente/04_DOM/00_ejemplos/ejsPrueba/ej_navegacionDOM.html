@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bloque">
+        <p>This is text</p>
+        <ul>
+            <li>Apple</li>
+            <li>Pear</li>
+            <li>Melon</li>
+        </ul>
+    </div>
+    <script>
+            var theDiv=document.getElementsByTagName('div')[0];  //Referencia a elto div
+            var p=theDiv.firstElementChild; //Referencia a elto p
+            var ul=p.nextElementSibling; //Referencia a elemento ul
+            var eltoli1=ul.children[0]; //Referencia a elto li Apple
+            var eltoli2=ul.children[1]; //Referencia a elto li Pear
+            var eltoli2=ul.children[2];//Referencia a elto li Melon
+
+            alert("Contenido del párrafo: " + p.innerHTML);
+            alert("Contenido del primer elto li: " + eltoli1.innerHTML);
+            alert("Contenido del segundo elto li: " + eltoli1.innerHTML);
+            alert("Contenido del tercer elto li: " + eltoli1.innerHTML);
+        </script>
+</body>
+</html>

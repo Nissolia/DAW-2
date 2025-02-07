@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicar estilos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Mostrar en una página varios parámetros para configurar el aspecto de otra página: color de fondo, tipo de letra,
+alineación del texto, imagen del banner (entre 3 posibles), y demás reglas de estilo que se te ocurran. Una vez
+enviada la información se mostrará una página con el contenido que desees acorde a los estilos elegidos. -->
+ 
+<!-- tamaño de la letra: pequeño mediano y grande e imagen igual 
+ checkbox para quitar o poner imagen
+ input type radio para poner 1 nama-->
+
+<h1>Configurador de estilos: </h1>
+    <form action="ej03.php" method="post">
+        <label class="label"  for="colorFondo"> Color de fondo: </label>
+        <input  type="color" name="colorFondo" value="#ffffff"><br>
+
+        <label class="label" for="colorTexto"> Color de texto: </label>
+        <input type="color" name="colorTexto" value="#000000"><br>
+
+        <label class="label" for="fuente">Tipo de letra: </label>
+        <select class="input" name="fuente" id="fuente">
+            <option value="Arial"> Arial</option>
+            <option value="Segoe UI"> Segoe UI</option>
+            <option value="Gill Sans"> Gill Sans</option>
+            <option value="Lucida Sans"> Lucida Sans</option>
+            <option value="Courier New"> Courier New</option>
+            <option value="Times New Roman"> Times New Roman</option>
+            <option value="Franklin Gothic Medium"> Franklin Gothic Medium</option>
+
+        </select><br>
+
+        <label class="label" for="alineacion">Alineación del Texto:</label>
+        <select class="input" id="alineacion" name="alineacion">
+            <option value="left">Izquierda</option>
+            <option value="center">Centro</option>
+            <option value="right">Derecha</option>
+        </select><br>
+        <!--  -->
+
+        <label class="label" for="imagen">Selecciona una fruta:</label>
+        <select class="input" id="imagen" name="imagen">
+            <option value="ej03/lima.png">Lima</option>
+            <option value="ej03/naranja.png">Naranja</option>
+            <option value="ej03/uvas.png">Uvas</option>
+        </select> <br>
+
+        <input class="boton" type="submit" value="Aplicar estilo">
+    </form>
+
+</body>
+
+</html>

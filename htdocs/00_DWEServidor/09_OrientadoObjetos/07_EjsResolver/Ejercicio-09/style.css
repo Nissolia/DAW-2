@@ -1,0 +1,53 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+background-color: #f4f4f9;
+color: #333;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+h1 {
+text-align: center;
+padding: 20px;
+}
+
+h2 {
+text-align: center;
+margin-top: 30px;
+}
+
+/* Estilos para la tabla */
+table {
+width: 80%;
+margin: 20px auto;
+border-collapse: collapse;
+}
+
+table, th, td {
+border: 1px solid #ccc;
+}
+
+th, td {
+padding: 10px;
+text-align: center;
+}
+
+/* Estilos para el formulario */
+.formulario {
+text-align: center;
+margin-top: 20px;
+}
+
+input, select, button {
+padding: 10px;
+margin: 10px;
+font-size: 16px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.theader{
+    font-weight: bold;
+    font-size: medium;
+}

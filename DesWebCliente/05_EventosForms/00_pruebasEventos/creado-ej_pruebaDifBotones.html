@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba dif.botones</title>
+  </head>
+  <body>
+    <script>
+      // se ejecuta al cargar completamente la página
+      function iniciar() {
+        // asi se pone para tener de referencia al primer botón
+        const boton1 = document.querySelector("#boton1");
+        boton1.addEventListener("click", manejadorCompartido);
+        const boton2 = document.querySelector("#boton2");
+        boton2.addEventListener("click", manejadorCompartido);
+        const lista = document.querySelector("#lista");
+        lista.addEventListener("change", manejadorCompartido);
+      }
+      //   Manejador de eventos compartido
+      function manejadorCompartido(evt) {
+        // alert("Manejador");
+        alert("Manejador:\n" + evt.target + "\n" + evt.type);
+        //cambios en el color de fondo del control
+        evt.target.style.backgroundColor = "yellow";
+      }
+      addEventListener("load", iniciar);
+    </script>
+    <input type="button" id="boton1" value="Botón1" />
+    <input type="button" id="boton2" value="Botón2" />
+    <select id="lista">
+      <option value="">Seleccionar</option>
+      <option value="Utrera">Utrera</option>
+      <option value="Dos Hermanas">Dos Hermanas</option>
+    </select>
+  </body>
+</html>

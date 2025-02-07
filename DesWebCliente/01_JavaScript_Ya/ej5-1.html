@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <style>
+    body {
+      margin: 3em;
+      /* Espacio externo */
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #f8f9fa;
+    }
+
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      color: #fff;
+      background-color: #0056b3;
+      border-color: #004085;
+      text-decoration: none;
+    }
+
+
+    #contenido {
+      border: 1px solid lightgray;
+      /* Borde gris claro */
+      background-color: lightyellow;
+      /* Fondo amarillo claro */
+      border-radius: 10px;
+      /* Bordes redondeados */
+      min-height: 50px;
+      /* Altura mínima de 50 píxeles */
+      padding: 10px;
+      /* Espacio interno */
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Plantilla JavaScript v2</h1>
+  <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+  <!-- Con el atributo onclick indicamos qué función de JS queremos que se ejecute al pulsar el botón-->
+  <input type="button" class="btn" onclick="calculo()" value="Pulsar">
+  <br><br>
+  <div id="contenido"></div>
+
+  <script>
+    // Dentro de la etiqueta script va el código en JavaScript
+    function calculo() {
+      // Declaramos variables
+      let lado;
+      let perimetro;
+      // Preguntamos al usuario
+      lado = prompt('Dame el valor del lado del cuadrado');
+      // Calculos del perimetro y el area del cuadrado
+      perimetro = parseInt(lado) * 4;
+      area = parseInt(lado) * parseInt(lado);
+      // Mostramos las variables que tenemos por consola
+      console.log('Lado: ', lado);
+      console.log('Perimetro: ', perimetro);
+      console.log('Area: ', area);
+      // Mostrar al usuario los datos completados
+      volcarTextoWeb('Perímetro del cuadrado es ' + perimetro + ' el área del cuadrado es ' + area);
+    }
+
+    // Función para volvar contenido a la página web
+    function volcarTextoWeb(texto) {
+      document.querySelector("#contenido").insertAdjacentHTML('beforeend', `<p>${texto}</p>`);
+    }
+  </script>
+
+</body>
+
+</html>

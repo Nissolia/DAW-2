@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 66</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="recuadro2"></div>
+    <p id="cantidad">0</p>
+
+    <script>
+      document.getElementById("recuadro2").addEventListener("mousemove", mover);
+
+      function mover() {
+        let x = parseInt(document.getElementById("cantidad").innerHTML);
+        x++;
+        document.getElementById("cantidad").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+figure{
+    width: 250px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+td, th, tr, table{
+    padding: 5px;
+    border: 2px solid rgb(206, 206, 206);
+    border-collapse: collapse;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    background-color: grey;
+    border-radius: 5px;
+    padding:10px;
+    display: block;
+}
+.rellenarDatos{
+    width: 350px;
+    margin: 20px auto;
+}
+input{
+    margin: 10px 0;
+    padding: 5px;
+}

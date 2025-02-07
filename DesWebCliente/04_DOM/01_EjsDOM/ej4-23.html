@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 22</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Crea un documento HTML que permita insertar, borrar, copiar y reemplazar el texto introducido en cuadro de texto. -->
+  
+      <h1>Lista de Tareas</h1>
+      <ul id="lista-tareas">
+        <!-- Aquí se agregarán las tareas -->
+      </ul>
+    
+      <button onclick="agregarTarea()">Agregar Tarea</button>
+      <button onclick="insertarTarea()">Insertar Tarea al Inicio</button>
+      <button onclick="reemplazarTarea()">Reemplazar Primera Tarea</button>
+      <button onclick="clonarTarea()">Clonar Segunda Tarea</button>
+      <button onclick="eliminarTarea()">Eliminar Última Tarea</button>
+    
+      <script>
+    
+        let contador = 1;
+    
+        // Funciones para cada acción
+    
+        // Agregar una nueva tarea al final de la lista
+        function agregarTarea() {
+          // Obtener el elemento de la lista donde se van a añadir las tareas
+          const lista = document.getElementById("lista-tareas");
+          const nuevaTarea = document.createElement("li");
+          const textoTarea = document.createTextNode(`Nueva Tarea ${contador}`);
+          nuevaTarea.appendChild(textoTarea);
+          lista.appendChild(nuevaTarea);
+          contador++;
+        }
+    
+        // Insertar una nueva tarea al inicio de la lista
+        function insertarTarea() {
+          // Obtener el elemento de la lista donde se van a añadir las tareas
+          const lista = document.getElementById("lista-tareas");
+          const nuevaTarea = document.createElement("li");
+          const textoTarea = document.createTextNode(`Tarea ${contador} insertada al Inicio`);
+          nuevaTarea.appendChild(textoTarea);
+          if (lista.firstElementChild) {
+            lista.insertBefore(nuevaTarea, lista.firstElementChild);
+          } else {
+            lista.appendChild(nuevaTarea);
+          }
+          contador++;
+        }
+    
+        // Reemplazar la primera tarea de la lista
+        function reemplazarTarea() {
+          // Obtener el elemento de la lista donde se van a añadir las tareas
+          const lista = document.getElementById("lista-tareas");
+          if (lista.firstElementChild) {
+            const nuevaTarea = document.createElement("li");
+            const textoTarea = document.createTextNode(`Tarea Reemplazada ${contador}`);
+            nuevaTarea.appendChild(textoTarea);
+            lista.replaceChild(nuevaTarea, lista.firstElementChild);
+          } else {
+            alert("No hay tareas para reemplazar.");
+          }
+          contador++;
+        }
+    
+        // Clonar la segunda tarea y agregarla al final de la lista
+        function clonarTarea() {
+          // Obtener el elemento de la lista donde se van a añadir las tareas
+          const lista = document.getElementById("lista-tareas");
+          if (lista.children.length >= 2) {
+            const segundaTarea = lista.children[1];
+            const tareaClonada = segundaTarea.cloneNode(true);
+            lista.appendChild(tareaClonada);
+          } else {
+            alert("No hay suficientes tareas para clonar.");
+          }
+        }
+    
+        // Eliminar la última tarea de la lista
+        function eliminarTarea() {
+          // Obtener el elemento de la lista donde se van a añadir las tareas
+          const lista = document.getElementById("lista-tareas");
+          if (lista.lastElementChild) {
+            lista.removeChild(lista.lastElementChild);
+          } else {
+            alert("No hay tareas para eliminar.");
+          }
+        }
+      </script>
+  </body>
+</html>

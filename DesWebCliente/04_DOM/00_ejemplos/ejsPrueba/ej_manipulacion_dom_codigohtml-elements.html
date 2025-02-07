@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            min-height: 100px;
+            background-color: cornsilk;
+            border: 1px lightgray solid;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo insertar elementos html de dos maneras</h1>
+    <input type="button" onclick="insertarUsandoInnerHTML();" value="Crear usando innerHTML">
+    <input type="button" onclick="insertarUsandoCreateElement();" value="Crear usando createTextNode">
+    <br><br>
+    <div id="contenedor"></div>
+    
+    <script>
+        let contador=1;
+        
+        function insertarUsandoInnerHTML(){
+            let miDiv = document.querySelector("#contenedor");
+            miDiv.insertAdjacentHTML("beforeend",`<p style="color: red">Párrafo ${contador} creado usando HTML</p>`);
+
+            contador++;
+        }
+
+        function insertarUsandoCreateElement(){
+            let miDiv = document.querySelector("#contenedor");
+            let parrafo=document.createElement('p');
+            parrafo.style.color ="blue";
+            let texto=document.createTextNode(`Párrafo ${contador} creado usando createElement`);
+            parrafo.appendChild(texto);
+            miDiv.appendChild(parrafo);
+
+            contador++;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+Modifica el ejercicio del carrito de la compra que obtenía los productos de un fichero, para que ahora estén
+almacenados en una base de datos llamada tienda. Por tanto, la aplicación deberá recuperar todos los productos
+de la base de datos al inicio. Debe añadirse la funcionalidad que permita añadir nuevos productos en la Base
+de Datos, así como eliminarlos. Incluir un “type file” que permita subir al servidor, el archivo de imagen
+correspondiente al producto nuevo que se está añadiendo.

@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los mensajes */
+.mensaje {
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    animation: desaparecer 5s forwards;
+}
+
+.mensaje.exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensaje.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Animación para desaparecer el mensaje */
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

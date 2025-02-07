@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 5a1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Manejador eventos compartido (Ver consola depuración)</h1>
+
+    <button id="boton1">Botón 1</button>
+    <button id="boton2">Botón 2</button> <br />
+    <br />
+    Div 1
+    <div id="div1"></div>
+    Div 2
+    <div id="div2"></div>
+    <script>
+      // Seleccionamos los elementos que vamos a usar
+      const boton1 = document.getElementById("boton1");
+      const boton2 = document.getElementById("boton2");
+      const div1 = document.getElementById("div1");
+      const div2 = document.getElementById("div2");
+
+      // Manejador de eventos único
+      function manejadorEventos(event) {
+        const targetId = event.target.id; // Obtenemos el ID del elemento que disparó el evento
+
+        // Si el evento es un clic en un botón, añade "Hola" al div correspondiente
+        if (event.type === "click") {
+          if (targetId === "boton1") {
+            div1.innerHTML += "Hola<br>";
+          } else if (targetId === "boton2") {
+            div2.innerHTML += "Hola<br>"; // Añade "Hola" al div2
+          }
+        }
+
+        // Si el evento es mouseenter, solo muestra información en la consola
+        if (event.type === "mouseenter") {
+          if (targetId === "div1") {
+            console.log("Ratón entró en Div 1");
+          } else if (targetId === "div2") {
+            console.log("Ratón entró en Div 2");
+          }
+        }
+      }
+
+      // Agregamos el manejador a cada evento
+      boton1.addEventListener("click", manejadorEventos);
+      boton2.addEventListener("click", manejadorEventos);
+      div1.addEventListener("mouseenter", manejadorEventos);
+      div2.addEventListener("mouseenter", manejadorEventos);
+    </script>
+  </body>
+</html>

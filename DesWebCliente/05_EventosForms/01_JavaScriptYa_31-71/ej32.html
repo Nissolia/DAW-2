@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej 32</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <!-- tenemos que poner onMouseOver como si fuese un
+             hover de css y cuando no haya focus con el raton
+             vuelve a su estado original que es el blanco -->
+        <td
+          onMouseOver="pintar(this,'#ff0000')"
+          onMouseOut="pintar(this,'#ffffff')"
+        >
+          <a href="http://www.outlook.com">Outlook</a>
+        </td>
+        <td
+          onMouseOver="pintar(this,'#00ff00')"
+          onMouseOut="pintar(this,'#ffffff')"
+        >
+          <a href="http://www.yahoo.com">Yahoo</a>
+        </td>
+        <td
+          onMouseOver="pintar(this,'#0000ff')"
+          onMouseOut="pintar(this,'#ffffff')"
+        >
+          <a href="http://www.gmail.com">Gmail</a>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      // Funcion para pintar el objeto de un color
+      function pintar(objeto, color) {
+        objeto.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

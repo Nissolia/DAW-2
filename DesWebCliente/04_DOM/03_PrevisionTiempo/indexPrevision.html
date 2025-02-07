@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsión tiempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="https://docs.google.com/document/d/1C9fMx0WkO4EV0tp7V3_f3uIpi3mmo7iIbNcyKlIpw94/edit?tab=t.0">Ejercicio Previsión tiempo</a>
+    <button onclick="crear()" id="boton">Crear tabla</button>
+    <div class="tabla-externa">
+        <table id="tabla">
+
+        </table>
+    </div>
+    <script>
+        let encabezados = ["Horas", "Previsión", "Viento", "Velocidad", "Lluvias"];
+        let datos = [
+            {
+                hora: "19:00",
+                prevision: { temperatura: "33º", icono: "dia" },
+                viento: "oeste",
+                velocidad: "15 km/h",
+                lluvias: "0 mm"
+            },
+            {
+                hora: "20:00",
+                prevision: { temperatura: "30º", icono: "dia" },
+                viento: "norte",
+                velocidad: "5 km/h",
+                lluvias: "10 mm"
+            },
+            {
+                hora: "21:00",
+                prevision: { temperatura: "28º", icono: "noche" },
+                viento: "sur",
+                velocidad: "0 km/h",
+                lluvias: "5 mm"
+            },
+
+        ];
+        function crear(){
+
+
+            let container = document.getElementById("tabla");
+            
+            container.insertAdjacentHTML("beforeend",'<tr>');
+
+          
+            for (let i = 0; i < encabezados.length; i++) {
+                container.insertAdjacentHTML("beforeend",'<th>'+encabezados[i]+'</th>');
+           datos.forEach(elto => {
+            
+               container.insertAdjacentHTML("beforeend",'<th>'+elto[i][i]+'</th>');
+           });
+                
+            }
+            container.insertAdjacentHTML("beforeend",'</tr>');
+            
+            container.innerHTML = fila;
+        }
+    </script>
+</body>
+
+</html>

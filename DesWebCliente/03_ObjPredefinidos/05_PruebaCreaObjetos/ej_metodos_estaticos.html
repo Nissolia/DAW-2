@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  class Num {
+    static mayor(v1,v2) {
+      if (v1>v2)
+        return v1;
+      else
+        return v2;
+    }
+
+    static menor(v1,v2) {
+      if (v1<v2)
+        return v1;
+      else
+        return v2;
+    }
+
+    static rand(inicio, fin) {
+      return Math.trunc((Math.random()*(fin+1-inicio))+inicio);
+    }
+  }
+  
+  let x1=Num.rand(1,10);
+  let x2=Num.rand(1,10);
+  document.write(`El mayor entre ${x1} y ${x2} es ${Num.mayor(x1,x2)} <br>`);
+  document.write(`El menor entre ${x1} y ${x2} es ${Num.menor(x1,x2)}`);
+
+</script>
+
+</body>
+</html>

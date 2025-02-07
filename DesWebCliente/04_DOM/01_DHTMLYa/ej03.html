@@ -1,0 +1,26 @@
+<!-- Permitir cambiar el tamaño de la fuente de un párrafo.
+Para esto crear tres botones (fuente pequeña (10), fuente mediana(13) y fuente grande(20))
+Accediendo a una marca HTML a través del DOM (getElementById) -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 id="titulo">Ejercicio 3</h1>
+    <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eaque vitae ipsa provident et harum laudantium nam deserunt quisquam! Assumenda asperiores sit aliquam ab officia nemo eos ratione, soluta vero!</p>
+    <button class="boton" onclick="cambiarTamanoFuente(10)">Fuente Pequeña</button>
+    <button class="boton" onclick="cambiarTamanoFuente(13)">Fuente Mediana</button>
+    <button class="boton" onclick="cambiarTamanoFuente(20)">Fuente Grande</button>
+
+    <script>
+      function cambiarTamanoFuente(tamano) {
+        let parrafo = document.getElementById("parrafo");
+        parrafo.style.fontSize = tamano + "px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 16</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt
+        architecto amet nihil facere praesentium consequuntur? Molestias
+        pariatur dolore, earum aliquam, dolor saepe, doloribus facere doloremque
+        harum laboriosam perferendis libero?
+      </p>
+    </div>
+    <select name="fontSize" id="tamanioFuente">
+      <option value="small">small</option>
+      <option value="medium">medium</option>
+      <option value="large">large</option>
+    </select>
+    <button onclick="cambiarLetra()">Cambiar letra</button>
+    <!-- Parte javascript -->
+    <script>
+      function cambiarLetra() {
+        console.log('Entra en cambiarLetra');
+        let contenedor = document.getElementById("container");
+        let tamanioFuente = document.getElementById("tamanioFuente").value; 
+        console.log('Valor seleccionado:', tamanioFuente);
+
+        if (tamanioFuente === "small") {
+          contenedor.style.fontSize = "9px";
+        } else if (tamanioFuente === "medium") {
+          contenedor.style.fontSize = "15px";
+        } else if (tamanioFuente === "large") {
+          contenedor.style.fontSize = "30px";
+        } else {
+          contenedor.style.fontSize = "12px";
+        }
+      }
+    </script>
+  </body>
+</html>

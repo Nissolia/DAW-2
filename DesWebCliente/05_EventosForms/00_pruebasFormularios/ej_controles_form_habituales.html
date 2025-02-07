@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Formularios</title>
+</head>
+<body>
+  <section id="formulario">
+    <form name="miformulario" method="get" action="procesar.php">
+      <br><label for="minombre">Texto: </label>
+      <input type="text" name="minombre" id="minombre">
+      <br><label for="miopcion">Botones de Selección: </label>
+      <input type="radio" name="miopcion" value="1" checked> 1
+      <input type="radio" name="miopcion" value="2"> 2
+      <input type="radio" name="miopcion" value="3"> 3
+      <br><label for="miclave">Clave: </label>
+      <input type="password" name="miclave" id="miclave">
+      <br><label for="micasilla">Casilla de Verificación: </label>
+      <br><label for="miDropBox">Color:</label>
+      <select name="color" id="color">
+          <option value="1">Rojo</option>
+          <option value="2">Verde</option>
+          <option value="3">Azul</option>
+      </select>
+      <br><label for="micasilla">Fumador:</label> <input type="checkbox" name="micasilla" id="micasilla" value="123">
+      <br>
+      <label for="mitexto">Area de Texto: </label>
+      <br><textarea name="mitexto" id="mitexto" rows="5" cols="30"></textarea>
+      <br>
+      <input type="hidden" value="clave secreta">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+    </form>
+  </section>
+</body>
+</html>

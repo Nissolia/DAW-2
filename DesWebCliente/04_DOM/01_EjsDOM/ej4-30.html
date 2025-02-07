@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 25</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Crea un programa que simule el lanzamiento de un dado. Cuando se pulse un botón el dado irá cambiando aleatoriamente su valor cada 500msg durante un intervalo de tiempo de 5sg. Transcurrido ese tiempo el valor del dado permanecerá inalterado.-->
+<h1 id="dado"></h1>
+<img src="" alt="">
+<button onclick="lanzarDado()">Lanzar dado</button>
+<script>
+
+function generarAleatorio(){
+    return numAleatorio = (Math.trunc(Math.random()*6)+1);
+}
+// funcion detener temporizador
+function lanzarDado(idTemp){
+    clearInterval(idTemp);
+  let dado = document.getElementById("dado");
+   dado.innerHTML(idTemp);
+}
+// ponemos en marcha el temporizador
+let temporizador = setInterval(generarAleatorio,500);
+//lo detenemos despues de 10 segundos
+
+setTimeout(() =>lanzarDado(temporizador),10000);
+
+
+</script>
+  </body>
+</html>

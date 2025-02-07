@@ -1,0 +1,39 @@
+<!-- 
+Definir una lista con tres nombres de paises. Luego en tiempo de ejecución permitir cambiar el estilo de la lista.
+Accediendo al estilo de una marca HTML.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Lista de países -->
+    <ul id="listaPaises">
+        <li>Argentina</li>
+        <li>Brasil</li>
+        <li>Chile</li>
+    </ul>
+
+    <!-- Botón para cambiar el estilo de la lista -->
+    <input type="button" value="Cambiar estilo de la lista" onclick="cambiarEstilo()">
+
+    <script>
+        function cambiarEstilo() {
+            // Obtener la lista
+            var lista = document.getElementById("listaPaises");
+
+            // Cambiar el estilo de la lista
+            lista.style.fontSize = "20px";  // Cambiar el tamaño de la fuente
+            lista.style.color = "green";    // Cambiar el color del texto
+            lista.style.listStyleType = "square";  // Cambiar el estilo de los puntos de la lista a cuadrados
+            lista.style.fontFamily = "Arial, sans-serif";  // Cambiar la fuente
+        }
+    </script>
+
+</body>
+</html>

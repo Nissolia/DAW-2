@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo de AJAX</title>
+</head>
+
+<body>
+    <h1>Actualización de reloj con Ajax Síncrona/Asíncrona</h1>
+    <h2>(Pulsa F12 para ver mensajes de la consola)</h2>
+    <label for="nombre">Nombre</label><input name="nombre" type="text" />
+    <select name="localidades" id="localidades">
+        <option value="1">Utrera</option>
+        <option value="2">Chipiona</option>
+        <option value="3">Punta Umbría</option>
+        <option value="4">El Palmar</option>
+    </select>
+    <label for="autonomo">Autónomo</label><input name="autonomo" type="checkbox">
+    <input type="button" onclick="diHola()" value="Púlsame">
+    <hr>
+    <div id="contenido"></div>
+    <br>
+    <input type="button" onclick="enviarPeticionAJAXAsincrona();" value="Petición Asíncrona">
+    <input type="button" onclick="enviarPeticionAJAXSincrona()" value="Petición Síncrona">
+    <script>
+        var xhr;
+
+        // Petición Asíncrona
+        // Necesitamos un callback
+        // Cuando se ejecuta el método send() no se siguen ejecutando el resto de las instrucciones (por tanto aparecerá el mensaje del console.log de manera instantánea)
+        function enviarPeticionAJAXAsincrona() {
+            xhr = new XMLHttpRequest();
+            xhr.addEventListener('readystatechange', gestionarRespuesta); // gestionarRespuesta es un callback
+            xhr.open('GET', 'hora.php', true); // Al usar el argumento true indicamos que la petición es asíncrona
+            xhr.send(); // Cuando se ejecuta esta instrucción no se queda esperando a que llegue los datos
+            console.log("Instrucción posterior al send() en la petición asíncrona");
+        }
+
+        // Petición Síncrona
+        // No necesitamos un callback
+        // Cuando se ejecuta el método send() se quedará esperando a que lleguen los datos y no se ejecutarán más instrucciones mientras tanto (eso provocará también que no se atienda a la interfaz de usuario)
+        // Podremos rescatar los datos que han llegado del servidor en la instrucción posterior al método send()
+        function enviarPeticionAJAXSincrona() {
+            xhr = new XMLHttpRequest();
+            xhr.open('GET', 'hora.php', false);
+            xhr.send();
+            console.log("Instrucción posterior al send() en la petición síncrona");
+            document.getElementById('contenido').innerHTML = xhr.responseText;
+        }
+
+
+        function gestionarRespuesta(evt) {
+            console.log(`readyState:${evt.target.readyState}`);
+            if (evt.target.readyState == 4 && evt.target.status == 200) {
+                document.getElementById('contenido').innerHTML = evt.target.responseText;
+            }
+        }
+
+        function diHola(){
+            alert("Hola");
+        }
+    </script>
+</body>
+
+</html>

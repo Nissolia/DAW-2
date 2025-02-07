@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+// Función para mostrar las coordenadas en ambos formatos
+function showPosition(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  // Conversión a formato sexagesimal (DMS)
+  const dmsLatitude = toDMS(latitude, "lat");
+  const dmsLongitude = toDMS(longitude, "lon");
+
+  // Mostrar los resultados en la página
+  x.innerHTML = `
+    <h3>Decimal Degrees (DD):</h3>
+    Latitude: ${latitude} <br>
+    Longitude: ${longitude} <br>
+    <h3>Degrees Minutes Seconds (DMS):</h3>
+    Latitude: ${dmsLatitude} <br>
+    Longitude: ${dmsLongitude} <br>
+  `;
+}
+
+// Conversión de coordenadas decimales a sexagesimales (DMS)
+function toDMS(decimal, type) {
+  const direction = decimal >= 0 
+    ? (type === "lat" ? "N" : "E") 
+    : (type === "lat" ? "S" : "W");
+  const absDecimal = Math.abs(decimal);
+  const degrees = Math.floor(absDecimal);
+  const minutes = Math.floor((absDecimal - degrees) * 60);
+  const seconds = ((absDecimal - degrees - minutes / 60) * 3600).toFixed(2);
+  return `${degrees}° ${minutes}' ${seconds}" ${direction}`;
+}
+
+// Mostrar mensajes de error
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable.";
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out.";
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred.";
+      break;
+  }
+}
+</script>
+
+</body>
+</html>
