@@ -1,0 +1,6 @@
+package proyectoVehiculos2;
+
+public class TransporteAuxiliarDos_Qualifier {
+	public int getPasajerosExtra() {
+		return 2;	} 
+}

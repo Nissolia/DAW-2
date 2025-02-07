@@ -1,0 +1,29 @@
+package EjerciciosMatrices;
+
+import java.util.Scanner;
+
+public class Ej_b {
+	final static int MAX = 25;
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int size;
+		// Le pedimos la información al usuario
+		do {
+			System.out.println("Dime el tamaño de la matriz:");
+			size = s.nextInt();
+			// Comprobamos que la persona mete los numeros correctos
+		} while (size < 0 || size > MAX);
+		// Creamos la matriz
+		int[][] matriz = new int[size][size];
+		// Rellenado de datos
+		System.out.println("A continuación rellenaremos los datos:");
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				matriz[i][j] = s.nextInt();
+			}
+		}
+		s.close();
+	}
+
+}

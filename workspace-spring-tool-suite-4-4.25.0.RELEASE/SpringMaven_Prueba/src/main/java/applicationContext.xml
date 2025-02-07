@@ -1,0 +1,25 @@
+<!-- 
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context-3.1.xsd
+">
+<!-- Creamos el bean para instanciar objetos especificando un id y donde se
+localiza la clase de la que queremos construir objetos.
+Esto lo haremos una única vez ya que SpringBoot genera mucho código de este tipo
+de forma autónoma.-->
+<!-- Otro generador de tipo Coche-->
+<!-- Otro generador de tipo Coche-->
+<!--<bean id="GeneradorVehiculos" class="proyectoVehiculos.Coche">
+<!-- Paso 5-->
+<!--<constructor-arg ref="miMantenimiento"></constructor-arg>
+</bean>
+<!-- Paso 4 Vinculación del bean-->
+<!--<bean id="miMantenimiento" class="proyectoVehiculos.MantenimientoAp4">
+<!--</bean>
+</beans>

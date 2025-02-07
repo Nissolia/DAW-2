@@ -1,0 +1,8 @@
+package GestionVehiculos;
+
+public class Vehiculo {
+	private String marca;
+	private String modelo;
+	private float precio;
+
+}

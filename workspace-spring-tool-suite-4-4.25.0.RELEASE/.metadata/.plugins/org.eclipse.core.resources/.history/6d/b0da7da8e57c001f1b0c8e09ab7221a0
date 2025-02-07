@@ -1,0 +1,23 @@
+package EjerciciosMatrices;
+
+import java.util.Scanner;
+
+public class Ej_a {
+final static int MAX = 5;
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int col;
+		
+		System.out.println("Dame las columnas de nuestra matriz:");
+		col = s.nextInt();
+		int[][] matriz = new int[MAX][col];
+	}
+private int aleatorio() {
+	
+	int rand = (int) (Math.random() * 10);
+	
+	return rand;
+	
+
+}
+}

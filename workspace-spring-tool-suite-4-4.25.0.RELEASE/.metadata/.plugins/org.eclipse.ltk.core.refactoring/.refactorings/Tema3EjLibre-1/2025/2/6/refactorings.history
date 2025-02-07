@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Tema3EjLibre-1/docker_compose&apos; to &apos;docker_compose.yml&apos;" description="Rename resource &apos;docker_compose&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="docker_compose" name="docker_compose.yml" stamp="1738758760386" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Tema3EjLibre-1/docker_compose.yml&apos; to &apos;docker-compose.yml&apos;" description="Rename resource &apos;docker_compose.yml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="docker_compose.yml" name="docker-compose.yml" stamp="1738760076157" updateReferences="true"/>
+</session>

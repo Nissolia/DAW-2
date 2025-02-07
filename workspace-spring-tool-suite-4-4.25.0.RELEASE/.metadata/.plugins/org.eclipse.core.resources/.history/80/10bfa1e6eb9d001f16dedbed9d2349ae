@@ -1,0 +1,17 @@
+package BanosJimenezNoelia;
+//importante -- ppo para un cine
+// asientos divididos por filas, nos interesa que pelicula estamos viendo
+// edades es imortante
+// pelicula es al azar, va por porcentajes
+// no se permiten filas negativas, algo logico hasta 20 filas aprox
+// 
+//
+//
+// 
+public class Main {
+
+	public static void main(String[] args) {
+
+	}
+// FUNCIONES
+}

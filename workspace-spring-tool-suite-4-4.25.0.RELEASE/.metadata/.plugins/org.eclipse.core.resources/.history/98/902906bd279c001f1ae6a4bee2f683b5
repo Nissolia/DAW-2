@@ -1,0 +1,22 @@
+package GestionVehiculos;
+
+public class Motocicleta extends Vehiculo implements Vendible{
+		private String cilindrada;
+		private String tipoCarenado;
+		
+		
+		@Override
+		public void vender() {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public double calcularDescuento() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+	
+
+
+}

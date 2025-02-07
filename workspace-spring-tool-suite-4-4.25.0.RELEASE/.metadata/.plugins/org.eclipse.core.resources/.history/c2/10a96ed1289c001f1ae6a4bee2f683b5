@@ -1,0 +1,25 @@
+package GestionVehiculos;
+
+import java.util.ArrayList;
+
+public class Vehiculo {
+	// ATRIBUTOS
+	private String marca;
+	private String modelo;
+	private float precio;
+
+	// CONSTRUCTORES
+	public Vehiculo(String marca, String modelo, float precio) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.precio = precio;
+	}
+
+//MÉTODOS
+public void listaVehiculos() {
+	ArrayList<Vehiculo> concesionario = new ArrayList<>();
+	concesionario.add(new Vehiculo("Toyota", "470 Air",30000));
+	concesionario.add(new Vehiculo("Hyundai", "360",50000));
+}
+
+}

@@ -1,0 +1,7 @@
+package GestionVehiculos;
+
+public class Automovil extends Vehiculo implements Vendible {
+	private String tipoMotor;
+	private boolean EsDescapotable;
+
+}

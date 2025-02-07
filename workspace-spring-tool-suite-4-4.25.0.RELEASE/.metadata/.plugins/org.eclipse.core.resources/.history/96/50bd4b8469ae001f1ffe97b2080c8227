@@ -1,0 +1,17 @@
+package proyectoVehiculosMejorado;
+
+public class NaveEspacial implements VehiculoMejorado {
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNumPasajeros() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

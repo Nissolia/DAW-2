@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Enlaces</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Selecciona un enlace</h1>
+        <ul>
+            <li><a th:href="@{/enlace(nenlace=1)}">Enlace 1</a></li>
+            <li><a th:href="@{/enlace(nenlace=2)}">Enlace 2</a></li>
+            <li><a th:href="@{/enlace(nenlace=3)}">Enlace 3</a></li>
+            <li><a th:href="@{/enlace(nenlace=4)}">Enlace 4</a></li>
+        </ul>
+    </div>
+</body>
+</html>

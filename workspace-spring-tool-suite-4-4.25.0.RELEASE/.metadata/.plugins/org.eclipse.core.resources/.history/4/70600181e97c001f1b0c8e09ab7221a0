@@ -1,0 +1,31 @@
+package EjerciciosMatrices;
+
+import java.util.Scanner;
+
+public class Ej_b {
+final static int MAX = 25;
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int fil, col;
+		// Le pedimos la información al usuario
+		do {
+			System.out.println("Dime las filas de la matriz:");
+			fil = s.nextInt();
+			System.out.println("Dime las columnas de la matriz:");
+			col = s.nextInt();
+			// Comprobamos que la persona mete los numeros correctos
+		} while ((fil < 0 || fil > MAX) || (col < 0 || col > MAX));
+		// Creamos la matriz
+		int[][] matriz = new int[fil][col];
+// Rellenado de datos
+		System.out.println("A continuación rellenaremos los datos:");
+		for (int i = 0; i < fil; i++) {
+			for (int j = 0; j < col; j++) {
+
+				matriz[i][j] = s.nextInt();
+			}
+		}
+		s.close();
+	}
+
+}

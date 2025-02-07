@@ -1,0 +1,21 @@
+package proyectoVehiculosMejorado;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class NaveEspacial implements VehiculoMejorado {
+
+	
+	@Override
+	public String getNombre() {
+		
+		return "Halcón Milenario tiene un total de "+getNumPasajeros()+ " pasajeros.";
+	}
+
+	@Override
+	public int getNumPasajeros() {
+		int pasajeros = numPasajeros + 4 ;
+		return pasajeros;
+	}
+
+}

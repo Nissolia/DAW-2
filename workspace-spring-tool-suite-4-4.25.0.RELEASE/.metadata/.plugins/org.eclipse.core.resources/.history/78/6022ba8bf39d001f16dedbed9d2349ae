@@ -1,0 +1,117 @@
+package BanosJimenezNoelia;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+//importante -- ppo para un cine
+// asientos divididos por filas, nos interesa que pelicula estamos viendo
+// edades es imortante
+// pelicula es al azar, va por porcentajes
+// no se permiten filas negativas, algo logico hasta 20 filas aprox
+public class Main {
+
+	public static void main(String[] args) {
+		int num = 17;
+		// variables
+		ArrayList<Espectador> clientes = new ArrayList<>();
+		// código
+		boolean correcto = false;
+		// comprobacion para ver que se introducen correctamente los números
+		do {
+			int fila, columna = 0;
+			System.out.println("Introduce el número de filas: ");
+			fila = num;
+			System.out.println("Introduce el número de columnas: ");
+			columna = num;
+
+			if (fila >= 3 && fila <= 9 && fila == columna) {
+				correcto = true;
+				rellenarAsientos(fila, columna);
+				crearEspectadores(fila * columna, clientes);
+			} else {
+				System.out.println("Valor no permitido");
+			}
+		} while (!correcto);
+// comprobamos los descuentos
+		comprobacionDescuentos(clientes);
+	}
+
+// FUNCIONES
+	private static void comprobacionDescuentos(ArrayList<Espectador> clientes) {
+		// TODO Auto-generated method stub
+		double entrada = 7;
+		for (Espectador e : clientes) {
+			if (e.getEdad() >= 18 && e.getEdad() <= 35) {
+				entrada = 3.5;
+			} else if (e.isTarjeta()) {
+				entrada = 5;
+			}
+		}
+		return
+	}
+
+	/***
+	 * 
+	 * @param total
+	 * @return ArrayList clientes
+	 */
+	private static ArrayList<Espectador> crearEspectadores(int total, ArrayList<Espectador> clientes) {
+
+		for (int i = 0; i < total; i++) {
+			clientes.add(generarEspectadores());
+		}
+		return clientes;
+	}
+
+	/***
+	 * 
+	 * @param minimo
+	 * @param maximo
+	 * @return
+	 */
+	public static int genNum(int minimo, int maximo) {
+		return (int) (Math.random() * (maximo - minimo + 1)) + minimo;
+	}
+
+	static Espectador generarEspectadores() {
+
+		String nombres[] = { "Mateo", "Martín", "Lucas", "Leo", "Daniel", "Alejandro", "Manuel", "Pablo", "Álvaro",
+				"Adrián", "Mario", "Diego", "David", "Bruno", "Juan", "Pedro", "Gabriel", "Sofía", "Martina", "María",
+				"Julia", "Paula", "Valeria", "Emma", "Carmen", "Olivia", "Celia", "Irene", "Marta", "Laura", "Gema",
+				"Lola", "Jimena", "Claudia" };
+		int el = (int) (Math.random() * nombres.length);
+		// comprobaicon de la tarjeta si la tiene o no
+		boolean bandera = false;
+		if (Math.random() * 100 <= 25) {
+			bandera = true;
+		}
+
+		return new Espectador(nombres[el], genNum(8, 48), genNum(2, 20), bandera);
+	}
+
+	/***
+	 * 
+	 * @param fila
+	 * @param columna
+	 * @return
+	 */
+	private static int[][] rellenarAsientos(int fila, int columna) {
+		// min 6x6, tiene que ser cuadrada
+// tratarlo como numeros nada mas y al mostrarlo se cambia por la letra
+
+		int[][] asientos = new int[fila][columna];
+		// mientras las filas sean mayor a 0
+		int num = 0;
+//creamos el asiento
+		for (int i = fila; i > 0; i--) {
+			for (int j = fila; j > 0; j--) {
+				// guardamos las cosas en la matriz
+				asientos[i][j] = num;
+				num++;
+			}
+
+		}
+
+		return asientos;
+	}
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Lista de Libros</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+
+<body>
+    <h1>Biblioteca Virtual</h1>
+    <a class="agregar-libro" th:href="@{/nuevo}">Añadir un nuevo libro</a>
+
+    <!-- Tabla para mostrar los libros -->
+	<table class="tabla-libros">
+	    <tbody>
+	        <th:block th:each="libro : ${libros}">
+	            <tr>
+	                <td class="dato-tabla" th:text="${libro.titulo}">Título</td>
+	                <i>><td class="dato-tabla" th:text="${libro.autor}">Autor</td></i
+	                <td class="accion-tabla">
+	                    <a class="enlace-detalle" th:href="@{/detalle/{id}(id=${libro.id})}">Ver Detalles</a>
+	                </td>
+	            </tr>
+	        </th:block>
+	    </tbody>
+	</table>
+
+</body>
+
+</html>

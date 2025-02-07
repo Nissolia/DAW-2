@@ -1,0 +1,15 @@
+package proyectoVehiculosMejorado;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class PruebaNaveEspacial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ClassPathXmlApplicationContext miContexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+		NaveEspacial nave = new NaveEspacial();
+		System.out.println(nave.getNombre() + " tiene un total de " + nave.getNumPasajeros() + "pasajeros");
+	}
+
+}

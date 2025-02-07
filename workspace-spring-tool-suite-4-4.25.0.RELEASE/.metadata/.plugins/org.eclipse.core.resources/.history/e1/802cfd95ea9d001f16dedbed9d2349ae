@@ -1,0 +1,15 @@
+package BanosJimenezNoelia;
+
+public class Espectador {
+	String nombre;
+	int edad;
+	double dineroEncima;
+
+	public Espectador(String nombre, int edad, double dineroEncima) {
+
+			this.nombre = nombre;
+		this.edad = edad;
+		this.dineroEncima = dineroEncima;
+	}
+
+}

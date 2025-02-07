@@ -1,0 +1,16 @@
+package EjerciciosMatrices;
+
+import java.util.Scanner;
+
+public class Ej_b {
+	// constante de la anchura de la matriz
+	final static int MAX = 2;
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		int[][] matriz = new int[MAX][MAX];
+
+	}
+
+}

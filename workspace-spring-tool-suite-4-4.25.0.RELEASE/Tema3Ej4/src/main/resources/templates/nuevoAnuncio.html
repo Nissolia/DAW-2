@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo anuncio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+		<h1>Nuevo anuncio</h1>
+		<form action="/anuncio" method="post">
+		  <label>Nombre</label>
+		  <input class="input" type="text" name="nombre" required /><br />
+		  <label>Asunto</label>
+		  <input class="input" type="text" name="asunto" required /><br />
+		  <label>Comentario</label>
+		  <textarea class="input" name="comentario" required></textarea><br />
+		  <input class="boton" type="submit" value="Enviar" />
+		</form>
+		<a th:href="@{/}">Volver al índice</a>
+  </div>
+  </body>
+</html>

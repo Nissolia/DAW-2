@@ -1,0 +1,20 @@
+package EjerciciosMatrices;
+
+import java.util.Scanner;
+
+public class Ej_b {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int fil, col;
+		// Le pedimos la información al usuario
+		System.out.println("Dime las filas de la matriz:");
+		fil = s.nextInt();
+		System.out.println("Dime las columnas de la matriz:");
+		col = s.nextInt();
+// Creamos la matriz
+		int[][] matriz = new int[fil][col];
+
+	}
+
+}

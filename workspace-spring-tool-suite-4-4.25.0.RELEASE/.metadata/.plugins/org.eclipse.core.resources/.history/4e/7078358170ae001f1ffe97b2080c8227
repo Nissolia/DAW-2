@@ -1,0 +1,41 @@
+package proyectoVehiculos2;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class NaveEspacial implements VehiculoMejorado{
+	int pasajeros;
+	private PasajerosExtra pasajerosExtra_naveDos;
+
+	
+	public NaveEspacial() {
+	}
+
+	@Override
+	public String getNombre() {
+		return "Halcón Milenario";
+	}
+
+	@Autowired
+	public int getNumPasajeros() {
+		return pasajerosExtra_naveDos.getPasajerosExtra()+numPasajeros;
+		}
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getNombre() + " tiene un total de " + getNumPasajeros() + " pasajeros.";
+	}
+
+
+	public int getPasajerosExtra_naveDos() {
+		return pasajerosExtra_naveDos.getPasajerosExtra();
+	}
+
+	
+
+	
+
+}

@@ -1,0 +1,63 @@
+package BanosJimenezNoelia;
+
+import java.lang.reflect.Array;
+import java.util.Scanner;
+
+//importante -- ppo para un cine
+// asientos divididos por filas, nos interesa que pelicula estamos viendo
+// edades es imortante
+// pelicula es al azar, va por porcentajes
+// no se permiten filas negativas, algo logico hasta 20 filas aprox
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		// código
+		boolean correcto = false;
+		do {
+			int fila, columna = 0;
+			System.out.println("Introduce el número de filas: ");
+			fila = s.nextInt();
+			System.out.println("Introduce el número de columnas: ");
+			columna = s.nextInt();
+
+			if (fila >= 3 && fila <= 9 && fila == columna) {
+				correcto = true;
+				rellenarAsientos(fila, columna);
+			} else {
+				System.out.println("Valor no permitido");
+			}
+		} while (!correcto);
+//persona que paga
+		
+		// cerrado de teclado
+		s.close();
+	}
+
+// FUNCIONES
+	/***
+	 * 
+	 * @param fila
+	 * @param columna
+	 * @return
+	 */
+	private static int[][] rellenarAsientos(int fila, int columna) {
+		// min 6x6, tiene que ser cuadrada
+// tratarlo como numeros nada mas y al mostrarlo se cambia por la letra
+
+		int[][] asientos = new int[fila][columna];
+		// mientras las filas sean mayor a 0
+		int num = 0;
+//creamos el asiento
+		for (int i = fila; i > 0; i--) {
+			for (int j = fila; j > 0; j--) {
+				// guardamos las cosas en la matriz
+				asientos[i][j] = num;
+				num++;
+			}
+
+		}
+
+		return asientos;
+	}
+}

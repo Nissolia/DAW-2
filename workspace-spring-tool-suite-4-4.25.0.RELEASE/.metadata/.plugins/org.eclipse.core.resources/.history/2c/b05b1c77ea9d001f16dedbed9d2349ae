@@ -1,0 +1,7 @@
+package BanosJimenezNoelia;
+
+public class Espectador {
+	String nombre;
+	int edad;
+	double dineroEncima;
+}

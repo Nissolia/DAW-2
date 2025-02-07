@@ -1,0 +1,2 @@
+nombres=Bartolito,Romualda,Segismundo,Rosalin,Enjistan
+ataqueEspecial=ninguno,La hostia,Los gérmenes,Purificación bendita

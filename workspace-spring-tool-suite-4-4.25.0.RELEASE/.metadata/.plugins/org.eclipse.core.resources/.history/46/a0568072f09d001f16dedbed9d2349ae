@@ -1,0 +1,38 @@
+package BanosJimenezNoelia;
+
+public class Espectador {
+	String nombre;
+	int edad;
+	double dineroEncima;
+
+	public Espectador(String nombre, int edad, double dineroEncima) {
+
+		this.nombre = nombre;
+		this.edad = edad;
+		this.dineroEncima = dineroEncima;
+	}
+
+	/***
+	 * 
+	 * @return Espectador obj
+	 */
+	private Espectador generarEspectadores() {
+
+		String nombres[] = { "Mateo", "Martín", "Lucas", "Leo", "Daniel", "Alejandro", "Manuel", "Pablo", "Álvaro",
+				"Adrián", "Mario", "Diego", "David", "Bruno", "Juan", "Pedro", "Gabriel", "Sofía", "Martina", "María",
+				"Julia", "Paula", "Valeria", "Emma", "Carmen", "Olivia", "Celia", "Irene", "Marta", "Laura", "Gema",
+				"Lola", "Jimena", "Claudia" };
+		int el = (int) (Math.random() * nombres.length);
+		return new Espectador(nombres[el], genNum(8, 48), genNum(2, 20));
+	}
+
+	/***
+	 * 
+	 * @param minimo
+	 * @param maximo
+	 * @return
+	 */
+	public static int genNum(int minimo, int maximo) {
+		return (int) (Math.random() * (maximo - minimo + 1)) + minimo;
+	}
+}

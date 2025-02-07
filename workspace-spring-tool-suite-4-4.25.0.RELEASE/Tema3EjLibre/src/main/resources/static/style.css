@@ -1,0 +1,177 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-color: white; /* Fondo blanco */
+    color: #47364A; /* Color oscuro para el texto */
+    line-height: 1.6;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Estilo para el título */
+h1 {
+    color: #B185A7; /* Color lavanda suave */
+    text-align: center;
+    margin-top: 20px;
+}
+table{
+	text-align: center;
+}
+/* Estilo para el enlace "Añadir un nuevo libro" */
+.agregar-libro {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #B185A7;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #B185A7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.agregar-libro:hover {
+    color: white;
+    background-color: #47364A; /* Oscurecer al pasar el mouse */
+}
+
+/* Estilo de la tabla */
+.tabla-libros {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilo para los encabezados de la tabla */
+.encabezado-tabla {
+    text-align: left;
+    padding: 10px;
+    color: #47364A;
+    font-weight: bold;
+}
+
+/* Estilo para las celdas de la tabla */
+.dato-tabla {
+    padding: 10px;
+    color: #47364A;
+}
+
+/* Estilo para la columna de acción (Ver Detalles) */
+.accion-tabla {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo del enlace "Ver Detalles" */
+.enlace-detalle {
+    display: inline-block;
+    padding: 10px;
+    color: #B185A7;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #B185A7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.enlace-detalle:hover {
+    color: white;
+    background-color: #47364A; /* Oscurecer al pasar el mouse */
+}
+
+/* Estilo de los enlaces generales */
+a {
+	display: inline-block;
+	   padding: 10px;
+	   color: #B185A7;
+	   text-decoration: none;
+	   border-radius: 10px;
+	   border: 1px solid #B185A7;
+	   transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+a:hover {
+	color: white;
+	background-color: #47364A; /* Oscurecer al pasar el mouse */
+}
+
+/* Estilos de botones */
+button {
+    background-color: #B185A7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #47364A;
+}
+
+/* Ajustes de estilo para formularios */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #C3A29E; /* Color suave para los labels */
+}
+
+/* Estilo de los inputs y textareas */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #E8DBC5; /* Borde suave */
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Error container */
+.error-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #FFF4E9;
+    border: 1px solid #E8DBC5;
+    border-radius: 8px;
+    color: #47364A;
+    text-align: center;
+}
+
+.error-container a {
+    color: #47364A;
+}
+
+.error-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para cajas adicionales */
+.caja {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+/* Ajustes pequeños para pantallas móviles */
+@media (max-width: 600px) {
+    form, .error-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

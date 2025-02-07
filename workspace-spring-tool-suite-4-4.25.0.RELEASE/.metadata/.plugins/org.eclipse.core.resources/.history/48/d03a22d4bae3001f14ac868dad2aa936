@@ -1,0 +1,30 @@
+# Stage 1: Build the application
+#FROM eclipse-temurin:23-jdk AS builder
+# Set the working directory
+#WORKDIR /app
+# Copy the application code
+#COPY . .
+# Given permissions to mvnw
+#RUN chmod +x mvnw
+# Build the application (requires Maven or Gradle)
+#RUN ./mvnw clean package -DskipTests
+# Stage 2: Run the application
+#FROM eclipse-temurin:23-jre
+# Set the working directory
+#WORKDIR /app
+# Copy the JAR file from the builder stage
+#COPY --from=builder /app/target/*.jar app.jar
+# Expose the port the app will run on
+#EXPOSE 8080
+# Command to run the application
+#ENTRYPOINT ["java", "-jar", "app.jar"]
+
+FROM maven:3.6.3-openjdk-14-slim AS build 
+COPY src /home/app/src
+COPY pom.xml /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM openjdk:14-alpine
+COPY --from=build "home/app/target/CrudSpringAea_docker-1.0.jar" "app.jar"
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]

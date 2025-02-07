@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anuncio Creado</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Mostrando lista de anuncios si existen -->
+      <table th:if="${anuncios != null && !anuncios.isEmpty()}">
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Asunto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="anuncio : ${anuncios}">
+            <td><a th:href="@{/anuncio}" th:text="${anuncio.titulo}"></a></td>
+            <td th:text="${anuncio.asunto}"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Mensaje de bienvenida si no hay anuncios -->
+      <h2 th:unless="${anuncios != null && !anuncios.isEmpty()}">¡Bienvenido!</h2>
+
+      <!-- Enlace para crear nuevo anuncio -->
+      <a th:href="@{/nuevoAnuncio}">Nuevo anuncio</a>
+    </div>
+  </body>
+</html>

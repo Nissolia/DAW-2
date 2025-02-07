@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;anuncio.html&apos; to &apos;anuncio.html&apos;&#x0D;&#x0A;- Original project: &apos;Tema3Ej4&apos;&#x0D;&#x0A;- Destination element: &apos;anuncio.html&apos;&#x0D;&#x0A;- Original element: &apos;anuncio.html&apos;" description="Copy file" element1="src/main/resources/templates/anuncio.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1737128279536" target="/Tema3Ej4/src/main/resources/templates/anuncio.html" units="0" version="1.0"/>
+</session>

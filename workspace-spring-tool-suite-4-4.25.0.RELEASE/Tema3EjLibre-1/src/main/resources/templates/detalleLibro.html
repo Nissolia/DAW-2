@@ -1,0 +1,22 @@
+<!-- detalleLibro.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Libro</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+
+</head>
+<body>
+	<div class="caja">
+		
+	
+    <h1>Detalle del Libro</h1>
+    <p><strong>Título:</strong><br> <span th:text="${libro.titulo}"></span></p>
+    <p><strong>Autor:</strong> <br><span th:text="${libro.autor}"></span></p>
+    <p><strong>Género:</strong><br> <span th:text="${libro.genero}"></span></p>
+    <p><strong>Sinopsis:</strong> <br><span th:text="${libro.sinopsis}"></span></p>
+    <a href="/">Volver a la lista de libros</a>
+	</div>
+</body>
+</html>

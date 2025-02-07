@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 packages to &apos;Ejercicios/src&apos;&#x0D;&#x0A;- Original project: &apos;PruebaSpringBoot&apos;&#x0D;&#x0A;- Destination element: &apos;Ejercicios/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     PruebaSpringBoot/src/main/java/EjerciciosFunciones&#x0D;&#x0A;     PruebaSpringBoot/src/main/java/EjerciciosString&#x0D;&#x0A;- Update references to refactored element" description="Move packages" destination="=Ejercicios/src" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;EjerciciosFunciones" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;EjerciciosString" flags="589830" fragments="2" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1727866789257" version="1.0"/>
+</session>

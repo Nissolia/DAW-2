@@ -1,0 +1,42 @@
+package BanosJimenezNoelia;
+
+import java.lang.reflect.Array;
+
+//importante -- ppo para un cine
+// asientos divididos por filas, nos interesa que pelicula estamos viendo
+// edades es imortante
+// pelicula es al azar, va por porcentajes
+// no se permiten filas negativas, algo logico hasta 20 filas aprox
+// 
+//
+//
+// 
+public class Main {
+
+	public static void main(String[] args) {
+rellenarAsientos(6,6);
+
+
+
+	}
+// FUNCIONES
+	private String[][] rellenarAsientos(int fila, int columna) {
+		//min 6x6, tiene que ser cuadrada
+	
+		String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		String[][] asientos= new String[fila][columna];
+		//mientras las filas sean mayor a 0
+
+		int indAbc = 0;
+//creamos el asiento
+	for (int i = fila; i > 0; i--) {
+		for (int j = fila; j > 0; j--) {
+			asientos[i][j] = abc.indexOf(indAbc);
+			indAbc ++;
+		}
+		indAbc = 0;
+	}
+
+		return asientos;
+	}
+}

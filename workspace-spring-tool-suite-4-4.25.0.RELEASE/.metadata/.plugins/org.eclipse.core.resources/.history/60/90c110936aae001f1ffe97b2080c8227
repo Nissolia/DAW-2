@@ -1,0 +1,23 @@
+package proyectoVehiculosMejorado;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+
+@Component
+public class NaveEspacial implements VehiculoMejorado {
+
+	ClassPathXmlApplicationContext miContexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+	
+	@Override
+	public String getNombre() {
+		
+		return "Halcón Milenario";
+	}
+
+	@Override
+	public int getNumPasajeros() {
+		int total = 6;
+		return total;
+	}
+
+}

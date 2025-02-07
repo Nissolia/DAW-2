@@ -1,0 +1,11 @@
+package proyectoVehiculos2;
+
+public class TransporteAuxiliar implements PasajerosExtra{
+
+	@Override
+	public int getPasajerosExtra() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,7 @@
+package proyectoVehiculos2;
+
+public interface PasajerosExtra {
+	int pasajerosExtra = 8;
+
+	public  int getPasajerosExtra();
+}

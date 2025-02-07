@@ -1,0 +1,5 @@
+package proyectoVehiculosMejorado;
+
+public interface Vehiculo {
+	 public String getTareas();
+}

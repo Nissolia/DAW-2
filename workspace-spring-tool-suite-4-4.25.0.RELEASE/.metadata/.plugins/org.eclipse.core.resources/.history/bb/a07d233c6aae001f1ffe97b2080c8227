@@ -1,0 +1,10 @@
+package proyectoVehiculosMejorado;
+
+public class PruebaNaveEspacial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Nave NaveEspacial = new Nave();
+	}
+
+}

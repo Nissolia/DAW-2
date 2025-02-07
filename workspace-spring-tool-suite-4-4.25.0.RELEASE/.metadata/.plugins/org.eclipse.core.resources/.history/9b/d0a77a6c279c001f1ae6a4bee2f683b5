@@ -1,0 +1,5 @@
+package GestionVehiculos;
+
+public interface Vendible {
+
+}

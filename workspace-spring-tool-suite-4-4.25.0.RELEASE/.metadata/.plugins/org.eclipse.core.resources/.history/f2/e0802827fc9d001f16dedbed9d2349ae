@@ -1,0 +1,26 @@
+package BanosJimenezNoelia;
+
+import java.util.ArrayList;
+
+public interface MejorVersion {
+	//metodo para obtener la tarjeta
+	static void obtenerTarjeta(ArrayList<Espectador> clientes) {
+		int contador = 0;
+		double mediaEdad = 0;
+		double elecc = Math.random() * 100;
+		System.out.println();
+		System.out.println("Salida de los métodos de MejorVersion");
+		System.out.println("Los nombres de las personas que cumplen los métodos de la Interface son:");
+
+		for (Espectador e : clientes) {
+			if (e.getDineroEncima() >= 12 != (e.getEdad() < 18 || e.getEdad() < 35)&&elecc<20) {
+				e.setTarjeta(true);
+				contador++;
+				mediaEdad += e.getEdad();
+				System.out.println(e.getNombre());
+			}
+		}
+
+		System.out.println("La media de edad es: " + mediaEdad / contador);
+	}
+}

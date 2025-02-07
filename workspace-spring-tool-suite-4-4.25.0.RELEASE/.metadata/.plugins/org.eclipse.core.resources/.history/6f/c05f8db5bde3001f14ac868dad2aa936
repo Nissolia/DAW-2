@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  myapp-mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - /home/hans/Escritorio/git_proyect/bd_spring_docker:/var/lib/mysql
+    networks:
+      - employee-mysql
+      
+  myapp-main:
+    image: hansleolml/spring_docker:2.0
+    networks:
+      - employee-mysql
+    restart: on-failure
+    depends_on:
+      - myapp-mysql
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_HOST=myapp-mysql
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=mysql
+      - DATABASE_NAME=test
+      - DATABASE_PORT=3306
+   
+networks:
+  employee-mysql: 
