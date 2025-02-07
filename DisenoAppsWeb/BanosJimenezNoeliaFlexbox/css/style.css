@@ -1,0 +1,425 @@
+/* Variables usadas en nuestra página web */
+:root {
+    /* Colores */
+    --rosa: #b8336a;
+    --turquesa: #068d9d;
+    --naranja: #ff8015;
+    --gris: #484349;
+    --grisclaro: #f2f2f2;
+    --negro: #000000;
+    --blanco: #ffffff;
+    /* Nuestra anchura máxima */
+    --maxima: 1200px;
+    /* Tipografías a usar */
+    --RalewayRegular: RalewayRegular, sans-serif;
+    --RalewayBold: RalewayBold, sans-serif;
+    --RalewayBlack: RalewayBlack, sans-serif;
+    --Staatliches: Staatliches, Impact, sans-serif;
+}
+
+/* Reseteamos la página */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Fuentes usadas en la página web */
+@font-face {
+    font-family: RalewayRegular;
+    src: url("fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: RalewayBold;
+    src: url("fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: RalewayBlack;
+    src: url("fonts/Raleway-Black.ttf");
+}
+
+@font-face {
+    font-family: Staatliches;
+    src: url("fonts/Staatliches-Regular.ttf");
+}
+
+/* Definimos el font size a 62.5 para usar propiedad rem comodamente */
+html {
+    font-size: 62.5%;
+}
+
+/* Modificación según la guía de estilo proporcionada */
+body {
+    font-family: var(--RalewayRegular);
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4.4rem;
+    font-family: var(--Staatliches);
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* Estilifación del nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: var(--maxima);
+    margin: 0px auto;
+}
+
+.nav__picture {
+    height: 10rem;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.nav__picture--img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+
+.nav__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-right: 10px;
+}
+
+.nav__group {
+    text-decoration: none;
+    color: var(--rosa);
+    font-weight: bold;
+}
+
+.session__item {
+    color: var(--gris);
+    /* margin-left: 2rem; */
+    text-decoration: none;
+}
+
+.session__item:first-child {
+    border-left: 1px solid var(--grisclaro);
+    border: 0.5;
+    padding-left: 1rem;
+}
+
+/* Estilización del hero */
+.hero {
+    background-image: url('hero.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__container {
+    max-width: var(--maxima);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+
+}
+
+.hero h1 {
+    color: var(--blanco);
+}
+
+.hero a {
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--naranja);
+    padding: 1.5rem;
+    font-family: var(--RalewayRegular);
+    border-radius: 1rem;
+}
+
+/* Estilización de buscar un grupo en tu ciudad */
+.search {
+    background-color: var(--grisclaro);
+    width: 100%;
+    padding: 5rem;
+
+}
+
+.search__container {
+    max-width: var(--maxima);
+    margin: 0px auto;
+}
+
+.search__text {
+    color: var(--gris);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.search_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.search__input {
+    width: calc(95%/5);
+    font-family: var(--RalewayRegular);
+    padding: 1rem;
+    border: none;
+    box-shadow: 1px 1px 5px var(--gris);
+    border-radius: 0.2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 1 auto;
+}
+
+.input__button {
+    color: var(--blanco);
+    background-color: var(--rosa);
+}
+
+/* Estilización de los próximos eventos */
+.events h1 {
+    color: var(--gris);
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.events__card {
+    box-shadow: 0px 0px 4px var(--gris);
+    gap: 2rem;
+    width: calc(100%3);
+    overflow: auto;
+    margin: 1rem;
+
+}
+
+/* contenedor de todos los card que tenemos */
+.card__containers {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    max-width: var(--maxima);
+    color: var(--gris);
+    margin: 0px auto;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.card__picture--img,
+.card__portait--img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card__portait--img {
+    border-radius: 100%;
+}
+
+.card__picture {
+    width: calc(var(--maxima)/4);
+    display: inline-block;
+    object-fit: cover;
+}
+
+.card__organization {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    justify-content: start;
+    flex: 1 1 auto;
+}
+
+.card__portait {
+    width: 60px;
+}
+
+.card_p--important {
+    font-family: var(--RalewayBold);
+}
+
+.card_text {
+    padding: 2rem;
+}
+
+.card_text h2 {
+    font-size: 3rem;
+}
+
+/* Estililzación de categorías */
+.categories {
+    background-color: var(--grisclaro);
+}
+
+.categories h1 {
+    color: var(--gris);
+    margin: 1.5rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.categories__content h3 {
+    margin-bottom: 2rem;
+
+}
+
+.category__create,
+.category__created {
+    padding: 5rem;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.category__create {
+    background-color: var(--rosa);
+}
+
+.category__created {
+    background-color: var(--turquesa);
+}
+
+.categories__content {
+    height: 30vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+/* Estilización de crear grupo e iniciar sesion */
+.container {
+    max-width: var(--maxima);
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 10px;
+    margin: 0 auto;
+}
+
+.container__group {
+    text-decoration: none;
+    color: var(--rosa);
+    font-weight: bold;
+}
+
+.session {
+    border-left: 1px solid var(--grisclaro);
+    border: 0.5;
+    padding-left: 1rem;
+}
+
+/* Estilizacion de footer */
+.footer {
+    text-align: center;
+    padding: 3rem;
+    color: var(--gris);
+}
+
+/* Media query para hacer la versión de teléfono */
+@media screen and (max-width: 768px) {
+
+    /* Cambiamos la estructura del navbar */
+    .nav {
+        text-align: center;
+        align-items: center;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .nav__container {
+        flex-direction: column;
+    }
+
+    .nav__sesion {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .session__item {
+        margin-bottom: 1rem;
+    }
+
+    /* cambiamos ciertas propiedades del hero para ajustarlo */
+    .hero__container {
+        width: 90vw;
+    }
+
+    .hero__container a {
+        width: 60vw;
+    }
+
+    /* Empezamos con el formulario */
+    .search_form {
+        flex-direction: column;
+    }
+
+    .search__input {
+        width: 95%;
+    }
+
+    /*Modificamos los eventos próximos */
+    .card__containers {
+        justify-content: center;
+    }
+
+    .category__create,
+    .category__created {
+        padding: 3rem;
+    }
+
+    .categories__content {
+        flex-direction: column;
+        width: auto;
+    }
+
+    /* El contenido inferior también se modifica para ponerlo a nuestro gusto */
+    .container {
+        margin: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

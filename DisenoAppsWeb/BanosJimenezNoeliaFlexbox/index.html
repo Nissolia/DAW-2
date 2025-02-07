@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeti</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Apartado del nav con logo y creacion de grupo y sesiones -->
+    <nav class="nav">
+        <picture class="nav__picture"><img class="nav__picture--img" src="img/logo.png" alt="logo meeti"></picture>
+        <div class="nav__container">
+            <a class="nav__group" href="#">Crear grupo</a>
+            <div class="nav__sesion">
+                <a class="session__item" href="#">Iniciar sesión</a>
+                <a class="session__item" href="#">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero principal de la página para la imagen y tagline -->
+    <article class="hero">
+        <div class="hero__container">
+            <h1>Encuentra o crea un grupo para compartir lo que más te gusta</h1>
+            <a href="#">Obtener una cuenta</a>
+        </div>
+    </article>
+    <!-- Seccion para buscar el grupo en tu ciudad -->
+    <section class="search">
+        <div class="search__container">
+            <h1 class="search__text">Busca un grupo en tu ciudad</h1>
+            <form class="search_form" action="#">
+                <select class="search__input" name="grupo" id="group">
+                    <option value="Programacion">Programación</option>
+                    <option value="Gastronomia">Gastronomia</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="Dibujo">Dibujo</option>
+                    <option value="Baile">Baile</option>
+                </select>
+                <input class="search__input" type="text" placeholder="Nombre evento">
+                <input class="search__input" type="text" placeholder="Ciudad o país">
+                <input class="search__input input__button" type="button" value="Buscar">
+            </form>
+        </div>
+    </section>
+    <!-- Apartado para los próximos eventos -->
+    <section class="events">
+        <h1>Próximos eventos</h1>
+        <!-- Card creada para cada uno de los eventos -->
+        <div class="card__containers">
+            <div class="events__card">
+                <picture class="card__picture"><img class="card__picture--img" src="img/imagen1.jpg"
+                        alt="personas reunidas en una mesa"></picture>
+                <div class="card_text">
+                    <p>Jueves 28 de noviembre de 2024</p>
+                    <h2>Hackaton Intercentros</h2>
+                    <div class="card__organization">
+                        <picture class="card__portait"><img class="card__portait--img" src="img/perfil1.jpg"
+                                alt="retrato de una mujer joven"></picture>
+                        <div class="text__organization">
+                            <p class="card_p--important">Organizado por:</p>
+                            <p>Ayuntamiento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo evento creado a partir de card -->
+            <div class="events__card">
+                <picture class="card__picture"><img class="card__picture--img" src="img/imagen2.jpg"
+                        alt="fotografía de un ordenador en una mesa"></picture>
+                <div class="card_text">
+                    <p>Jueves 5 de diciembte de 2024</p>
+                    <h2>Programación web</h2>
+                    <div class="card__organization">
+                        <picture class="card__portait"><img class="card__portait--img" src="img/perfil2.jpg"
+                                alt="retrato de una hombre joven"></picture>
+                        <div class="text__organization">
+                            <p class="card_p--important">Organizado por:</p>
+                            <p>IES Ruíz Gijón</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tercer evento creado a partir de card -->
+            <div class="events__card">
+                <picture class="card__picture"><img class="card__picture--img" src="img/imagen3.jpg"
+                        alt="fotografía de una pizza"></picture>
+                <div class="card_text">
+                    <p>Martes 10 de diciembte de 2024</p>
+                    <h2>Pizza paso a paso</h2>
+                    <div class="card__organization">
+                        <picture class="card__portait"><img class="card__portait--img" src="img/perfil3.jpg"
+                                alt="retrato de un hombre adulto"></picture>
+                        <div class="text__organization">
+                            <p class="card_p--important">Organizado por:</p>
+                            <p>Massimo Santoro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Apartado de categorías -->
+    <section class="categories">
+        <h1>Categorías</h1>
+        <div class="categories__content">
+            <div class="category__create">
+                <h3>Crea un grupo</h3>
+                <p>Comparte lo que te gusta o tu pasión con los demás, crea tu propio grupo y eventos; hoy mismo,
+                    gratis.
+                </p>
+            </div>
+            <div class="category__created">
+                <h3>Únete a un grupo</h3>
+                <p>Conoce personas con tus mismos gustos y pasiones, únete a un grupo ya existente y asiste a los
+                    próximos
+                    eventos.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Navegación de crear grupo e iniciar sesion -->
+    <div class="container">
+        <a class="container__group" href="#">Crear grupo</a>
+        <div class="sesion">
+            <a class="session__item" href="#">Iniciar sesión</a>
+            <a class="session__item" href="#">Registrarse</a>
+        </div>
+    </div>
+    <!-- Footer de la página web -->
+    <footer class="footer">
+        <p class="footer__text">Todos los derechos reservados. Meeti</p>
+    </footer>
+</body>
+
+</html>

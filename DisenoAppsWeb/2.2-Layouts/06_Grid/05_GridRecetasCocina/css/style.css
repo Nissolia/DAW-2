@@ -1,0 +1,155 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header__logo {
+    margin: 2rem auto;
+}
+
+.header {
+    padding: 3rem 0 0 1rem;
+
+}
+
+.navigation {
+    background-color: black;
+    margin: 3rem 0;
+}
+
+.navigation__link {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navigation__link:hover {
+    background-color: #c9c84a;
+    color: black;
+}
+
+.hero__img {
+    width: 100%;
+}
+
+.main-content__title {
+    text-align: center;
+}
+
+.main-content__post p {
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+blockquote {
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
+    color: #525252;
+}
+
+.main-content__info {
+    background-color: #c9c84a;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.main-content__info p {
+    margin: 0 0 .5rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-content__img1,
+.main-content__img2 {
+    text-align: center;
+}
+
+.footer {
+    background-color: #c9c84a;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.footer__link {
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #525252;
+    margin-bottom: .5rem;
+}
+
+.footer__copyright {
+    color: white;
+    background-color: #282828;
+    margin: 3rem 0 0 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* contenedor */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation .container, .footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+/* Grind a main-content */
+@media screen and (min-width: 768px) {
+    /* definicion del grid para el contenido */
+    .main-content{
+        display: grid;
+        grid-template-columns: minmax(100px, max-content) auto minmax(100px, max-content) ;
+    grid-template-rows: repeat(4,auto);
+    }
+
+    /* colocacion de los elementos grid */
+    .main-content__title{
+        grid-column: 1/-1;
+    }
+    /* colocamos el bloque de texto */
+    .main-content__post{
+        grid-column: 2/3;
+        grid-row: 2/-1;
+    }
+    .main-content__info{
+        grid-row:2/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content__img1{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .main-content__img2{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+}

@@ -1,0 +1,41 @@
+/* variables */
+:root {
+  --fuentePrincipal: Staatliches, sans-serif;
+  --fuenteSecundaria: NotoSans, sans-serif;
+  --col1: #25072c;
+  --col2: #642b73;
+  --col3: #ffce00;
+  --colClaro: #ECE5F0;
+  --colOscuro: #010f0e;
+}
+/* fuentes usadas */
+@font-face {
+  font-family: Staatliches;
+  src: url("../fonts/Staatliches-Regular.ttf");
+}
+@font-face {
+  font-family: NotoSans;
+  src: url("../fonts/NotoSansTC-Regular.otf");
+}
+/* body principal */
+body {
+  font-family: var(--fuentePrincipal);
+  background-color: var(--col1);
+  color: var(--colClaro);
+}
+/* navegador con links */
+.nav__link{
+    text-decoration: none;
+    color: white;
+}
+.products__grid{
+  max-width: 120px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 10px;
+}
+.grid__card{
+  background-color: var(--col2);
+ text-align: center;
+}

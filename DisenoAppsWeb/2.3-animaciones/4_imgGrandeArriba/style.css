@@ -1,0 +1,95 @@
+/*  estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Configuración del contenedor */
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__img {
+  width: 250px;
+  height: 400px;
+}
+
+.container__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Factor oculto */
+.oculto {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.oculto__img {
+margin: 10vw 5vh;
+
+  width: 90vw;
+  height: 80vh;
+
+  max-width: 1200px;
+  background-image: url('img/imgM.jpg');
+  background-size: cover;
+  position: fixed;
+  top:0px;
+  left: 0px;
+
+}
+
+.oculto__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* link de quitar imagen*/
+.linkActivo {
+  color: white;
+  background-color: red;
+  padding: 5px 10px;
+  font-size: 10px;
+  text-decoration: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
+}
+
+/* */
+#abrir:target {
+  transform: translateX(0);
+}
+
+#cerrar:target .oculto {
+  transform: translateX(100%);
+}

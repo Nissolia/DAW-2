@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+    font-size: 63.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clip_path {
+    background-color: purple;
+    height: 350px;
+    width: 350px;
+
+    /* clip path */
+    /* a */
+
+    clip-path: polygon(77% 0, 100% 100%, 25% 100%, 0 0);
+    /* va en sentido agujas del reloj */
+    transition: clip-path ease 2s;
+}
+
+.clip_path:hover {
+    clip-path: polygon(100% 0, 49% 100%, 0 100%, 56% 0);
+
+}

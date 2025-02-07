@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App reservas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mq.css">
+</head>
+
+<body>
+    <!-- parte superior del header con logo incluido-->
+    <header class="header  container">
+        <figure class="header__logo"><img src="img/logo.png" alt="logo app reservas"></figure>
+        <nav class="header__nav">
+            <a class="header__link" href="#">Iniciar sesion</a>
+            <a class="header__link" href="#">Crear cuenta</a>
+            <a class="header__link header__link--register" href="#">Registrar restaurante</a>
+        </nav>
+    </header>
+    <!-- section para localizar la reserva -->
+    <main class="booking container">
+        <form action="#" class="booking__form">
+            <h1 class="booking__title">Localiza y reserva en tu restaurante favorito</h1>
+            <p class="booking__text">CIUDAD</p>
+            <input class="booking__input" type="text" placeholder="Sevilla">
+            <p class="booking__text">TIPO DE COMIDA</p>
+            <input class="booking__input" type="text" placeholder="Mediterránea, asiática...">
+            <input class="booking__button" type="button" value="Buscar">
+        </form>
+        <figure class="booking__hero"><img src="img/dinner.svg" alt="dos personas cenando"></figure>
+
+    </main>
+    <main class="main">
+        <!-- en este div vamos a añadir el vector wave-->
+        <div class="main__wave">
+            <svg width="1440" height="252" viewBox="0 0 1440 252" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_2)">
+                    <path
+                        d="M0 59.7L48 81C96 102.7 192 144.7 288 145C384 144.7 480 102.7 576 70.4C672 38.7 768 16.7 864 6.4C960 -4.3 1056 -4.3 1152 27.7C1248 59.7 1344 123.7 1392 155.7L1440 187.7V251.7H0V59.7Z"
+                        fill="#3F2690" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_1_2">
+                        <rect width="1440" height="251.7" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="main__container">
+            <!-- pasos para pedir la comida -->
+            <h1 class="main__title">¿Cómo funciona?</h1>
+            <h3 class="main__title">¡Sigue estos pasos!</h3>
+            <div class="main__cards container">
+
+                <figure class="main__card"><img src="img/step1.png" alt="lugar de comida"></figure>
+                <figure class="main__card"><img src="img/step2.png" alt="app de comida"></figure>
+                <figure class="main__card"><img src="img/step3.png" alt="bicicleta veloz"></figure>
+            </div>
+        </div>
+    </main>
+    <!-- opiniones -->
+    <article class="opinion container">
+        <h1 class="opinion__title">Opiniones</h1>
+        <!-- primera opinion -->
+        <div class="opinion__card opinion__card--first">
+            <div class="opinion__presentation">
+                <figure class="opinion__portait"><img src="img/opinion1.jpg" alt="retrato de una persona"></figure>
+                <p class="opinion__name">Michael Kitawura</p>
+                <figure class="opinion__stars"><img src="img/stars.png" alt=""></figure>
+            </div>
+            <div class="opinion__text">
+                <h1 class="opinion__start">"</h1>
+                <p class="opinion__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugit ab,
+                    maiores, facilis voluptates
+                    quas animi quibusdam debitis officia.</p>
+            </div>
+        </div>
+        <!-- segunda opinion -->
+        <div class="opinion__card">
+            <div class="opinion__presentation">
+                <figure class="opinion__portait"><img src="img/opinion2.jpg" alt="retrato de una persona"></figure>
+                <p class="opinion__name">Sara Lamesa</p>
+                <figure class="opinion__stars"><img src="img/stars.png" alt=""></figure>
+            </div>
+            <div class="opinion__text">
+                <h1 class="opinion__start">"</h1>
+                <p class="opinion__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <!-- tercera opinion -->
+        <div class="opinion__card opinion__card--third">
+            <div class="opinion__presentation ">
+                <figure class="opinion__portait"><img src="img/opinion3.jpg" alt="retrato de una persona"></figure>
+                <p class="opinion__name">Paco Duran</p>
+                <figure class="opinion__stars"><img src="img/stars.png" alt=""></figure>
+            </div>
+            <div class="opinion__text">
+                <h1 class="opinion__start">"</h1>
+                <p class="opinion__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugit ab,
+                    maiores, facilis voluptates
+                    quas animi quibusdam debitis officia.</p>
+            </div>
+        </div>
+        <!-- cuarta opinion -->
+        <div class="opinion__card opinion__card--fourth">
+            <div class="opinion__presentation">
+                <figure class="opinion__portait"><img src="img/opinion4.jpg" alt="retrato de una persona"></figure>
+                <p class="opinion__name">Adiana Celenta</p>
+                <figure class="opinion__stars"><img src="img/stars.png" alt=""></figure>
+            </div>
+            <div class="opinion__text">
+                <h1 class="opinion__start">"</h1>
+                <p class="opinion__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugit ab,
+                    maiores, facilis voluptates
+                    quas animi quibusdam debitis officia.</p>
+            </div>
+        </div>
+        <!-- quinta opinion -->
+        <div class="opinion__card opinion__card--end">
+            <div class="opinion__presentation ">
+                <figure class="opinion__portait"><img src="img/opinion5.jpg" alt="retrato de una persona"></figure>
+                <p class="opinion__name">Antonia Luque</p>
+                <figure class="opinion__stars"><img src="img/stars.png" alt=""></figure>
+            </div>
+            <div class="opinion__text">
+                <h1 class="opinion__start">"</h1>
+                <p class="opinion__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugit ab,
+                    maiores, facilis voluptates
+                    quas animi quibusdam debitis officia.</p>
+            </div>
+        </div>
+    </article>
+    <!-- lugares favoritos -->
+    <section class="favourites">
+        <!-- carta de restaurantes favoritos - 1 -->
+        <h1 class="favourites__title">Vuestros favoritos</h1>
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img "><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div>
+        <!-- carta de restaurantes favoritos - 2 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 3 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 4 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 5 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 6 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 7 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 8 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 9 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div> <!-- carta de restaurantes favoritos - 10 -->
+        <div class="favourites__card">
+            <figure class="favourites__restaurant favourites__restaurant--img"><img src="img/harveys_logo.jpg" alt="">
+            </figure>
+            <figure class="favourites__stars"><img src="img/stars.png" alt=""></figure>
+            <h3 class="favourites__name">Harvey's Bar & Grill</h3>
+            <p class="favourites__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque nisi qui
+                dignissimos quidem aperiam eos, voluptatibus ut perferendis, voluptas beatae rem! Temporibus harum
+                cumque quaerat. Voluptatibus iste sed saepe.</p>
+        </div>
+    </section>
+    <!-- registro de restaurante -->
+    <article class="register">
+        <h1 class="register__title">Registra tu restaurante</h1>
+        <figure class="register__img"></figure>
+        <p class="register__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur deserunt nulla
+            quisquam amet commodi ipsa
+            repudiandae explicabo cupiditate. Fuga commodi.</p>
+        <p class="register__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur deserunt nulla
+            quisquam amet commodi ipsa
+            repudiandae explicabo cupiditate. Fuga commodi.</p>
+        <a class="register__button" href="#"> Más información</a>
+    </article>
+    <!-- nosotros con informacion -->
+    <section class="about">
+        <div class="about__info">
+            <h2 class="about__title">Nosotros</h2>
+            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt,
+                incidunt porro sit soluta
+                illo eligendi labore laborum alias perferendis dolores quod dolorum adipisci maiores, magni architecto
+                laudantium enim id.</p>
+        </div>
+        <div class="about__info">
+            <h2 class="about__title">Navegación</h2>
+            <div class="about__links">
+
+                <a class="about__link" href="#">Enlace 1</a>
+                <a class="about__link" href="#">Enlace 2</a>
+                <a class="about__link" href="#">Enlace 3</a>
+                <a class="about__link" href="#">Enlace 4</a>
+                <a class="about__link" href="#">Enlace 5</a>
+                <a class="about__link" href="#">Enlace 6</a>
+            </div>
+
+        </div>
+        <div class="about__info">
+            <h2 class="about__title">Contacto</h2>
+            <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt,
+                incidunt porro sit soluta
+
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <p class="footer__text">&copy;AppReservas. Todos los derechos reservados - Noelia Baños</p>
+    </footer>
+</body>
+
+</html>

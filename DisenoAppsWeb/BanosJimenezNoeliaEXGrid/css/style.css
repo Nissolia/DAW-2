@@ -1,0 +1,334 @@
+/* variables usadas en nuestra página web */
+:root {
+    --robRegular: Roboto-Regular, sans-serif;
+    --robBold: Roboto-Bold, sans-serif;
+    --robBlack: Roboto-Black, sans-serif;
+    --robConBold: RobotoCondensed-Bold, sans-serif;
+    --principal: #3f2690;
+    --gris: #7f7e7e;
+    --grisClaro: #eceeef;
+    --botonFormulario: #222729;
+    --negro: #000000;
+    --blanco: #ffffff;
+}
+
+/* Formateo de la página */
+html {
+    box-sizing: border-box;
+    font-size: 63.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Inserccion de fuentes */
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url("../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: RobotoCondensed-Bold;
+    src: url("../fonts/RobotoCondensed-Bold.ttf");
+}
+
+/* Tamaños y fuente preestablecidos para las fuentes que vamos a usar */
+html {
+    box-sizing: border-box;
+    /* para que los rem sean 10px, se usa tmb para las personas que cambian la fuente en su navegador */
+    font-size: 62.5%;
+    font-family: var(--robRegular);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--robConBold);
+    text-align: center;
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 3.4rem;
+}
+
+p,
+a {
+    font-size: 2rem;
+}
+
+/* ajustamos todas las imagenes a su contenedor */
+img {
+    max-width: 100%;
+
+}
+
+/* estilización de la página - comenzaremos con móvil */
+/* contenedor global que tiene mínimo margen en los laterales */
+.container {
+    margin: 2rem;
+}
+
+/* header */
+.header__logo {
+    width: 30rem;
+}
+
+.header__link {
+    text-decoration: none;
+    text-align: center;
+    color: var(--botonFormulario);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.header__link--register {
+    background-color: var(--principal);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* booking */
+.booking {
+    color: var(--blanco);
+}
+
+.booking__form {
+    background-color: var(--principal);
+    padding: 1rem;
+    border-radius: 1rem;
+    padding: 3.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.booking__title {
+    margin-bottom: 2rem;
+}
+
+.booking__input {
+    padding: 1.5rem;
+}
+
+.booking__button {
+    border: none;
+    background-color: var(--botonFormulario);
+    color: var(--blanco);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+/* hero */
+.booking__hero {
+    padding-top: 2rem;
+    width: 40rem;
+    margin: 0 auto;
+}
+
+/* main */
+.main__wave {
+    /* ponemos estas modificaciones para que no se vea la línea entre el fondo y la ola */
+    position: relative;
+    top: 1rem;
+    /* en desktop no se como ajustarla */
+}
+
+.main__container {
+    background-color: var(--principal);
+}
+
+.main__title {
+    color: var(--blanco);
+
+}
+
+/* opinions */
+.opinion {
+    display: grid;
+    gap: 2rem;
+}
+
+.opinion__card {
+    background-color: var(--gris);
+    color: var(--blanco);
+
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.opinion__start {
+    color: var(--grisClaro);
+    opacity: 0.5;
+    font-size: 5rem;
+}
+
+.opinion__portait>img {
+    border-radius: 100%;
+    width: 10rem;
+}
+
+.opinion__presentation {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    gap: 2rem;
+}
+
+.opinion__portait {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.opinion__name {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-items: end;
+}
+
+.opinion__stars {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-items: start;
+}
+
+/* al repetirse lo mismo en ambos lo ponemos en uno conjunto */
+.opinion__name,
+.opinion__stars {
+    display: flex;
+    justify-content: start;
+
+}
+
+.opinion__text {
+    display: grid;
+    grid-template-columns: 2rem auto;
+}
+
+/* favourites */
+.favourites {
+    background-color: var(--grisClaro);
+    margin-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.favourites__title {
+    padding: 4rem;
+}
+
+.favourites__card {
+    background-color: var(--blanco);
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5rem var(--gris);
+    margin: 2rem;
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    text-align: center;
+}
+
+.favourites__stars {
+    margin: 1rem;
+}
+
+.favourites__name {
+    color: var(--principal);
+    margin-bottom: 2rem;
+}
+
+/* register */
+.register {
+    display: grid;
+    grid-template-rows: repeat(5, fr);
+}
+
+.register__title {
+    padding: 4rem;
+}
+
+.register__img,
+.register__text,
+.register__button {
+    margin: 2rem;
+}
+
+.register__button {
+    text-decoration: none;
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: 8rem;
+}
+
+.register__img {
+    width: 95%;
+    height: 300px;
+    background-image: url("../img/table.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* about */
+.about {
+    background-color: var(--gris);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.about__title,
+.about__text {
+    padding: 2rem;
+
+}
+
+.about__title>li {
+    list-style-position: none;
+}
+
+.about__link {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.about__links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer */
+.footer {
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 3rem;
+    text-align: center;
+}

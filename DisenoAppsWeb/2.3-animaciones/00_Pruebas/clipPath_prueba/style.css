@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+    font-size: 63.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clip_path {
+    background-color: purple;
+    height: 350px;
+    width: 350px;
+
+    /* clip path */
+clip-path: circle(50% at top);
+/* se hace el recorte al 50% con el punto medio en zona superior */
+transition: clip-path ease 2s ;
+}
+.clip_path:hover {
+    clip-path: circle(80% at center);
+}

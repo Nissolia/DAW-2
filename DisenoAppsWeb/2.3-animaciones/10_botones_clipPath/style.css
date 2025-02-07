@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+  font-size: 63.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+h1,
+.links {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Contenedor de botones */
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  gap: 20px;
+}
+
+/* Botón base */
+.boton {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 13px 20px;
+  background-color: purple;
+  color: white;
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Necesario para efectos */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Botón 1*/
+.boton1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  clip-path: circle(0% at 50% 50%);
+  transform: translate(-50%, -50%);
+  transition: clip-path 0.3s ease-in-out, width 0.3s, height 0.3s;
+}
+
+.boton1:hover::before {
+  clip-path: circle(150% at 50% 50%);
+  width: 300%;
+  height: 300%;
+}
+
+.boton1:hover {
+  color: white;
+  clip-path: circle(150% at 50% 50%);
+}
+
+/* Botón 2 */
+.boton2 {
+  background-color: purple;
+  color: white;
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Necesario para el clip-path */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.boton2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -100%; /* Comienza fuera del botón, a la izquierda */
+  width: 200%;
+  height: 200%;
+  background-color: white;
+  clip-path: circle(50%); /* Forma circular */
+  transform: translate(-50%, -50%);
+  transition: left 0.5s ease; /* Desplazamiento suave */
+  z-index: -1; /* Coloca el círculo detrás del texto */
+}
+
+.boton2:hover::after {
+  left: 100%; /* Mueve el círculo completamente hacia la derecha */
+}
+
+.boton2:hover {
+  color: purple; /* Texto morado */
+  background-color: white; /* Fondo blanco */
+}
+
+/* Botón 3 */
+.boton3 {
+  text-decoration: none;
+  font-size: 20px;
+  color: purple;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.3s;
+}
+
+.boton3:hover,
+.boton3:focus {
+  background-size: 100% 2px;
+}

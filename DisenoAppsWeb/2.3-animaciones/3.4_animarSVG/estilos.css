@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* arbol
+pajaro2 pajaro1 pajaro3
+banco */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 95%;
+}
+h1 {
+  margin: 20px;
+}
+.parque {
+  margin-top: 80px;
+  overflow: visible;
+}
+/* animacion pajaros */
+#pajaro1, #pajaro3 {
+  animation: parque-animacion-pajaroIzq 2s ease-in forwards;
+}
+#pajaro2 {
+    animation: parque-animacion-pajaroDrc 2s ease-in forwards;
+  }
+
+@keyframes parque-animacion-pajaroIzq {
+  from {
+    transform: translateX(0px);
+  }
+
+ 
+  to {
+    transform: translateX(-1000px);
+  }
+}
+
+@keyframes parque-animacion-pajaroDrc {
+    from {
+      transform: translateX(0px);
+    }
+  
+  
+    to {
+        transform: translateX(1000px);
+    }
+  }
+  /* animacion arboles */
+  #arbol1,#arbol2,#arbol3,#arbol4 {
+    animation: parque-animacion-arboles 3s;
+  }
+  @keyframes parque-animacion-arboles {
+    from {
+      transform: scaleY(-100%)
+    }
+   
+    to {
+      transform: scaleY(100%);
+    }
+  }
+  /* animacion banco */
+#banco{
+    animation: parque-animacion-banco 5s;
+}
+@keyframes parque-animacion-banco {
+    from {
+     opacity: 0;
+    }
+   
+    to {
+     opacity: 1;
+    }
+  }

@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+  font-size: 63.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --color: #0c6944;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1.5rem;
+}
+/* codigo de la página */
+.buttons {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: var(--color);
+  border-radius: 50px;
+  color: white;
+  display: inline-block;
+  margin-right: 20px;
+  padding: 15px 30px;
+  text-decoration: none;
+
+  position: relative;
+}
+/* PRIMER BOTON */
+/* nuevo elemento hijo que crea a partir del href */
+.button--opacity::before {
+  content: "";
+  background-color: #ffffff;
+  opacity: 0.2;
+
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* estado inicial de recorte */
+  clip-path: circle(0% at center);
+  transition: clip-path 0.4s cubic-bezier(0.075, 0.082, 0.165, 0.1);
+}
+.button--opacity:hover::before {
+  clip-path: circle(100% at center);
+}
+/*************************************** BOTON 2 */
+.button--top-left {
+  background-color: #fff;
+  color: var(--color);
+  transition: color 0.4s ease;
+}
+.button--top-left:hover {
+  color: #fff;
+}
+.button--top-left::after {
+  content: "";
+  background-color: var(--color);
+  border-radius: 50px;
+
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: circle(0% at top left);
+  transition: clip-path 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.button--top-left:hover::after {
+  clip-path: circle(140% at top left);
+}
+.button__text {
+  /* funciona de esta forma */
+  position: relative;
+  z-index: 1;
+}
+/*************************************** BOTON 3 */
+.button-underline {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color);
+  font-weight: 20px;
+}
+.button-underline::after{
+  content: "";
+  background-color: var(--color);
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 1.5px;
+
+  clip-path: circle(0% at center);
+  transition: clip-path 0.4s cubic-bezier(0.075, 0.082, 0.165, 0.1);
+}
+.button-underline:hover::after{
+  clip-path: circle(100% at center);
+}

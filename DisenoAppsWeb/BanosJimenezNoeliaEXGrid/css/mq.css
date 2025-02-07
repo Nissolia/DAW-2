@@ -1,0 +1,222 @@
+/* breakpoint para tablet */
+@media screen and (min-width: 768px) {
+
+    /* header */
+    .header__logo {
+        margin: 0 auto;
+    }
+
+    .header__link--register {
+        width: 30rem;
+        margin: 0 auto;
+    }
+
+    /* booking */
+    .booking {
+        display: grid;
+        grid-template-columns: 35rem auto;
+    }
+
+    .booking__hero {
+        margin: 2rem;
+    }
+
+    /* main cards */
+
+    .main__cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* opinion */
+    .opinion {
+        grid-template-columns: 30% auto 30% auto;
+        grid-auto-rows: min-content;
+    }
+
+    .opinion__title {
+        grid-column: 1/-1;
+    }
+
+    .opinion__card--first {
+        grid-column: 1/3;
+    }
+
+    .opinion__card--third {
+        grid-column: -2/-1;
+        grid-row: 2/4;
+    }
+
+    .opinion__card--end {
+        grid-column: 2/4;
+
+    }
+
+    /* favourites */
+    .favourites {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .favourites__title {
+        grid-column: 1/-1;
+    }
+
+    .favourites__card {
+        display: grid;
+        grid-template-columns: 15rem auto;
+        gap: 1rem;
+    }
+
+    .favourites__restaurant--img {
+        grid-row: 1/4;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .favourites__name {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .favourites__stars {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .favourites__text {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        text-align: left;
+    }
+
+    /* register */
+    .register {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 45% auto;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .register__title {
+        grid-column: 1/-1;
+    }
+
+    .register__img {
+        grid-row: 2/5;
+        object-position: center;
+        object-fit: fill;
+        height: 400px;
+        /* intenté ponerlo con background image pero me estaba ocasionando problemas */
+    }
+
+    .register__button {
+
+        display: inline;
+        align-self: self-end;
+        justify-self: end;
+    }
+
+    /* about */
+    .about {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__text,
+    .about__links {
+        text-align: left;
+    }
+}
+
+/* breakpoint para laptop */
+@media screen and (min-width: 1024px) {
+
+    /* container general */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* header */
+    .header {
+        display: grid;
+        grid-template-columns: 35% auto;
+    }
+
+    .header__nav {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-self: self-end;
+    }
+
+    .header__link {
+        align-self: baseline;
+        display: inline-block;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    /* booking */
+    .booking {
+        margin-top: 2rem;
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking__hero {
+        width: 100%;
+        justify-self: center;
+    }
+
+    .booking__form {
+        width: auto;
+
+    }
+
+    /* opinion */
+    .opinion {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: min-content;
+    }
+
+    .opinion__card--first {
+        grid-column: 1/4;
+    }
+
+    .opinion__card--third {
+        grid-column: -1-2;
+        grid-row: 2/4;
+    }
+
+    .opinion__card--fourth {
+        grid-column: 3/5;
+        grid-row: 3/4;
+    }
+
+    .opinion__card--end {
+        grid-column: 1/3;
+        grid-row: 3/4;
+
+    }
+
+    /* favourites */
+    .favourites__card {
+        grid-template-columns: 25rem auto;
+        gap: 3rem;
+    }
+
+    .favourites__stars {
+        grid-row: 1/2;
+
+    }
+
+    .favourites__name {
+        grid-row: 2/3;
+    }
+}

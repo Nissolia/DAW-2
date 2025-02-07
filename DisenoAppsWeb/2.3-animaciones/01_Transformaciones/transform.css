@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ---------------------- */
+.container {
+  outline: 2px solid crimson;
+  
+  width: 70%;
+  margin: 50px auto;
+}
+
+.element {
+  background-color: darkblue;
+  color: white;
+
+  font-size: 2rem;
+  line-height: 150px;
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  margin-top: 25px;
+}
+/* transformaciones: propiedad transform */
+/* translate */
+.translate {
+  transform: translate(250px);
+  background-color: greenyellow;
+  /* este es para la animacion */
+  /* transition con la propiedad y el tiempo que tarda */
+  transition: transform 3s, background-color 3s;
+}
+.container:hover .translate {
+  transform: translate(0%);
+  background-color: green;
+}
+/* rotate */
+.rotate {
+  transform: rotate(25deg);
+  transform-origin: top left;
+  background-color: blueviolet;
+}
+.container:hover .rotate {
+  transform: rotate(0deg);
+  transition: transform 3s, background-color 3s;
+  background-color: darkgreen;
+}
+/* scale */
+.scale {
+  transform: scale(0.5);
+  background-color: red;
+}
+.container:hover .scale {
+  transform: scale(1);
+  background-color: orange;
+  transition: transform 3s, background-color 3s;
+}
+/* scaleX */
+.scalex {
+  transform: scaleX(0.5);
+  background-color: red;
+}
+.container:hover .scalex {
+  transform: scaleX(1);
+  background-color: yellow;
+  transition: transform 3s, background-color 3s;
+}
+/* scaleY */
+.scaley {
+  transform: scaleY(0.5);
+  background-color: red;
+}
+.container:hover .scaley {
+  transform: scaleY(1);
+  background-color: orangered;
+  transition: transform 3s, background-color 3s;
+}
+/* skew */
+.skew {
+  transform: skew(0deg);
+  background-color: crimson;
+}
+.container:hover .skew {
+  transform: skew(30deg);
+  background-color: green;
+  transition: transform 3s, background-color 3s;
+}
+/* skewx */
+.skewx {
+  transform: skewX(0deg);
+  background-color: crimson;
+}
+.container:hover .skewx {
+  transform: skewX(40deg);
+  background-color: goldenrod;
+  transition: transform 3s, background-color 3s;
+}
+/* skewY */
+.skewy {
+  transform: skewY(0deg);
+  background-color: crimson;
+}
+.container:hover .skewy {
+  transform: skewY(40deg);
+  background-color:chartreuse;
+  transition: transform 3s, background-color 3s;
+}
+/* prueba */
+.extra{
+    transform: rotate(0deg) translate(0px, 0px) scale(1) skew(0deg);
+}
+.container:hover .extra {
+    transform: rotate(180deg) translate(-600px, 50px) scale(0.5) skew(20deg);
+
+
+    transition: transform 3s;
+  }

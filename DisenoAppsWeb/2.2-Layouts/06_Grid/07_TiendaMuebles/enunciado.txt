@@ -1,0 +1,33 @@
+Requisitos:
+
+Realiza la maquetación de la página Tienda Muebles basándote en CSS Grid. Puedes utilizar
+Flexbox para otros aspectos, como alineaciones, pero no para la maquetación prinicpal.
+Utiliza etiquetas semánticas HTML5.
+
+Tiene un diseño responsive, con un breakpoint en 768px.
+Importante: claridad y estructuración del código y comentarios.
+Mini-guía de estilo:
+
+
+Tipografías utilizadas:
+
+Titulares nivel 1, 2 y 3: Playfair Display
+Resto de textos y enlaces: Raleway
+* Si estableces un tamaño de fuente en el elemento raíz de la página de
+62.5%, los tamaños de lo textos son:
+
+Tamaño texto: 1.6 rem y line-height de 2
+h1: 3.8 rem en mobile, 5 rem en desktop
+h2: 3.2 rem en mobile, 4 rem en desktop
+h3: 2.4 rem en mobile, 3 rem en desktop
+
+
+Tamaño hero:
+altura de 25 rem en mobile
+altura de 55rem en desktop
+
+
+Colores:
+Azul: #037bc0
+Verde botones: #8cbc00
+Verde botones hover (con transición): #769c02

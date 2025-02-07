@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: #822a12;
+  background: linear-gradient(to right, #e9cd5c, #822a12);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+h1 {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery {
+  max-width: 1200px;
+  width: 90%;
+}
+
+.gallery__container {
+  margin: 2rem;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.picture {
+  height: 350px;
+}
+
+img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte Extraordinario</title>
+    <!-- Enlace a CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Parte Extraordinario de Incidencia</h1>
+            <div class="d-flex justify-content-center">
+                <img src="img/logo_RG_formularios.png" class="img-fluid" alt="Logo Instituto"  class="me-3">
+                <img src="img/logo_juntaAndalucia.png" class="img-fluid" alt="Logo Junta de Andalucía" >
+            </div>
+        </header>
+
+        <!-- Formulario para parte extraordinario -->
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Alumno</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="curso" class="form-label">Curso y Grupo</label>
+                <input type="text" class="form-control" id="curso" name="curso" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="hora" name="hora" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="profesor" class="form-label">Profesor</label>
+                <input type="text" class="form-control" id="profesor" name="profesor" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="asignatura" class="form-label">Asignatura</label>
+                <input type="text" class="form-control" id="asignatura" name="asignatura" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="conducta" class="form-label">Conducta Originada</label>
+                <textarea class="form-control" id="conducta" name="conducta" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="actitud" class="form-label">Actitud del Alumno</label>
+                <textarea class="form-control" id="actitud" name="actitud" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="medida" class="form-label">Medida Adoptada</label>
+                <textarea class="form-control" id="medida" name="medida" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono de Contacto</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. 612345678" pattern="[0-9]{9}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="adjunto" class="form-label">Adjuntar Documento</label>
+                <input type="file" class="form-control" id="adjunto" name="adjunto" accept=".jpg,.jpeg,.png,.pdf" required>
+                <div id="fileHelp" class="form-text">Añada una captura o documento relevante.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="acuerdo" class="form-label">Medida Aceptada</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="acuerdo" id="acuerdoSi" value="si" required>
+                    <label class="form-check-label" for="acuerdoSi">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="acuerdo" id="acuerdoNo" value="no" required>
+                    <label class="form-check-label" for="acuerdoNo">No</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="confirmar" required>
+                    <label class="form-check-label" for="confirmar">
+                        Confirmo que los datos son correctos
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Parte</button>
+        </form>
+    </div>
+
+    <!-- Enlace a JS de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
