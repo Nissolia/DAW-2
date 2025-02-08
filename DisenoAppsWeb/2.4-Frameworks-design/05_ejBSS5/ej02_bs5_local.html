@@ -8,7 +8,8 @@
   <!-- link icons -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
   <!-- instalación en local -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- link icono -->
   <link rel="stylesheet" href="css/bootstrap-icons.css">
   <style>
@@ -19,20 +20,37 @@
     .carousel-item iframe {
       width: 100%;
       height: 500px;
-      /* Ajusta la altura según necesites */
     }
 
     .carousel-item img {
       height: 500px;
-      /* Igual que el video para mantener proporción */
       object-fit: cover;
-      /* Asegura que las imágenes se ajusten correctamente */
     }
   </style>
 </head>
 <!-- body -->
 
 <body>
+  <!-- modal cookies -->
+  <!-- Modal de Aviso -->
+  <div class="modal show" tabindex="-1" id="cookieModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Aviso de cookies</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso
+            de cookies. Puedes configurar tus preferencias o aceptar solo las necesarias.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Aceptar las necesarias</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Todas las cookies</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container-md">
     <!-- HEADER -->
     <header class="row justify-content-center m-3">
@@ -53,9 +71,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link" href="#">Coches</a>
-                <a class="nav-link" href="#">Blog</a>
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#coches">Coches</a>
+                <a class="nav-link" href="#anuncios">Anuncios</a>
+                <a class="nav-link" href="#contacto">Contacto</a>
                 <a class="nav-link" href="#">Tienda</a>
               </div>
             </div>
@@ -70,18 +88,17 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
+            aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+            aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
             aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-            aria-label="Slide 3"></button>
+            aria-label="Slide 4"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-            aria-label="Slide 3"></button>
+            aria-label="Slide 5"></button>
         </div>
-
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="coches">
           <div class="carousel-item active">
             <iframe class="d-block" src="https://www.youtube.com/embed/IgkL0Zmvors?si=GhFl20g2YWaOQC-I"
               title="YouTube video player" frameborder="0"
@@ -116,7 +133,7 @@
     </section>
     <!-- ANUNCIOS -->
     <!-- titular -->
-    <h1 class="display-5 bg_yo text-light text-center p-2 text-uppercase">
+    <h1 class="display-5 bg_yo text-light text-center p-2 text-uppercase" id="anuncios">
       Anuncios
     </h1>
     <!-- cards -->
@@ -147,25 +164,24 @@
                 <a href="#" class="btn btn-primary">Comprar</a>
               </div>
             </div>
-            </div>
-            <!-- card 3 -->
-            <div class="col-md-4">
-              <div class="card">
-                <img src="img/anuncio1.jpg" class="card-img-top" alt="imagen de furgoneta amarilla en miniatura">
-                <div class="card-body">
-                  <h4 class="card-title text-uppercase">En venta</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
+          </div>
+          <!-- card 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/anuncio1.jpg" class="card-img-top" alt="imagen de furgoneta amarilla en miniatura">
+              <div class="card-body">
+                <h4 class="card-title text-uppercase">En venta</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">Comprar</a>
               </div>
             </div>
           </div>
+        </div>
     </main>
-
     <!-- CONTACTO -->
     <!-- titular contacto -->
-    <h1 class="display-5 bg_yo text-light text-center p-2 text-uppercase mt-3">
+    <h1 class="display-5 bg_yo text-light text-center p-2 text-uppercase mt-3" id="contacto">
       Contacto
     </h1>
     <section class="row mt-3 justify-content-evenly g-3 py-3">
@@ -196,10 +212,8 @@
     </section>
     <!-- FOOTER -->
     <footer class="bg_yo mt-3">
-
       <div class="row justify-content-center p-1 ">
         <!-- fila 1 -->
-
         <div class="col-6 justify-content-center text-center">
           <p class="text-light pt-3">Copyright 2025</p>
         </div>
@@ -222,7 +236,15 @@
   </div>
   </div>
   <!-- src de js -->
-  <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById('cookieModal'), {
+      backdrop: 'static',
+      keyboard: false
+    });
+    myModal.show();
+  </script>
 </body>
 
 </html>
