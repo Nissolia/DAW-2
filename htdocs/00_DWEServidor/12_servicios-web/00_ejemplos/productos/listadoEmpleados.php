@@ -1,20 +1,22 @@
 <?php
 
 /**
- * Devuelve un JSON con los datos de los empleados cuyos nombres contienen la cadena que* se pasa en la URL.
+ * Devuelve un JSON con los datos de los empleados cuyos nombres contienen la cadena
+que* se pasa en la URL.
  *
  * Ejemplo 1:
  *
  * listaEmpleados.php?nombre=me
  *
  * Devuelve un JSON con todos los datos de los empleados cuyos nombres contienen la
- * cadena "me" (sin distiguir mayúsculas de minúsculas. Se mostrarían los datos de * "Jimenez, Noelle J.", "Cooley, Cameron A.", "Meyer, Mikayla L.", etc.
+ * cadena "me" (sin distiguir mayúsculas de minúsculas. Se mostrarían los datos de *n"Jimenez, Noelle J.", "Cooley, Cameron A.", "Meyer, Mikayla L.", etc.
  *
  * Ejemplo 2:
  *
  * listaEmpleados.php
  *
- * Si no se pasa ninguna cadena en la URL, se devuelven los datos de todos los emplea\ dos.
+ * Si no se pasa ninguna cadena en la URL, se devuelven los datos de todos los emplea\
+dos.
  */
 // Abre el fichero con los datos en modo lectura
 $f = fopen("datos_empleados.csv", "r");

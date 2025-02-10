@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost//00_DWEServidor/12_servicios-web/_ejemplos/productos/consultaProductos.php";
+$url = "http://localhost/RESTFULL/consultaProductos.php";
 if (isset($_REQUEST['filtraPrecio'])) {
     $parametros = '?min=' . $_REQUEST['min'] . '&max=' . $_REQUEST['max'];
     mostrarDatos($url, $parametros);
