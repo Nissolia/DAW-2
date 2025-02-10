@@ -1,0 +1,17 @@
+Crea un servicio web que proporcione información sobre las matriculaciones de los alumnos en asignaturas del
+ejercicio 4 de la unidad anterior y permita realizar algunas operaciones en los datos.
+
+Se podrán realizar peticiones sobre las siguientes consultas:
+- Los alumnos de un grupo pasado por parámetro
+- Alumnos cuyo nombre contenga la cadena pasada por parámetro
+- Asignaturas de un alumno pasado por parámetro.
+El servicio también permitirá realizar las siguientes acciones:
+- Matriculación de un alumno en una asignatura.
+- Cambio de grupo de un alumno
+- Borrar un alumno
+Devolver el código de estado de la petición y el mensaje asociado a dicho código, junto con los datos. Probar y
+guardar todas las peticiones posibles en la aplicación Postman.
+
+
+Como segunda parte del ejercicio, realiza una página que actúe como cliente realizando peticiones al servidor, a
+través de formularios.
