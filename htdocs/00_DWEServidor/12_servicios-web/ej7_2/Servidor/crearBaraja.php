@@ -19,7 +19,6 @@ function crearBaraja($num)
 
 if (isset($_REQUEST['numero'])) {
     $numeroCartas = $_REQUEST['numero'];
-
     // Creamos la baraja
     $baraja = crearBaraja($numeroCartas);
     $mensaje = "BARAJA INSERTADA CORRECTAMENTE";

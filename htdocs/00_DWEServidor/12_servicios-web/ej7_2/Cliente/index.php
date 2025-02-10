@@ -28,7 +28,6 @@ en la URL es menor que 1 o mayor que 40, se debe devolver un error. -->
     </form>
 
 <?php
-
 if (isset($_REQUEST['numero'])) {
     $parametros =  '?numero=' . $_REQUEST['numero'];
     $data = @file_get_contents("http://localhost//00_DWEServidor/12_servicios-web/ej7_2/Servidor/crearBaraja.php" . $parametros);

@@ -1,6 +1,7 @@
 <?php
 // Configuración
-$api_url = "http://localhost//00_DWEServidor/12_servicios-web/ej7_3/Servidor/servicio.php"; // URL del servicio
+// $api_url = "http://localhost//00_DWEServidor/12_servicios-web/ej7_3/Servidor/servicio.php"; // URL del servicio
+$api_url = "D:/Noelia/dev/htdocs/00_DWEServidor/12_servicios-web/ej7_3/Servidor/servicio.php"; // URL del servicio
 
 $token = "abc123"; // Token del cliente (debe estar registrado en la BBDD)
 
