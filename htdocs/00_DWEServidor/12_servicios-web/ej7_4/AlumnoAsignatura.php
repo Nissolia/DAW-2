@@ -1,127 +1,74 @@
-<?php require_once 'EscuelaDB.php';
+<?php
+require_once 'EscuelaDB.php';
 require_once 'Alumno.php';
 require_once 'Asignatura.php';
-// clase asignatura
+
 class AlumnoAsignatura
 {
-    // alumno-asignatura
     private $matricula;
     private $codigoAsignatura;
 
-    // construct
-    function __construct($codigoAsignatura = "", $matricula = "")
+    function __construct($matricula = "", $codigoAsignatura = "")
     {
-        $this->codigoAsignatura = $codigoAsignatura;
         $this->matricula = $matricula;
+        $this->codigoAsignatura = $codigoAsignatura;
     }
-    // getters
+
     public function getCodigoAsignatura()
     {
         return $this->codigoAsignatura;
     }
-    public function getMatricula()
-    {
-        return $this->matricula;
-    }
-    // funciones de mysql
+
     public function insert()
     {
         $conexion = EscuelaDB::connectDB();
-        $insercion = "INSERT INTO alumno-asignatura (matricula, codigoAsignatura) 
-        VALUES ('$this->matricula', '$this->codigoAsignatura')";
-        $conexion->exec($insercion);
+        $insercion = "INSERT INTO alumno_asignatura (matricula, codigoAsignatura) 
+                      VALUES ('$this->matricula', '$this->codigoAsignatura')";
+        return $conexion->exec($insercion);
     }
-    public function update()
-    {
-        $conexion = EscuelaDB::connectDB();
-        $actualizacion = "UPDATE alumno-asignatura 
-                          SET matricula = '$this->matricula',
-                              codigoAsignatura = '$this->codigoAsignatura',
-                          WHERE codigoAsignatura = '$this->codigoAsignatura'";
-        $conexion->exec($actualizacion);
-    }
-
 
     public function delete()
     {
         $conexion = EscuelaDB::connectDB();
-        $borrado = "DELETE FROM alumno-asignatura WHERE codigo-asignatura='$this->codigoAsignatura'";
-        $conexion->exec($borrado);
+        $borrado = "DELETE FROM alumno_asignatura 
+                    WHERE matricula='$this->matricula' AND codigoAsignatura='$this->codigoAsignatura'";
+        return $conexion->exec($borrado);
     }
-    public static function getAlumnoAsignatura()
+
+    public static function getAsignaturasByAlu($matricula)
     {
         $conexion = EscuelaDB::connectDB();
-        $seleccion = "SELECT * FROM alumno-asignatura ORDER BY matricula";
+        $seleccion = "SELECT * FROM alumno_asignatura WHERE matricula='$matricula'";
         $consulta = $conexion->query($seleccion);
-        $alumnoAsignatura = [];
+        $asignaturas = [];
+
         while ($registro = $consulta->fetchObject()) {
-            $alumnoAsignatura[] = new AlumnoAsignatura(
+            $asignaturas[] = new AlumnoAsignatura(
                 $registro->matricula,
                 $registro->codigoAsignatura
             );
         }
-        return $alumnoAsignatura;
+        return $asignaturas;
     }
-    public static function getAlumnoAsignaturaById($id)
+
+    public static function getMatricula($matricula, $codigoAsignatura)
     {
         $conexion = EscuelaDB::connectDB();
-        $seleccion = "SELECT * FROM alumno-asignatura WHERE codigo-asignatura=\"" . $id . "\"";
+        $seleccion = "SELECT * FROM alumno_asignatura 
+                      WHERE matricula='$matricula' AND codigoAsignatura='$codigoAsignatura'";
         $consulta = $conexion->query($seleccion);
+
         if ($consulta->rowCount() > 0) {
-            $registro = $consulta->fetchObject();
-            $alumnoAsignatura = new AlumnoAsignatura(
-                $registro->codigoAsignatura,
-                $registro->matricula,
-            );
-            return $alumnoAsignatura;
+            return true; // La matrícula ya existe
         } else {
-            return false;
+            return false; // La matrícula no existe
         }
-        $conexion = null;
     }
-}
-// alumnosbyasignatura(id-asignatura) - devuelve array con alumnos
-function alumnosByAsignatura($idAsignatura)
-{
-    $conexion = EscuelaDB::connectDB();
-    $seleccion = "SELECT * FROM alumno-asignatura WHERE codigo-asignatura=\"" . $idAsignatura . "\"";
-    $consulta = $conexion->query($seleccion);
-    if ($consulta->rowCount() > 0) {
-        $registro = $consulta->fetchObject();
-        return Alumno::getAlumnoByMatricula($registro);
-    } else {
-        return false;
+
+    public static function deleteAlumno($matricula)
+    {
+        $conexion = EscuelaDB::connectDB();
+        $borrado = "DELETE FROM alumno_asignatura WHERE matricula='$matricula'";
+        return $conexion->exec($borrado);
     }
-    $conexion = null;
-}
-// asignaturasbyalumno(matricula-alumno) - array asignaturas
-function asignaturasByAlumno($matAlumno)
-{
-    $conexion = EscuelaDB::connectDB();
-    $seleccion = "SELECT * FROM alumno-asignatura WHERE matricula=\"" . $matAlumno . "\"";
-    $consulta = $conexion->query($seleccion);
-    if ($consulta->rowCount() > 0) {
-        $registro = $consulta->fetchObject();
-        return Asignatura::getAsignaturaById($registro);
-    } else {
-        return false;
-    }
-    $conexion = null;
-}
-// asignaturasLibresbyalumno(matricula-alumno) - array de las asignaturas en las que no participa
-function asignaturasLibresByAlumno($matAlumno)
-{
-    // select * from asignatura where id not in
-    // (select ... id de los que essta matruiculado)
-    $conexion = EscuelaDB::connectDB();
-    $seleccion = "SELECT * FROM asignatura WHERE 
-    matricula=' . $matAlumno . ' not in (SELECT * FROM alumno-asignatura WHERE )";
-    $consulta = $conexion->query($seleccion);
-    if ($consulta->rowCount() > 0) {
-        $registro = $consulta->fetchObject();
-        return Asignatura::getAsignaturaById($registro);
-    } else {
-        return false;
-    }
-    $conexion = null;
 }

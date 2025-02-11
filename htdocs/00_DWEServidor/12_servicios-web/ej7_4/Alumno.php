@@ -1,96 +1,114 @@
-<?php require_once 'EscuelaDB.php';
+<?php
+require_once 'EscuelaDB.php';
+
 class Alumno
 {
-    // alumno
     private $matricula;
     private $nombre;
     private $apellidos;
     private $curso;
 
-    // construct
-    function __construct($matricula = "", $nombre = "", $apellidos = "", $curso = "")
+    public function __construct($matricula = "", $nombre = "", $apellidos = "", $curso = "")
     {
         $this->matricula = $matricula;
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->curso = $curso;
     }
-    // getters
-    public function getApellidos()
-    {
-        return $this->apellidos;
-    }
+
     public function getMatricula()
     {
         return $this->matricula;
     }
+
     public function getNombre()
     {
         return $this->nombre;
     }
+
+    public function getApellidos()
+    {
+        return $this->apellidos;
+    }
+
     public function getCurso()
     {
         return $this->curso;
     }
 
-    // funciones de mysql
     public function insert()
     {
         $conexion = EscuelaDB::connectDB();
-        $insercion = "INSERT INTO alumno (matricula, nombre, apellidos, curso) 
-        VALUES ('$this->matricula','$this->nombre', '$this->apellidos','$this->curso')";
-        $conexion->exec($insercion);
-    }
-    public function update($nombre, $apellidos, $curso, $matricula)
-    {
-        $conexion = EscuelaDB::connectDB();
-        $actualizacion = "UPDATE alumno 
-                          SET nombre = '$this->nombre',
-                              apellidos = '$this->apellidos',
-                              curso = '$this->curso',
-                          WHERE matricula = '$this->matricula'";
-        $conexion->exec($actualizacion);
+        $sql = "INSERT INTO alumno (matricula, nombre, apellidos, curso) VALUES (?, ?, ?, ?)";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute([$this->matricula, $this->nombre, $this->apellidos, $this->curso]);
     }
 
+    public function update()
+    {
+        $conexion = EscuelaDB::connectDB();
+        $sql = "UPDATE alumno SET nombre = ?, apellidos = ?, curso = ? WHERE matricula = ?";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute([$this->nombre, $this->apellidos, $this->curso, $this->matricula]);
+    }
 
     public function delete()
     {
         $conexion = EscuelaDB::connectDB();
-        $borrado = "DELETE FROM alumno WHERE matricula='$this->matricula'";
-        $conexion->exec($borrado);
+        $sql = "DELETE FROM alumno WHERE matricula = ?";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute([$this->matricula]);
     }
+
     public static function getAlumno()
     {
         $conexion = EscuelaDB::connectDB();
-        $seleccion = "SELECT * FROM alumno ORDER BY nombre";
-        $consulta = $conexion->query($seleccion);
-        $alumno = [];
-        while ($registro = $consulta->fetchObject()) {
-            $alumno[] = new alumno(
-                $registro->matricula,
-                $registro->nombre,
-                $registro->apellidos,
-            );
+        $sql = "SELECT * FROM alumno ORDER BY nombre";
+        $stmt = $conexion->query($sql);
+        $alumnos = [];
+        while ($registro = $stmt->fetchObject()) {
+            $alumnos[] = new Alumno($registro->matricula, $registro->nombre, $registro->apellidos, $registro->curso);
         }
-        return $alumno;
+        return $alumnos;
     }
+
     public static function getAlumnoByMatricula($id)
     {
         $conexion = EscuelaDB::connectDB();
-        $seleccion = "SELECT * FROM alumno WHERE matricula=\"" . $id . "\"";
-        $consulta = $conexion->query($seleccion);
-        if ($consulta->rowCount() > 0) {
-            $registro = $consulta->fetchObject();
-            $alumno = new alumno(
-                $registro->matricula,
-                $registro->nombre,
-                $registro->apellidos,
-                $registro->curso,
-            );
-            return $alumno;
-        } else {
-            return false;
+        $sql = "SELECT * FROM alumno WHERE matricula = ?";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute([$id]);
+        
+        if ($stmt->rowCount() > 0) {
+            $registro = $stmt->fetchObject();
+            return new Alumno($registro->matricula, $registro->nombre, $registro->apellidos, $registro->curso);
         }
-        $conexion = null;
+        return false;
+    }
+
+    public static function getAlumnosFiltroNombre($nombre)
+    {
+        $conexion = EscuelaDB::connectDB();
+        $sql = "SELECT * FROM alumno WHERE nombre LIKE ?";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute(["%$nombre%"]);
+        $alumnos = [];
+        while ($registro = $stmt->fetchObject()) {
+            $alumnos[] = new Alumno($registro->matricula, $registro->nombre, $registro->apellidos, $registro->curso);
+        }
+        return $alumnos;
+    }
+
+    public static function getAlumnosFiltroGrupo($grupo)
+    {
+        $conexion = EscuelaDB::connectDB();
+        $sql = "SELECT * FROM alumno WHERE curso = ?";
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute([$grupo]);
+        $alumnos = [];
+        while ($registro = $stmt->fetchObject()) {
+            $alumnos[] = new Alumno($registro->matricula, $registro->nombre, $registro->apellidos, $registro->curso);
+        }
+        return $alumnos;
     }
 }
