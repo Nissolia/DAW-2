@@ -1,0 +1,88 @@
+Scanner s = new Scanner(System.in);
+--------------------------------------------------
+  public static int generarNumeroAleatorio(int minimo, int maximo) {
+        return (int) (Math.random() * (maximo - minimo + 1)) + minimo;
+    }
+--------------------------------------------------
+	public static boolean esPrimo(int numero) {
+	    if (numero <= 1 || numero % 2 == 0) {
+	        return false;
+	    }
+
+	    if (numero == 2) {
+	        return true;
+	    }
+
+	    for (int i = 3; i <= numero; i += 2) {
+	        if (numero % i == 0) {
+	            return false; 
+	        }
+	    }
+
+	    return true; 
+	}
+--------------------------------------------------
+	Ej1- Funciones
+ej c > área circulo, área triangulo y área cuadrado
+ej d > calcular binario
+--------------------------------------------------
+	Ej2 - String
+ej 1 > cadenas de caracteres que son iguales en un string y diferentes en otro
+ej 2 > validación de fecha con estructura concreta y restándose entre si y excepción si es mi fecha
+--------------------------------------------------
+	Ej3 - matrices
+ej a > crear matriz y rellenarla con números aleatorios
+ej b > crear matriz y sumar las dos matrices para luego mostrarlas por pantalla
+ej c > cuadrado con marco rellenado e interior sin rellenar
+ej d > tabla en la que introduciremos los números de menor a mayor y ordenar la tabla después de añadir un número
+--------------------------------------------------
+	ej4 poo a
+> clase cuenta : ingresar, retirar
+main > ingresar, retirar mostrar saldo
+--------------------------------------------------
+	ej4 poo b
+> clase factura con un id que se crea automatico, totalingresos, litroarticulo y factura 600
+--------------------------------------------------
+	ej4 poo c
+asignar precio a producto con enum (igual al anterior)
+--------------------------------------------------
+	ej4 poo d4
+> clase libro con num paginas y tostring
+main > comparamos que libro tiene mas páginas
+--------------------------------------------------
+	ej4 poo e
+ordenación e > ordenar con compareTo
+teléfono > solo compara por precio y ya
+ordenación e2 > ordenar con arrays.sort
+teléfono 2 > compare to, inclusive si precios son iguales se compara por el nombre
+--------------------------------------------------
+	ej4 poo f
+> clase bolígrafo: compara con otro objeto boli
+main > comparación de bolígrafos concretos, ordenar con array.sort y mostrado por pantalla
+--------------------------------------------------
+	ej4 poo g
+> clase persona: generar dni y calcular letra de dni + calcular imc de la persona
+main: usabilidad de las funciones y métodos creados
+--------------------------------------------------
+	ej5 dinámicas
+main > arraylist creadas : llenar arraylist, mostrarlo, mostrar elementos arraylist, vaciarlo y mostrar si esta vacio o lleno
+--------------------------------------------------
+	ej6 interfaces
+main > funcionalidad de todas las clases creadas + crear alimento y crear detergente
+cereales > enum como atributo, caducidad, tostring
+condescuento > interface
+detergente > set descuento (modificado aqui), tipoenvase
+esalimento > interface
+esliquido > interface
+tipocereal > enum
+vino > con enum y todo eso + localdate
+--------------------------------------------------
+	exGestion vehículos
+vehiculo > clase padre : de automóvil y motocicleta
+vendible > interfaz
+motocicleta > extiende vehiculo implements vendible :  vender(Cliente cliente)
+automóvil >      "        "          "          "
+concesionario > agrega vehiculo > venderVehiculo > reporteVentas > totalIngresos > aplicarDescuentos > vehiculoMasVendido > mediaPa gada
+cliente > agregarVehiculoComprado
+main > mostrarVehiculos : agregarVehiculo : recomendarVehiculo : buscarVehiculo
+--------------------------------------------------

@@ -2,10 +2,11 @@
 
 <?php
 function conectarDB() {
-    $host = "localhost";  // Servidor de la base de datos
-    $dbname = "tienda"; // Nombre de la base de datos
-    $user = "root";       // Usuario de MySQL (ajusta si es necesario)
-    $pass = "";           // Contraseña de MySQL (ajusta si es necesario)
+    $host = "localhost"; 
+    $dbname = "tiendanb"; 
+    // $dbname = "tienda"; 
+    $user = "root";       
+    $pass = "";          
 
     try {
         // Crear conexión usando PDO

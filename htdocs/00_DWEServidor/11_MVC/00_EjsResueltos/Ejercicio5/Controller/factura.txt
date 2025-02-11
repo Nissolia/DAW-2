@@ -1,0 +1,7 @@
+FACTURA DE COMPRA 
+
+CODIGO 	 PRODUCTO 		 CANTIDAD 	 PRECIO 	 IMPORTE
+8	 ImpresoraCanon		 5		 35		 175
+------------------------------------------------------
+Base imponible: 175
+Importe total con IVA: 211.75 euros

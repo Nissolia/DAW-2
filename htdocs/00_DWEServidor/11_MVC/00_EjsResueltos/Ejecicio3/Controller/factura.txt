@@ -1,0 +1,8 @@
+FACTURA DE COMPRA 
+
+CODIGO 	 PRODUCTO 		 CANTIDAD 	 PRECIO 	 IMPORTE
+4	 joystick		 2		 35		 70
+8	 ImpresoraCanon		 2		 35		 70
+------------------------------------------------------
+Base imponible: 140
+Importe total con IVA: 169.4 euros

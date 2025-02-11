@@ -15,3 +15,5 @@ guardar todas las peticiones posibles en la aplicación Postman.
 
 Como segunda parte del ejercicio, realiza una página que actúe como cliente realizando peticiones al servidor, a
 través de formularios.
+
+serv -escuela
