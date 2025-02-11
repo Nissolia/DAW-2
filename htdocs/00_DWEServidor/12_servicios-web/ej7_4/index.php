@@ -2,31 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gestor de Alumnos y Asignaturas</title>
+    <title>Servicio Web de Matriculaciones</title>
 </head>
 <body>
-    <h1>Gestor de Alumnos y Asignaturas</h1>
+    <h1>Servicio Web de Matriculaciones</h1>
     <form action="peticion.php" method="POST">
         <fieldset>
-            <legend>Seleccione una opción:</legend>
+            <legend>Seleccione una consulta o acción:</legend>
             <label>
-                <input type="radio" name="tipo" value="alumnos"> Mostrar Alumnos
+                <input type="radio" name="tipo" value="grupo"> Alumnos por Grupo
             </label>
             <br>
             <label>
-                <input type="radio" name="tipo" value="grupo"> Mostrar Grupo
+                <input type="radio" name="tipo" value="nombre"> Alumnos por Nombre
             </label>
             <br>
             <label>
-                <input type="radio" name="tipo" value="asignaturas"> Mostrar Asignaturas
+                <input type="radio" name="tipo" value="asignaturas"> Asignaturas por Alumno
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="tipo" value="matricular"> Matricular Alumno en Asignatura
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="tipo" value="cambiar_grupo"> Cambiar Grupo de Alumno
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="tipo" value="borrar"> Borrar Alumno
             </label>
         </fieldset>
         <br>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-        <br>
         <label for="grupo">Grupo:</label>
         <input type="text" id="grupo" name="grupo">
+        <br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
         <br>
         <label for="matricula">Matrícula:</label>
         <input type="text" id="matricula" name="matricula">
