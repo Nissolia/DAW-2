@@ -1,0 +1,55 @@
+/* fuentes añadidas */
+@font-face {
+  font-family: "Playfair";
+  src: url("../fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+/* variables custom propierties */
+:root{
+    --bs-blue:#037bc0;
+    --bs-green:#8cbc00;
+    --green-hover:#769c02;
+}
+.text-primary{
+    color: var(--bs-blue)!important;
+}
+
+/* página */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Raleway;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+/* titulares */
+h1,
+h2,
+h3 {
+  font-family: Playfair;
+}
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+/* media query */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+}
