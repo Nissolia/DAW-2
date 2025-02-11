@@ -75,7 +75,7 @@
       </header>
 
       <!-- Formulario para parte extraordinario -->
-      <form action="#" method="POST" enctype="multipart/form-data">
+      <form class="needs-validation" action="#" method="POST" enctype="multipart/form-data">
           <div class="mb-3 form-floating position-relative">
               <input type="text" class="form-control" id="nombre" name="nombre"  placeholder="" required>
               <label for="nombre" class="form-label" id="nombre">Nombre del Alumno</label>
@@ -166,10 +166,10 @@
               <label for="email" class="form-label">Correo Electrónico</label>
           </div>
 
-          <div class="mb-3 form-floating position-relative">
+          <div class="mb-3">
+              <label for="adjunto" class="form-label">Adjuntar Documento</label>
               <input type="file" class="form-control" id="adjunto" name="adjunto" accept=".jpg,.jpeg,.png,.pdf" placeholder=""
               required>
-              <label for="adjunto" class="form-label">Adjuntar Documento</label>
               <div id="fileHelp" class="form-text">Añada una captura o documento relevante.</div>
           </div>
 
