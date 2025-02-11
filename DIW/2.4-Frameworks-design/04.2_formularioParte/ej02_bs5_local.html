@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantilla local BSS5</title>
+ <!-- instalación en local -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- link icono -->
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <style>
+    img {
+        width: 30%;
+        height: auto;
+    }
+</style>
+</head>
+<!-- body -->
+
+<body>
+  <!-- div contenedor a 7 -->
+  
+    <!-- Barra de navegación sticky -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-sm">
+          <!-- Logo del instituto -->
+         
+              <img src="img/logo_RG_480_blanco.png" class="pt-2 pb-2" alt="Logo Instituto" style="width:150px;" class="ps-5">
+    
+
+          <!-- Botón de colapso para móviles -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Contenido de la Navbar -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#">Inicio</a>
+                  </li>
+                  <!-- Dropdown -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown">
+                          Tipo de parte
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Indidencia leve</a></li>
+                          <li><a class="dropdown-item" href="#">Conducta disruptiva</a></li>
+                          <li><a class="dropdown-item" href="#">Conducta grave</a></li>
+                          <li><a class="dropdown-item" href="#">Conducta muy grave</a></li>
+                          <li><a class="dropdown-item" href="#">Conducta relacionada con las TIC</a></li>
+                      </ul>
+                  </li>
+              </ul>
+
+              <!-- Formulario de búsqueda -->
+              <form class="d-flex mb-2">
+                  <input class="form-control me-2" type="search" placeholder="Buscar">
+                  <button class="btn btn-outline-light" type="submit">Buscar</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+
+  <div class="container-sm col-md-7  mt-5 mb-5 ps-4 pe-4">
+      <header class="text-center mb-4">
+          <h1 class="mt-4">Parte Extraordinario de Incidencia</h1>
+          <div class="d-flex justify-content-between mt-3">
+              <img src="img/banner_RG_web.png" class="img-fluid" alt="Logo Instituto">
+              <img src="img/logo_juntaAnd.png" class="img-fluid" alt="Logo Junta de Andalucía">
+          </div>
+      </header>
+
+      <!-- Formulario para parte extraordinario -->
+      <form action="#" method="POST" enctype="multipart/form-data">
+          <div class="mb-3 form-floating position-relative">
+              <input type="text" class="form-control" id="nombre" name="nombre"  placeholder="" required>
+              <label for="nombre" class="form-label" id="nombre">Nombre del Alumno</label>
+          </div>
+
+          <div class="mb-3">
+              <label for="nivelEducativo" class="form-label">Selecciona el nivel educativo</label>
+              <select class="form-select" id="nivelEducativo" name="nivelEducativo"  placeholder="" required>
+                  <option value="" selected disabled>Elige una opción</option>
+
+                  <option value="primer_ciclo1">Primer Ciclo - 1º ESO</option>
+                  <option value="primer_ciclo2">Primer Ciclo - 2º ESO</option>
+                  <option value="primer_ciclo3">Primer Ciclo - 3º ESO</option>
+                  <option value="segundo_ciclo">Segundo Ciclo - 4º ESO</option>
+                  </optgroup>
+
+                  <optgroup label="Bachillerato">
+                      <option value="bach_humanidades">Humanidades y Ciencias Sociales</option>
+                      <option value="bach_ciencias">Ciencias</option>
+                  </optgroup>
+
+                  <optgroup label="ESO para personas adultas">
+                      <option value="eso_adultos_semipresencial">Modalidad semipresencial</option>
+                  </optgroup>
+
+                  <optgroup label="Bachillerato para adultos (Presencial)">
+                      <option value="bach_adultos_pres_humanidades">Humanidades y Ciencias Sociales</option>
+                      <option value="bach_adultos_pres_ciencias">Ciencias</option>
+                  </optgroup>
+
+                  <optgroup label="Bachillerato para adultos (Semipresencial)">
+                      <option value="bach_adultos_semi_humanidades">Humanidades y Ciencias Sociales</option>
+                  </optgroup>
+
+                  <optgroup label="Formación Profesional">
+                      <option value="fp_medio_microinformatica">Ciclo Formativo de Grado Medio "Sistemas
+                          Microinformáticos y Redes"</option>
+                      <option value="fp_superior_daw">Ciclo Formativo de Grado Superior "Desarrollo de Aplicaciones
+                          Web"</option>
+                  </optgroup>
+              </select>
+          </div>
+
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="date" class="form-control" id="fecha" name="fecha" placeholder="" required>
+              <label for="fecha" class="form-label">Fecha</label>
+          </div>
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="time" class="form-control" id="hora" name="hora" required>
+              <label for="hora" class="form-label">Hora</label>
+          </div>
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="text" class="form-control" id="profesor" name="profesor" placeholder="" required>
+              <label for="profesor" class="form-label">Profesor</label>
+          </div>
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="text" class="form-control" id="asignatura" name="asignatura" placeholder="" required>
+              <label for="asignatura" class="form-label">Asignatura</label>
+          </div>
+
+          <div class="mb-3">
+              <label for="conducta" class="form-label">Conducta Originada</label>
+              <textarea class="form-control" id="conducta" name="conducta" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+              <label for="actitud" class="form-label">Actitud del Alumno</label>
+              <textarea class="form-control" id="actitud" name="actitud" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+              <label for="medida" class="form-label">Medida Adoptada</label>
+              <textarea class="form-control" id="medida" name="medida" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. 612345678"
+                  pattern="[0-9]{9}" required>
+              <label for="telefono" class="form-label">Teléfono de Contacto</label>
+          </div>
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="email" class="form-control" id="email" name="email" placeholder="" required>
+              <label for="email" class="form-label">Correo Electrónico</label>
+          </div>
+
+          <div class="mb-3 form-floating position-relative">
+              <input type="file" class="form-control" id="adjunto" name="adjunto" accept=".jpg,.jpeg,.png,.pdf" placeholder=""
+              required>
+              <label for="adjunto" class="form-label">Adjuntar Documento</label>
+              <div id="fileHelp" class="form-text">Añada una captura o documento relevante.</div>
+          </div>
+
+          <div class="mb-3">
+              <label for="acuerdo" class="form-label">Medida Aceptada</label><br>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="acuerdo" id="acuerdoSi" value="si" required>
+                  <label class="form-check-label" for="acuerdoSi">Sí</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="acuerdo" id="acuerdoNo" value="no" required>
+                  <label class="form-check-label" for="acuerdoNo">No</label>
+              </div>
+          </div>
+
+          <div class="mb-3">
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="confirmar" required>
+                  <label class="form-check-label" for="confirmar">
+                      Confirmo que los datos son correctos
+                  </label>
+              </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar Parte</button>
+      </form>
+  </div>
+
+  <footer class="footer mb-4 text-center">
+      <p>2025&copy; Noelia Baños Jiménez</p>
+  </footer>
+  <!-- src de js -->
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

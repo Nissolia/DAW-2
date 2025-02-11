@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --color: #7955af;
+}
+body {
+  font-family: Helvetica, sans-serif;
+}
+/* contenido de la página */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+.container__gallery {
+  margin: 2rem;
+  max-width: 1200px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.container__title {
+  margin: 2rem;
+  font-size: 40px;
+}
+.container__title::after {
+  content: "";
+  background-color: var(--color);
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-top: 1rem;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery__link {
+  height: 350px;
+  flex: 1 1 350px;
+}
+.gallery__figure {
+  transition: background-color 0.4s ease;
+  position: relative;
+  /* he tenido que añadir esto para que funcione correctamente */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.footer {
+  text-align: center;
+  color: var(--color);
+}
+/* animacion para los hover de la clase gallery figure */
+.gallery__figure:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.gallery__figure::after {
+  content: "";
+  background-color: var(--color);
+  opacity: 0.35;
+
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: clip-path 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.gallery__figure:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+/* imagenes ocultas */
+.oculto {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.oculto__img {
+  width: 80%;
+  position: absolute;
+}
+.oculto__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* link de quitar imagen*/
+.linkActivo {
+  color: white;
+  background-color: red;
+  border-radius: 100%;
+  padding: 5px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  z-index: 2;
+}
+/* links modificables */
+#abrir1:target {
+  transform: scale(1);
+}
+
+#abrir2:target {
+  transform: scale(1);
+}
+
+#abrir3:target {
+  transform: scale(1);
+}
+
+#abrir4:target {
+  transform: scale(1);
+}
+
+#abrir5:target {
+  transform: scale(1);
+}
+
+#abrir6:target {
+  transform: scale(1);
+}
+
+#cerrar:target .oculto {
+  transform: scale(0);
+}
