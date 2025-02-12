@@ -1,0 +1,22 @@
+a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+img {
+    width: 400px;
+}
+
+table,
+thead,
+tbody,
+tr,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    padding: 5px;
+    font-weight: 800;
+}
