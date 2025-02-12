@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../View/style.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <tr>
                 <?php
                 if (isset($_SESSION['usuario'])) {
-                    echo "<td colspan='3'><a href='../Controller/perfil.php'>".$_SESSION['usuario']."</a></td>";
+                    echo "<td colspan='3'><a href='../Controller/perfil.php'>" . $_SESSION['usuario'] . "</a></td>";
                 } else {
                 ?>
                     <td colspan="3"> <a href="../Controller/login.php">Inicio sesión / Registro</a></td>
@@ -35,13 +35,20 @@
             <?php
             foreach ($data['fotografias'] as $foto) {
                 if (isset($data['nombreUsuario'][$data['controlIndex']])) {
-                    echo ' <tr><td><img src="../View/imagen/' . $foto->getImagen() . '" alt=""></td>';
-                    echo '<td>';
-                    echo $data['nombreUsuario'][$data['controlIndex']];
-                    echo "</td><td>";
-                    echo $data['conteoLikes'][$data['controlIndex']];
-                    echo '</td>';
+                  
+            ?>
+                    <tr>
+                        <td> <a href="../Controller/detalle.php?id=<?= $foto->getId() ?>">
+                                <img src="../View/imagen/<?= $foto->getImagen() ?>" alt=""></a></td>
+                        <td>
+                            <?= $data['nombreUsuario'][$data['controlIndex']] ?>
+                        </td>
+                        <td>
+                            <?= $data['conteoLikes'][$data['controlIndex']] ?>
+                        </td>
+                <?php
                     if (isset($_SESSION['usuario'])) {
+                        // hay que mirar que si el like está dado tiene que poner me gusta
                         echo "<td><a href=''>Dar like</a></td>";
                     }
 
@@ -49,7 +56,7 @@
                 }
                 $data['controlIndex']++;
             }
-            ?>
+                ?>
 
         </tbody>
     </table>

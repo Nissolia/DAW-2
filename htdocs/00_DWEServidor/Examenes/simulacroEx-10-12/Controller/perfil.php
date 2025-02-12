@@ -11,7 +11,7 @@ if (isset($_REQUEST['cerrarSesion'])) {
 if (!isset($_SESSION['usuario']) || isset($_REQUEST['volverIndex'])) {
     header('Location: index.php');
 }
-
+// se tiene que ver las imagenes de los productos que ve - con crear el link vale
 
 
 // Carga la vista de listado

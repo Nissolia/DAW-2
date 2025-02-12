@@ -69,4 +69,15 @@ class Foto
 		}
 		return $fotos;
 	}
+	public static function getFotoById($id)
+	{
+		$conexion = FotografiasDB::connectDB();
+		$seleccion = "SELECT * FROM fotos WHERE id = $id";
+		$consulta = $conexion->query($seleccion);
+		$fotos = [];
+		while ($registro = $consulta->fetchObject()) {
+			$fotos[] = new Foto($registro->id, $registro->imagen, $registro->id_usuario);
+		}
+		return $fotos;
+	}
 }

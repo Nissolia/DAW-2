@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../View/style.css">
 </head>
 <body>
     <h1>Perfil del usuario: <?= $_SESSION['usuario'] ?></h1>
@@ -19,6 +19,7 @@
     </form>
 
     <hr>
+    <!-- y aqui se ven las imagenes y se pone "likes acumulados y el numero" -->
 
 
     <!-- imagen del like -->
