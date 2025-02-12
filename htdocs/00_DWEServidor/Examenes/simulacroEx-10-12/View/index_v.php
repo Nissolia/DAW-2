@@ -35,11 +35,18 @@
             <?php
             foreach ($data['fotografias'] as $foto) {
                 if (isset($data['nombreUsuario'][$data['controlIndex']])) {
-                  
+
             ?>
                     <tr>
-                        <td> <a href="../Controller/detalle.php?id=<?= $foto->getId() ?>">
-                                <img src="../View/imagen/<?= $foto->getImagen() ?>" alt=""></a></td>
+                        <td>
+                           
+                            <!-- <a href=" C:\Dev\htdocs\00_DWEServidor\Examenes\simulacroEx-10-12\Controller\detalle.php?id=<?= $foto->getId() ?>"> -->
+
+                                <!-- <a href="../Controller/detalle.php"> -->
+                                <a href="../Controller/detalle.php?id=<?= $foto->getId() ?>">
+                                    <?= $foto->getId() ?>
+                                <img src="../View/imagen/<?= $foto->getImagen() ?>" alt=""></a>
+                        </td>
                         <td>
                             <?= $data['nombreUsuario'][$data['controlIndex']] ?>
                         </td>
