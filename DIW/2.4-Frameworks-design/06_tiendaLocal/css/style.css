@@ -8,15 +8,18 @@
   src: url("../fonts/Raleway-Regular.ttf");
 }
 /* variables custom propierties */
-:root{
-    --bs-blue:#037bc0;
-    --bs-green:#8cbc00;
-    --green-hover:#769c02;
+:root {
+  --bs-blue: #037bc0;
+  --bs-green: #8cbc00;
+  --green-hover: #769c02;
 }
-.text-primary{
-    color: var(--bs-blue)!important;
+/* clases de boostrap sobreescritas */
+.text-primary {
+  color: var(--bs-blue) !important;
 }
-
+.bg-primary{
+  background-color: var(--bs-blue) !important;
+}
 /* página */
 html {
   font-size: 62.5%;
