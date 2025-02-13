@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 12px auto;
+}
+
+/* Estilo general para las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para los encabezados h1 y h3 */
+h1,
+h2,
+h3 {
+  color: #757575;
+}
+input {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Estilo para los botones (input type button) */
+input[type="button"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+  background-color: #2f7e33;
+}

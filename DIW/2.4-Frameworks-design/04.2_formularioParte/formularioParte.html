@@ -66,7 +66,7 @@
         </div>
     </nav>
 
-    <div class="container-sm col-md-7  mt-5 mb-5 ps-4 pe-4">
+    <div class="container-sm col-md-8  mt-5 mb-5">
         <header class="text-center mb-4">
             <h1 class="mt-4">Parte Extraordinario de Incidencia</h1>
             <div class="d-flex justify-content-between mt-3">
@@ -76,10 +76,15 @@
         </header>
 
         <!-- Formulario para parte extraordinario -->
-        <form class="needs-validation" action="#" method="POST" enctype="multipart/form-data">
-            <div class="mb-3 form-floating position-relative">
+        <form class="needs-validation row" action="#" method="POST" enctype="multipart/form-data">
+            <div class="mb-3  form-floating position-relative col-6">
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
-                <label for="nombre" class="form-label" id="nombre">Nombre del Alumno</label>
+              <!-- cambiarlo aqui -->
+                <label for="nombre" class="form-label ms-2" id="nombre">Nombre del Alumno</label>
+            </div>
+            <div class="mb-3 form-floating position-relative col-6">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
+                <label for="nombre" class="form-label" id="nombre">Apellido del Alumno</label>
             </div>
 
             <div class="mb-3">

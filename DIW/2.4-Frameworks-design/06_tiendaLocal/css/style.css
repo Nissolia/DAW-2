@@ -17,24 +17,35 @@
 .text-primary {
   color: var(--bs-blue) !important;
 }
-.bg-primary{
+.bg-primary {
   background-color: var(--bs-blue) !important;
 }
+.btn-success {
+  background-color: var(--bs-green) !important;
+}
+
 /* hero */
-.hero{
-  background-image: url('../img/principal.jpg');
+.hero {
+  background-image: url("../img/principal.jpg");
   background-position: center center;
   background-size: cover;
   height: 25rem;
 }
 /* transiciones */
-.zoom{
-transform: scale(1);
-transition-property: transform;
-transition-duration: 0.3s;
+.zoom {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.3s;
 }
-.zoom:hover{
+.zoom:hover {
   transform: scale(1.2);
+}
+.btn-hover {
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+.btn-hover:hover {
+  background-color: var(--green-hover) !important;
 }
 /* página */
 html {
@@ -73,7 +84,7 @@ h3 {
     font-size: 3rem;
   }
   /* hero */
-  .hero{
+  .hero {
     height: 55rem;
   }
 }
