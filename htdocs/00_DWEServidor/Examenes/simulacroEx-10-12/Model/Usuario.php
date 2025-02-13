@@ -63,16 +63,13 @@ class Usuario
 		}
 		return $usuarios;
 	}
-	public static function getUsuarioById($id)
-	{
+	public static function getUsuarioById($id) {
 		$conexion = FotografiasDB::connectDB();
-		$seleccion = "SELECT * FROM usuarios WHERE id = $id";
-		$consulta = $conexion->query($seleccion);
-		$usuario = [];
-		while ($registro = $consulta->fetchObject()) {
-			$usuario[] = new Usuario($registro->id, $registro->nombre);
-		}
-		return $usuario;
+		$consulta = $conexion->query("SELECT * FROM usuarios WHERE id = $id");
+		$resultado = $consulta->fetchObject('Usuario');
+		return $resultado ?: null;
 	}
+	
+
 
 }

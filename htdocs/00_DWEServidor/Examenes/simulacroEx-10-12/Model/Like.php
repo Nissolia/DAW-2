@@ -100,5 +100,19 @@ class Like
         }
         return $fotos;
     }
+    public static function getUsuariosQueDieronLike($id_foto) {
+        $conexion = FotografiasDB::connectDB();
+        $seleccion = "SELECT u.id, u.nombre FROM likes l JOIN usuarios u ON l.id_usuario = u.id WHERE l.id_foto = $id_foto";
+        $consulta = $conexion->query($seleccion);
+        
+        $usuarios = [];
+        while ($registro = $consulta->fetchObject('Usuario')) {
+            $usuarios[] = $registro;
+        }
+    
+        return $usuarios;
+    }
+    
+
 }
 ?>

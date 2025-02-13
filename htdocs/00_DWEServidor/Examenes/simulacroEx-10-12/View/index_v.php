@@ -44,7 +44,7 @@
 
                                 <!-- <a href="../Controller/detalle.php"> -->
                                 <a href="../Controller/detalle.php?id=<?= $foto->getId() ?>">
-                                    <?= $foto->getId() ?>
+                            
                                 <img src="../View/imagen/<?= $foto->getImagen() ?>" alt=""></a>
                         </td>
                         <td>
