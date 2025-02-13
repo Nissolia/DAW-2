@@ -84,9 +84,29 @@
             </div>
             <div class="mb-3 form-floating position-relative col-6">
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
-                <label for="nombre" class="form-label" id="nombre">Apellido del Alumno</label>
+                <label for="nombre" class="form-label ms-2" id="nombre">Apellido del Alumno</label>
             </div>
 
+            <div class="mb-3 form-floating position-relative col-6">
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. 612345678"
+                    pattern="[0-9]{9}" required>
+                <label for="telefono" class="form-label ms-2">Teléfono de Contacto</label>
+            </div>
+
+            <div class="mb-3 form-floating position-relative col-6">
+                <input type="email" class="form-control" id="email" name="email" placeholder="" required>
+                <label for="email" class="form-label ms-2">Correo Electrónico</label>
+            </div>
+           
+            <div class="mb-3 form-floating position-relative col-6">
+                <input type="date" class="form-control" id="fecha" name="fecha" placeholder="" required>
+                <label for="fecha" class="form-label ms-2">Fecha</label>
+            </div>
+
+            <div class="mb-3 form-floating position-relative col-6">
+                <input type="time" class="form-control" id="hora" name="hora" required>
+                <label for="hora" class="form-label ms-2">Hora</label>
+            </div>
             <div class="mb-3">
                 <label for="nivelEducativo" class="form-label">Selecciona el nivel educativo</label>
                 <select class="form-select" id="nivelEducativo" name="nivelEducativo" placeholder="" required>
@@ -124,62 +144,39 @@
                     </optgroup>
                 </select>
             </div>
-
-
-            <div class="mb-3 form-floating position-relative">
-                <input type="date" class="form-control" id="fecha" name="fecha" placeholder="" required>
-                <label for="fecha" class="form-label">Fecha</label>
-            </div>
-
-            <div class="mb-3 form-floating position-relative">
-                <input type="time" class="form-control" id="hora" name="hora" required>
-                <label for="hora" class="form-label">Hora</label>
-            </div>
-
-            <div class="mb-3 form-floating position-relative">
+            <div class="mb-3 form-floating position-relative col-6">
                 <input type="text" class="form-control" id="profesor" name="profesor" placeholder="" required>
-                <label for="profesor" class="form-label">Profesor</label>
+                <label for="profesor" class="form-label ms-2">Profesor</label>
             </div>
 
-            <div class="mb-3 form-floating position-relative">
+            <div class="mb-3 form-floating position-relative col-6">
                 <input type="text" class="form-control" id="asignatura" name="asignatura" placeholder="" required>
-                <label for="asignatura" class="form-label">Asignatura</label>
+                <label for="asignatura" class="form-label ms-2">Asignatura</label>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-4">
                 <label for="conducta" class="form-label">Conducta Originada</label>
-                <textarea class="form-control" id="conducta" name="conducta" rows="3" required></textarea>
+                <textarea class="form-control" id="conducta" name="conducta" rows="5" required></textarea>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-4">
                 <label for="actitud" class="form-label">Actitud del Alumno</label>
-                <textarea class="form-control" id="actitud" name="actitud" rows="3" required></textarea>
+                <textarea class="form-control" id="actitud" name="actitud" rows="5" required></textarea>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-4">
                 <label for="medida" class="form-label">Medida Adoptada</label>
-                <textarea class="form-control" id="medida" name="medida" rows="3" required></textarea>
+                <textarea class="form-control" id="medida" name="medida" rows="5" required></textarea>
             </div>
 
-            <div class="mb-3 form-floating position-relative">
-                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. 612345678"
-                    pattern="[0-9]{9}" required>
-                <label for="telefono" class="form-label">Teléfono de Contacto</label>
-            </div>
-
-            <div class="mb-3 form-floating position-relative">
-                <input type="email" class="form-control" id="email" name="email" placeholder="" required>
-                <label for="email" class="form-label">Correo Electrónico</label>
-            </div>
-
-            <div class="mb-3">
+            <div class="mb-3 col-8 justify-content-center">
                 <label for="adjunto" class="form-label">Adjuntar Documento</label>
                 <input type="file" class="form-control" id="adjunto" name="adjunto" accept=".jpg,.jpeg,.png,.pdf"
                     placeholder="" required>
                 <div id="fileHelp" class="form-text">Añada una captura o documento relevante.</div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-2 justify-content-center flex-column">
                 <label for="acuerdo" class="form-label">Medida Aceptada</label><br>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="acuerdo" id="acuerdoSi" value="si" required>
@@ -191,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-2 justify-content-center flex-column">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="confirmar" required>
                     <label class="form-check-label" for="confirmar">
