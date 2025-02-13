@@ -69,7 +69,7 @@ class Foto
 		}
 		return $fotos;
 	}
-	public static function getFotosById($id)
+	public static function getFotoById($id)
 	{
 		$conexion = FotografiasDB::connectDB();
 		$seleccion = "SELECT * FROM fotos WHERE id = $id";
@@ -80,13 +80,4 @@ class Foto
 		}
 		return $fotos;
 	}
-
-	public static function getFotoById($id) {
-		$conexion = FotografiasDB::connectDB();
-		$consulta = $conexion->query("SELECT * FROM fotos WHERE id = $id");
-		$resultado = $consulta->fetchObject('Foto');
-		return $resultado ?: null; // Si no encuentra nada, devuelve null
-	}
-	
-	
 }

@@ -1,8 +1,2 @@
 ALTER TABLE pedidos
 ADD CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES clientes(id);
-
-
-DEPURACIÓN
-echo "<pre>";
-print_r($data);
-echo "</pre>";
