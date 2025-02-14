@@ -1,13 +1,7 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  margin: 12px auto;
+  margin: 20%;
 }
 
 /* Estilo general para las tablas */
@@ -29,10 +23,11 @@ h1,
 h2,
 h3 {
   color: #757575;
+  padding: 10px;
 }
 input {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 10px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -46,8 +41,4 @@ input[type="button"] {
 
 input[type="button"]:hover {
   background-color: #2f7e33;
-}
-a {
-  padding: 10px;
-  text-decoration: none;
 }
