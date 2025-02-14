@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+hr {
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+h1,
+h2,
+h3 {
+  color: darkcyan;
+  text-align: center;
 }
