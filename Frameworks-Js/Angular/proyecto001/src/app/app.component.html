@@ -1,4 +1,4 @@
-<div>
+<div class="principal">
   <!-- Primer ejercicio -->
   <div>
     <h2>Mecanismo de interpolación</h2>
@@ -24,4 +24,51 @@
       <li *ngFor="let sueldo of sueldos">{{sueldo}}</li>
     </ul>
   </div>
+  <hr>
+  <!--  -->
+  <div>
+    <h2>*ngFor se puede usar con literal objetos</h2>
+    <select name="provincias" id="provincias">
+      <option *ngFor="let prov of provincias" value="{{prov.id}}">{{prov.nombre}}</option>
+    </select>
+  </div>
+  <hr>
+  <div>
+    <h2>Tabla del array creado</h2>
+    <table>
+      <tr>
+        <td><b>ID</b></td>
+        <td *ngFor="let prov of provincias">{{prov.id}}</td>
+      </tr>
+      <tr>
+        <td><b>Nombre</b></td>
+        <td *ngFor="let prov of provincias">{{prov.nombre}}</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <div>
+    <h2>Captura de eventos</h2>
+    <button (click)="diHola()">Di Hola</button>
+  </div>
+  <hr>
+  <div>
+    <h2>Contador</h2>
+    <h1>{{contador}}</h1>
+    <button (click)="incrementar()">+</button>
+    <button (click)="decrementar()">-</button>
+  </div>
+  <!-- directiva ng model -->
+  <hr>
+  <div>
+    <h2>Diretiva ngModel</h2>
+    <label for="nombre"> Nombre: </label>
+    <input type="text" [(ngModel)]="nombre" name="nombre">
+    <label for="apellido"> Apellido: </label>
+    <input type="text" [(ngModel)]="apellido" name="apellido">
+  </div>
 </div>
+
+<footer>
+  <p>2025 &copy; Noelia Baños</p>
+</footer>
