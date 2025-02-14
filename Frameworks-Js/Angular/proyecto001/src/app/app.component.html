@@ -1,6 +1,6 @@
 <div class="principal">
   <!-- Primer ejercicio -->
-  <div>
+  <div class="cajas">
     <h2>Mecanismo de interpolación</h2>
     <p><b>El título de este proyecto es:</b> {{title}}</p>
     <p><b>Tu nombre es:</b> {{nombre}} {{apellido}}</p>
@@ -10,7 +10,7 @@
   </div>
   <hr>
   <!-- segundo ejercicio -->
-  <div>
+  <div class="cajas">
     <h2>Directiva *ngIf</h2>
     <p *ngIf="edad>=18; else menor">Eres mayor de edad</p>
     <ng-template #menor>
@@ -18,7 +18,7 @@
     </ng-template>
   </div>
   <hr>
-  <div>
+  <div class="cajas">
     <h2>Directiva *ngFor</h2>
     <ul>
       <li *ngFor="let sueldo of sueldos">{{sueldo}}</li>
@@ -26,14 +26,14 @@
   </div>
   <hr>
   <!--  -->
-  <div>
+  <div class="cajas">
     <h2>*ngFor se puede usar con literal objetos</h2>
     <select name="provincias" id="provincias">
       <option *ngFor="let prov of provincias" value="{{prov.id}}">{{prov.nombre}}</option>
     </select>
   </div>
   <hr>
-  <div>
+  <div class="cajas">
     <h2>Tabla del array creado</h2>
     <table>
       <tr>
@@ -47,12 +47,12 @@
     </table>
   </div>
   <hr>
-  <div>
+  <div class="cajas">
     <h2>Captura de eventos</h2>
     <button (click)="diHola()">Di Hola</button>
   </div>
   <hr>
-  <div>
+  <div class="cajas">
     <h2>Contador</h2>
     <h1>{{contador}}</h1>
     <button (click)="incrementar()">+</button>
@@ -60,7 +60,7 @@
   </div>
   <!-- directiva ng model -->
   <hr>
-  <div>
+  <div class="cajas">
     <h2>Diretiva ngModel</h2>
     <label for="nombre"> Nombre: </label>
     <input type="text" [(ngModel)]="nombre" name="nombre">
