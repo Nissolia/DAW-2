@@ -1,0 +1,33 @@
+// para que funcione la bilbioteca math
+@use 'sass:math' as math;
+
+$anchura: 1600px;
+$altura: 200px;
+$color1: #d44f26;
+$color2: #a0d81e;
+$color3: #1c9c42;
+$font:Calibri, san-serif;
+
+body{
+    font-family: $font;
+}
+
+div{
+    height: $altura;
+}
+
+.mitad{
+    // width: calc($anchura /2);
+    width: math.div($anchura, 2);
+    
+    background-color: $color1;
+}
+.cuarto{
+    width: calc($anchura/4);
+    background-color: $color2;
+}
+.octavo{
+    width: calc($anchura/8);
+    background-color: $color3;
+}
+@debug math.pow(2,4);

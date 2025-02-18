@@ -1,0 +1,14 @@
+// para que funcione la bilbioteca math
+@use 'sass:map' as math;
+// Mediante el mecanismo de anidación de Sass aplica
+// diferentes colores y tamaños de fuente a la lista del
+// siguiente archivo .html: lista_menu.html. Los colores debes
+// definirlo en una lista de Sass y los tamaños de fuentes en un
+// mapa de Sass.
+
+$colores: ("naranja": orange, "rojo":red,"anaranjado":orangered);
+
+
+.primero{
+    background-color: map.get($colores: naranja);
+}

@@ -1,0 +1,17 @@
+/* Error: There is no module with the namespace "map".
+ *    ,
+ * 13 |     background-color: map.get($colores: naranja);
+ *    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\ej4.scss 13:23  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "map".\a    \2577 \a 13 \2502      background-color: map.get($colores: naranja);\d\a    \2502                        ^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\ej4.scss 13:23  root stylesheet';
+}
