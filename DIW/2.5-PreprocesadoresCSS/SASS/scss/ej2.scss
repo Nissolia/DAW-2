@@ -1,0 +1,27 @@
+// @use '_ej2-variables.scss';
+
+// a esto se le llama alias:
+@use '_ej2-variables.scss' as v with (
+    $h1_color:pink,
+    $body_color:rgb(206, 243, 243),
+    $body_color_font:black
+);
+body {
+    font-family: Calibri, sans-serif;
+    background-color: v.$body_color;
+    color: v.$body_color_font;
+    color: v.$font_body_size;
+    line-height: v.$p_line;
+}
+
+h1 {
+    font-size: v.$h1_size;
+    color: v.$h1_color;
+    
+}
+
+h2 {
+    font-size: v.$h2_size;
+    color: v.$h2_color;
+
+}

@@ -1,0 +1,63 @@
+// Variables Sass
+// Estos comentarios no salen al compilar
+// sass --watch scss:css
+$color1: #179967;
+$color2: #0b4b3b;
+$fuente1: Calibri,
+Arial,
+sans-serif;
+$fuente2: Times new roman,
+serif;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $fuente1;
+    line-height: 2;
+    margin: 10px 20px;
+}
+
+h1 {
+    color: $color1;
+    font-family: $fuente2;
+    margin: 10px auto;
+
+    padding: 10px;
+}
+
+h2 {
+    padding: 10px;
+
+}
+
+h3 {
+    padding: 10px;
+
+}
+
+p {
+    padding: 10px;
+}
+
+/* este tipo de comentario si aparece en la compilacion */
+main {
+    border: 1px solid $color1;
+
+    div {
+        p {
+            background-color: $color2;
+            color: white;
+        }
+    }
+}
+
+footer {
+    color: white;
+    background-color: $color1;
+    padding: 10px;
+    margin-top: 10px;
+}

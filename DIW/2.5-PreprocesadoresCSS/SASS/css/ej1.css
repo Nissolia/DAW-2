@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Calibri, Arial, sans-serif;
+  line-height: 2;
+  margin: 10px 20px;
+}
+
+h1 {
+  color: #179967;
+  font-family: Times new roman, serif;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+h2 {
+  padding: 10px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+}
+
+/* este tipo de comentario si aparece en la compilacion */
+main {
+  border: 1px solid #179967;
+}
+main div p {
+  background-color: #0b4b3b;
+  color: white;
+}
+
+footer {
+  color: white;
+  background-color: #179967;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=ejercicio1.css.map */
