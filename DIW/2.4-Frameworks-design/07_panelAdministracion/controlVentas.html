@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administración de clientes</title>
+  <title>Control de ventas</title>
   <!-- instalación en local -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- link icono -->
@@ -30,9 +30,9 @@
         </div>
         <div class="offcanvas-body mt-4 mx-4">
           <div class="d-flex justify-content-center flex-column">
-            <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-person-lines-fill"></i>
+            <a class="text-decoration-none text-light" href="administracion.html"><i class="bi fs-5 pe-2 bi-person-lines-fill"></i>
               Clientes</a>
-            <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-graph-up-arrow"></i>
+            <a class="text-decoration-none text-light" href="controlVentas.html"><i class="bi fs-5 pe-2 bi-graph-up-arrow"></i>
               Ventas</a>
             <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-hdd-stack"></i>
               Inventario</a>
@@ -43,7 +43,6 @@
       </div>
       <!-- link de administracion -->
 
-      <!-- uso del search -->
       <div class="flex-grow-1 d-flex justify-content-center">
         <form class="w-50 d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -52,12 +51,36 @@
       </div>
     </div>
   </nav>
-
-
+  <!-- contenido aquí -->
+  <div class="container">
+  <h1 class="text-center mt-3">Ventas</h1>
+  <div id="myfirstchart" style="height: 250px;"></div>
+</div>
 
 
   <!-- src de js -->
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      new Morris.Line({
+        element: 'myfirstchart',
+        data: [
+          { year: '2008', value: 20 },
+          { year: '2009', value: 10 },
+          { year: '2010', value: 5 },
+          { year: '2011', value: 5 },
+          { year: '2012', value: 20 }
+        ],
+        xkey: 'year',
+        ykeys: ['value'],
+        labels: ['Value']
+      });
+    });
+  </script>
+  
 </body>
 
 </html>

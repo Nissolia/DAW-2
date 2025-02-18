@@ -4,11 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administración de clientes</title>
+  <title>Nuevo cliente</title>
   <!-- instalación en local -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- link icono -->
   <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <!-- estilo del grafico -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+
 </head>
 <!-- body -->
 
@@ -19,8 +22,8 @@
       <!-- boton para el offcanvas -->
       <a href="" class="btn btn-primary text-light text-decoration-none" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"> Administración Librería</a>
-   <!-- offcanvas -->
-        <div class="offcanvas offcanvas-start bg-black text-light" data-bs-scroll="true" data-bs-backdrop="false"
+      <!-- offcanvas -->
+      <div class="offcanvas offcanvas-start bg-black text-light" data-bs-scroll="true" data-bs-backdrop="false"
         tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header mt-4 mx-4 align-content-center">
           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navegación</h5>
@@ -30,9 +33,9 @@
         </div>
         <div class="offcanvas-body mt-4 mx-4">
           <div class="d-flex justify-content-center flex-column">
-            <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-person-lines-fill"></i>
+            <a class="text-decoration-none text-light" href="administracion.html"><i class="bi fs-5 pe-2 bi-person-lines-fill"></i>
               Clientes</a>
-            <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-graph-up-arrow"></i>
+            <a class="text-decoration-none text-light" href="controlVentas.html"><i class="bi fs-5 pe-2 bi-graph-up-arrow"></i>
               Ventas</a>
             <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-hdd-stack"></i>
               Inventario</a>
@@ -52,12 +55,23 @@
       </div>
     </div>
   </nav>
-
-
-
-
+  <!-- contenido aquí -->
+  <div class="container">
+    <h1 class="text-center mt-3">Nuevo cliente</h1>
+    <form action="admini">
+      <label class="form-label" for="nombre">Nombre</label>
+      <input class="form-control" type="text" placeholder="Nombre cliente">
+      <label class="form-label" for="apellido">Apellido</label>
+      <input class="form-control" type="text" placeholder="Apellido cliente">
+      <label class="form-label" for="correo">Correo electrónico</label>
+      <input class="form-control" type="text" placeholder="Correo electrónico cliente">
+  <button class="btn btn-primary mt-3"> Agregar</button>
+    </form>
+  </div>
   <!-- src de js -->
   <script src="js/bootstrap.bundle.js"></script>
+
+  
 </body>
 
 </html>

@@ -19,8 +19,8 @@
       <!-- boton para el offcanvas -->
       <a href="" class="btn btn-primary text-light text-decoration-none" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"> Administración Librería</a>
-   <!-- offcanvas -->
-        <div class="offcanvas offcanvas-start bg-black text-light" data-bs-scroll="true" data-bs-backdrop="false"
+      <!-- offcanvas -->
+      <div class="offcanvas offcanvas-start bg-black text-light" data-bs-scroll="true" data-bs-backdrop="false"
         tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header mt-4 mx-4 align-content-center">
           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navegación</h5>
@@ -30,9 +30,11 @@
         </div>
         <div class="offcanvas-body mt-4 mx-4">
           <div class="d-flex justify-content-center flex-column">
-            <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-person-lines-fill"></i>
+            <a class="text-decoration-none text-light" href="administracion.html"><i
+                class="bi fs-5 pe-2 bi-person-lines-fill"></i>
               Clientes</a>
-            <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-graph-up-arrow"></i>
+            <a class="text-decoration-none text-light" href="controlVentas.html"><i
+                class="bi fs-5 pe-2 bi-graph-up-arrow"></i>
               Ventas</a>
             <a class="text-decoration-none text-light" href="#"><i class="bi fs-5 pe-2 bi-hdd-stack"></i>
               Inventario</a>
@@ -52,8 +54,56 @@
       </div>
     </div>
   </nav>
+  <!-- contenedor -->
+  <div class="container mt-4">
+    <h2 class="text-center">Administración de Clientes</h2>
+    <div class="d-flex justify-content-center my-3">
+      <button class="btn btn-success w-40"><i class="bi bi-plus-lg fs-5 fw-bold"></i><br> Nuevo</button>
+    </div>
 
-
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>González</td>
+          <td>Pérez</td>
+          <td>
+            <button class="btn btn-danger btn-sm">Borrar</button>
+            <button class="btn btn-success btn-sm">Editar</button>
+            <button class="btn btn-primary btn-sm">Ver</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Fernández</td>
+          <td>López</td>
+          <td>
+            <button class="btn btn-danger btn-sm">Borrar</button>
+            <button class="btn btn-success btn-sm">Editar</button>
+            <button class="btn btn-primary btn-sm">Ver</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Martínez</td>
+          <td>García</td>
+          <td>
+            <button class="btn btn-danger btn-sm">Borrar</button>
+            <button class="btn btn-success btn-sm">Editar</button>
+            <button class="btn btn-primary btn-sm">Ver</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
   <!-- src de js -->
