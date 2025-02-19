@@ -10,6 +10,10 @@ $font:Calibri, san-serif;
 
 body{
     font-family: $font;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 div{

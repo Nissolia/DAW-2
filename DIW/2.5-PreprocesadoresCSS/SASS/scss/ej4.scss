@@ -1,14 +1,51 @@
 // para que funcione la bilbioteca math
-@use 'sass:map' as math;
+@use 'sass:map'as map;
 // Mediante el mecanismo de anidación de Sass aplica
 // diferentes colores y tamaños de fuente a la lista del
 // siguiente archivo .html: lista_menu.html. Los colores debes
 // definirlo en una lista de Sass y los tamaños de fuentes en un
 // mapa de Sass.
 
-$colores: ("naranja": orange, "rojo":red,"anaranjado":orangered);
+$colores: ("c1": rgb(243, 72, 20), "c2":rgb(20, 149, 158), "c3":rgb(82, 19, 165));
+$tamanios: ("s": 9px, "m":12px, "l":20px, "xl":25px, "xxl":30px);
 
-
-.primero{
-    background-color: map.get($colores: naranja);
+body {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+h1 {
+    margin-left: 10px;
+    font-size: map-get($tamanios, 'xxl');
+    color: map-get($colores, 'c3');
+}
+
+// .primero {
+// background-color: nth($colores, 1);
+// }
+.primero {
+    color: map-get($colores, 'c1');
+    font-size: map-get($tamanios, 'xl');
+}
+
+.segundo {
+    color: map-get($colores, 'c2');
+    font-size: map-get($tamanios, 'l');
+}
+
+.tercero {
+    color: map-get($colores, 'c3');
+    font-size: map-get($tamanios, 'm');
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+// ul li (primeros platos) ul li -ingredientes ul li pequeños
+
+// font-size: map-get($tamanios, 'm');
+// color: map-get($colores, 'c2');
