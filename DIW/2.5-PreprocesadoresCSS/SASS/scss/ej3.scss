@@ -8,13 +8,7 @@ $color2: #a0d81e;
 $color3: #1c9c42;
 $font:Calibri, san-serif;
 
-body{
-    font-family: $font;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+@use 'basico.scss';
 
 div{
     height: $altura;

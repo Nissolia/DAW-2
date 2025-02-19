@@ -9,13 +9,7 @@
 $colores: ("c1": rgb(243, 72, 20), "c2":rgb(20, 149, 158), "c3":rgb(82, 19, 165));
 $tamanios: ("s": 9px, "m":12px, "l":20px, "xl":25px, "xxl":30px);
 
-body {
-    font-family: Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+@use 'basico.scss';
 
 h1 {
     margin-left: 10px;

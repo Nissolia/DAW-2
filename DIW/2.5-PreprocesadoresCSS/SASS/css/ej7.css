@@ -12,17 +12,8 @@ body {
   align-items: center;
 }
 
-header h1 {
-  color: darkgreen;
+.decimo {
+  width: 50px;
 }
 
-main h2 {
-  color: darkblue;
-}
-
-footer a {
-  text-decoration: none;
-  color: darkcyan;
-}
-
-/*# sourceMappingURL=ej5.css.map */
+/*# sourceMappingURL=ej7.css.map */

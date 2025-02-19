@@ -1,7 +1,22 @@
-body{
-    font-family:Helvetica, sans-serif;
-   display:flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
+@use 'basico.scss';
+
+$contenedor-con-altura: 150px;
+.primero{
+    padding: 20px;
+    height: $contenedor-con-altura;
+    width: 60%;
+    background-color: lightcyan;
+}
+.segundo{
+    @extend.primero;
+    background-color: lightcoral;
+    height: calc($contenedor-con-altura*2);
+    
+}
+.tercero{
+    @extend.segundo;
+    background-color: lightgreen;
+    height: calc($contenedor-con-altura/3);
+    overflow: scroll;
+
 }

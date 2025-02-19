@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/ej2.scss","../scss/_ej2-variables.scss"],"names":[],"mappings":"AAQA;EACI;EACA,kBALY;EAMZ,OALiB;EAMjB,OCFa;EDGb,aCJK;;;ADOT;EACI,WCVM;EDWN,OAdU;;;AAkBd;EACI,WCfM;EDgBN,OClBO","file":"ej2.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/_basico.scss","../scss/ej2.scss","../scss/_ej2-variables.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;ACHJ;EACI;EACA,kBALY;EAMZ,OALiB;EAMjB,OCFa;EDGb,aCJK;;;ADOT;EACI,WCVM;EDWN,OAdU;;;AAkBd;EACI,WCfM;EDgBN,OClBO","file":"ej2.css"}

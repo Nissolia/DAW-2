@@ -1,0 +1,9 @@
+@use 'basico.scss';
+
+@function partir($tamanio, $numPartes){
+    $resultado: $tamanio/$numPartes;
+    @return $resultado;
+}
+.decimo{
+    width: partir(100px, 2);
+}

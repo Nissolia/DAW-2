@@ -1,5 +1,5 @@
 // @use '_ej2-variables.scss';
-
+@use 'basico.scss';
 // a esto se le llama alias:
 @use '_ej2-variables.scss' as v with (
     $h1_color:pink,
