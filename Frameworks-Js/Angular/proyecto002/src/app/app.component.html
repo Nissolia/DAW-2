@@ -1,0 +1,41 @@
+<div>
+  <h1>Administración de artículos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th colspan="2">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.codigo }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>
+          <button (click)="seleccionarProducto(producto)">Seleccionar</button>
+        </td>
+        <td>
+          <button (click)="eliminarProducto(producto.codigo)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3>Nuevo producto</h3>
+  <label for="codigo">Código:</label>
+  <input type="number" [(ngModel)]="nuevoCodigo"><br>
+
+  <label for="descripcion">Descripción:</label>
+  <input type="text" [(ngModel)]="nuevaDescripcion"><br>
+
+  <label for="precio">Precio:</label>
+  <input type="number" [(ngModel)]="nuevoPrecio"><br>
+
+  <button (click)="agregarProducto()">Agregar</button>
+  <button (click)="modificarProducto()" [disabled]="!productoSeleccionado">Modificar</button>
+</div>

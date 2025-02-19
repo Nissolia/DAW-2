@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+table, th,td,tbody,thead{
+    text-align: center;
+    border: 1px solid darkcyan;
+    border-collapse: collapse;
+    padding: 5px;
+}
+th{
+    color: darkcyan;
+    padding: 10px;
+}
+input{
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+button{
+    padding: 5px 20px;
+    background-color: darkcyan;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin: 5px;
+}
+button:hover{
+    background-color: rgb(1, 103, 103);
+
+}
