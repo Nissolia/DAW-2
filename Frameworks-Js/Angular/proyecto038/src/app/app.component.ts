@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// Le garantizamos a typescript que existe $
+declare var $: any; 
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,19 @@ import { Component } from '@angular/core';
   standalone: false,
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'proyecto038';
+
+  ngOnInit(): void {
+    $('[data-bs-toggle="popover"]').popover();
+ }
+
+ aceptar(){
+  alert("Ha pulsado Aceptar!");
+}
+
+cancelar(){
+  alert("Ha pulsado Cancelar!");
+}
+
 }
