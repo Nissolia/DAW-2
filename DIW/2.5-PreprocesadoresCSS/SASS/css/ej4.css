@@ -18,19 +18,20 @@ h1 {
   color: rgb(82, 19, 165);
 }
 
-.primero {
+ul {
   color: rgb(243, 72, 20);
   font-size: 25px;
+  padding-left: 10px;
 }
-
-.segundo {
+ul ul {
   color: rgb(20, 149, 158);
   font-size: 20px;
+  padding-left: 20px;
 }
-
-.tercero {
+ul ul ul {
   color: rgb(82, 19, 165);
   font-size: 12px;
+  padding-left: 30px;
 }
 
 li {

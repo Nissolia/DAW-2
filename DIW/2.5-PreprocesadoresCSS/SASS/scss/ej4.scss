@@ -17,29 +17,24 @@ h1 {
     color: map-get($colores, 'c3');
 }
 
-// .primero {
-// background-color: nth($colores, 1);
-// }
-.primero {
+ul {
     color: map-get($colores, 'c1');
     font-size: map-get($tamanios, 'xl');
-}
+    padding-left: 10px;
 
-.segundo {
-    color: map-get($colores, 'c2');
-    font-size: map-get($tamanios, 'l');
-}
+    ul {
+        color: map-get($colores, 'c2');
+        font-size: map-get($tamanios, 'l');
+        padding-left: 20px;
 
-.tercero {
-    color: map-get($colores, 'c3');
-    font-size: map-get($tamanios, 'm');
+        ul {
+            color: map-get($colores, 'c3');
+            font-size: map-get($tamanios, 'm');
+            padding-left: 30px;
+        }
+    }
 }
 
 li {
     margin-bottom: 5px;
 }
-
-// ul li (primeros platos) ul li -ingredientes ul li pequeños
-
-// font-size: map-get($tamanios, 'm');
-// color: map-get($colores, 'c2');

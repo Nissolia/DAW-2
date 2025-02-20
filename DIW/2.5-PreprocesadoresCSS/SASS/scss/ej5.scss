@@ -3,16 +3,20 @@
 header{
     h1{
         color: darkgreen;
+        margin: 1rem;
     }
 }
 main{
     h2{
         color: darkblue;
+        margin-bottom: 1rem;
     }
 }
 footer{
     a{
-        text-decoration: none;
         color: darkcyan;
+        &:hover{
+            text-decoration: none;
+        }
     }
 }

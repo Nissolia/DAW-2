@@ -14,15 +14,19 @@ body {
 
 header h1 {
   color: darkgreen;
+  margin: 1rem;
 }
 
 main h2 {
   color: darkblue;
+  margin-bottom: 1rem;
 }
 
 footer a {
-  text-decoration: none;
   color: darkcyan;
+}
+footer a:hover {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=ej5.css.map */
