@@ -17,10 +17,6 @@ h1 {
 }
 
 .contenedor {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  gap: 20px;
   margin-top: 20px;
 }
 
@@ -31,27 +27,30 @@ h1 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 2px 5px #4e1752;
 }
 
 .header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
   background-color: #7E2E84;
 }
 
 .main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
   background-color: #D14081;
 }
 
 .footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
   background-color: #EF798A;
-}
-
-.extra {
-  background-color: #F9F5E3;
-}
-
-.extras {
-  background-color: #CCF5AC;
 }
 
 /*# sourceMappingURL=ej9.css.map */

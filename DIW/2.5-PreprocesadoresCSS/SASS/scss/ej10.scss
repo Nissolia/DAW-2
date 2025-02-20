@@ -1,0 +1,13 @@
+@use 'basico.scss'as basico;
+
+$x: 1;
+
+@while $i <=5 {
+    .ancho-col-#{$i} {
+        width: calc(100 /($x*2))+string.unquote($string: "%");
+        background-color: blue;
+    }
+
+    $x: $x+1;
+  
+}

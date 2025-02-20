@@ -1,10 +1,11 @@
 @use 'basico.scss';
 // funcion creada
 @function partir($tamanio, $numPartes){
-    $resultado: $tamanio / $numPartes;
+    $resultado: calc($tamanio/$numPartes);
     @return $resultado;
 }
 // estilos a aplicar
 .decimo{
-    width: partir(100px, 2);
+    width: partir(900px, 2);
+    background-color: palevioletred;
 }

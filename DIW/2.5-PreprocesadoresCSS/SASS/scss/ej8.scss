@@ -1,0 +1,17 @@
+@use 'basico.scss';
+@use 'sass:string';
+// 
+
+@for $i from 0 through 9 {
+    $div-number: $i;
+    $div-color: '#'+$i+'00000';
+
+    .color#{$div-number} {
+        background-color: unquote($string: $div-color);
+        color: white;
+        padding: 5px 30px;   
+     }
+    
+    
+    
+    }

@@ -1,50 +1,44 @@
-@use 'basico.scss' as basico;
+@use 'basico.scss'as basico;
+@use 'sass:map'as map;
 // mixin
-@mixin crear-grid($c:1, $r:auto, $gap:20px) {
+@mixin crear-grid($column, $row:auto, $gap:20px) {
     display: grid;
-    grid-template-columns: repeat($c, 1fr);
-    grid-template-rows: repeat($r, 1fr);
+    grid-template-columns: repeat($column, 1fr);
+    grid-template-rows: repeat($row, 1fr);
     gap: $gap;
 }
+
 // variables
-$colores:("dark":#4e1752,"c1":#7E2E84, "c2":#D14081, "c3":#EF798A,"c4":#F9F5E3, "c5":#CCF5AC);
+$colores:("dark":#4e1752, "c1":#7E2E84, "c2":#D14081, "c3":#EF798A, "c4":#F9F5E3, "c5":#CCF5AC);
+
 // estilos
-h1{
+h1 {
     margin: 20px
 }
+
 .contenedor {
-    @include crear-grid(3);
+   
     margin-top: 20px;
 }
 
-.grid{
+.grid {
     padding: 8px;
     text-align: center;
     // para usar un mixin en otro archivo ponerlo asi:
     @include basico.flex-center;
-    box-shadow: 2px 2px 5px map-get($colores, 'dark');
 }
-.header {
 
+.header {
+    @include crear-grid(3,1);
     background-color: map-get($colores, 'c1');
-    
 }
 
 .main {
+    @include crear-grid(2,5);
     background-color: map-get($colores, 'c2');
-    
 }
 
 .footer {
+    @include crear-grid(1,1);
     background-color: map-get($colores, 'c3');
-    
-}
-
-.extra {
-    background-color: map-get($colores, 'c4');
-   
-}
-.extras {
-    background-color: map-get($colores, 'c5');
-
 }
