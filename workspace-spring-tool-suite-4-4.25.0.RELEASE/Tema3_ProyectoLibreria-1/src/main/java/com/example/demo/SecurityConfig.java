@@ -11,8 +11,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 public class SecurityConfig {
-	@Bean
-	public UserDetailsService userDetailsService() {
+    @Bean
+    UserDetailsService userDetailsService() {
 		var userDetailsService = new InMemoryUserDetailsManager();
 		UserDetails user1 = User.withUsername("admin").password(passwordEncoder().encode("admin")).authorities("write")
 				.build();

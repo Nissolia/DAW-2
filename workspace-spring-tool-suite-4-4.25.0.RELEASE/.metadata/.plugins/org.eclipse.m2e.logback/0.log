@@ -6789,3 +6789,9 @@ Caused by: java.lang.Exception: The resource tree is locked for modifications.
 2025-02-21 18:05:29,634 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-02-21 18:05:29,646 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
 2025-02-21 18:05:29,660 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 18:07:01,399 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 18:07:01,412 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 18:07:01,427 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 18:16:27,209 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 18:16:27,238 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src\main\resources to target\classes
+2025-02-21 18:16:27,255 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria\src\test\resources
