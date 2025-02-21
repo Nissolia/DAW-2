@@ -1,8 +1,8 @@
-<div class="principal">
-  <app-dado [valor]="valor1"></app-dado>
-  <app-dado [valor]="valor2"></app-dado>
-  <app-dado [valor]="valor3"></app-dado>
+<div class="container">
+  <app-dado  [valor]="valor1"></app-dado>
+  <app-dado  [valor]="valor2"></app-dado>
+  <app-dado  [valor]="valor3"></app-dado>
   <p>{{resultado}}</p>
   <br>
-  <button (click)="lanzarDados()">Lanzar dados</button>
+  <button class="btn btn-primary px-5" (click)="lanzarDados()">Lanzar dados</button>
 </div>
