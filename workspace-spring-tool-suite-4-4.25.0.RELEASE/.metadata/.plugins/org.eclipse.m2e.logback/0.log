@@ -6755,3 +6755,37 @@ Caused by: java.lang.Exception: The resource tree is locked for modifications.
 2025-02-14 18:19:41,740 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-02-14 18:19:41,760 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
 2025-02-14 18:19:41,774 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 17:29:32,239 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-02-21 17:37:33,599 [Worker-4: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-02-21 17:37:34,702 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 17:37:34,812 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 17:37:34,849 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 17:41:16,926 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-02-21 17:41:17,433 [Worker-2: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\pom.xml.
+2025-02-21 17:41:17,536 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-02-21 17:41:18,597 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 17:41:18,632 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 17:41:18,648 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 17:50:08,033 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 17:50:08,049 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 17:50:08,066 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 17:52:51,644 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 17:52:51,657 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 17:52:51,670 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 17:53:13,466 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 17:53:13,478 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 17:53:13,489 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 17:54:24,049 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 17:54:24,062 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 17:54:24,076 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 18:04:22,173 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-21 18:05:02,746 [Worker-1: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-02-21 18:05:04,061 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 18:05:04,117 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 18:05:04,157 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 18:05:23,347 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 18:05:23,365 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 18:05:23,385 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 18:05:29,634 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-21 18:05:29,646 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2025-02-21 18:05:29,660 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
