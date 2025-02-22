@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // <-- Asegúrate de que esto está presente
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DadoComponent } from './dado/dado.component';
 
@@ -12,7 +12,7 @@ import { DadoComponent } from './dado/dado.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule // <-- Esto es clave para que ngModel funcione
   ],
   providers: [],
   bootstrap: [AppComponent]
