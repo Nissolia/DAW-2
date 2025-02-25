@@ -76,4 +76,43 @@ img {
   }
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .navigation {
+    flex-direction: row;
+    width: auto;
+  }
+}
+.navigation__link {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+}
+.navigation__link--register {
+  background-color: #e8505b;
+  border: 0;
+  border-radius: 1rem;
+  color: white;
+  padding: 1.2rem 3rem;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.4s ease;
+}
+.navigation__link--register:hover {
+  background-color: rgb(226.0757575758, 34.9242424242, 48.7575757576);
+}
+@media screen and (min-width: 769px) {
+  .navigation__link--register {
+    width: auto;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
