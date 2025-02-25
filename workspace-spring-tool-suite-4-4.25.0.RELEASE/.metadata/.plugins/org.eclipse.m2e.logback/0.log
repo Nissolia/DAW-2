@@ -6755,3 +6755,5 @@ Caused by: java.lang.Exception: The resource tree is locked for modifications.
 2025-02-14 18:19:41,740 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-02-14 18:19:41,760 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
 2025-02-14 18:19:41,774 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\src\test\resources
+2025-02-21 16:31:09,663 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-02-21 16:31:57,359 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
