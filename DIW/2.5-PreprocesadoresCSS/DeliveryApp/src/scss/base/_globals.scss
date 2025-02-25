@@ -1,0 +1,61 @@
+@use 'vars'as v;
+@use 'mixins'as m;
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    @include m.box-sizing(border-box);
+}
+
+*,
+*::after,
+*::before {
+    @include m.box-sizing(inherit);
+}
+
+body {
+    font-family: v.$main-font;
+    font-size: 2rem;
+}
+
+// textos
+p {
+    color: v.$black;
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 v.$separation 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+//  imçagenes responsive
+img {
+    max-width: 100%;
+    display: block;
+}
+
+// container
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}

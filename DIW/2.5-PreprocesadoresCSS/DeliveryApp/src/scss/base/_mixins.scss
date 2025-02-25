@@ -1,0 +1,34 @@
+@use 'vars'as v;
+
+// Mixins
+// Box sizing
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+//  crear grid
+@mixin crear-grid($nCol, $gap:10px) {
+    display: grid;
+    grid-template-columns: repeat($nCol, 1fr);
+    gap: $gap;
+}
+
+// media-queries
+@mixin mobile() {
+    @media screen and (min-width:v.$small) {
+        // no se puede dejar vacio
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (min-width:v.$medium) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (min-width:v.$big) {
+        @content;
+    }
+}
