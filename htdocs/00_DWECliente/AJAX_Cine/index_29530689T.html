@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Examen AJAX Cine Jun.2024</title>
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <div class="container py-4">
+      <header class="pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center justify-content-between text-dark text-decoration-none">
+          <img src="images/banner_RG_web.png" style="width: 20%;" srcset="">
+          <h1 class="display-5 fw-bold" style="text-align: right;">Examen AJAX Junio 2024</h1>
+        </a>
+      </header>
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Directores</h2>
+          <p>Elige un director y posteriormente pulsa el botón para buscar sus películas</p>
+
+          <!-- AQUÍ VAN LOS DIRECTORES-->
+          <select id="directores" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Seleccionar</option>
+          </select>
+          <button id="btnBuscar" class="btn btn-outline-secondary" type="button">Buscar</button>
+        </div>
+      </div>
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Películas</h2>
+          <!--AQUÍ VAN LAS PELÍCULAS-->
+          <table id="peliculas" class="table">
+            <tr>
+              <th>Título</th>
+              <th>Año</th>
+              <th>Productora</th>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+
+
+      <footer class="pt-3 mt-4 text-muted border-top">
+        &copy; Junio 2024 Ruiz Gijón
+      </footer>
+    </div>
+  </main>
+
+
+  <script src="funciones.js"></script>
+</body>
+
+</html>
