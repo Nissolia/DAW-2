@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Ruiz Components</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/styles.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="assets/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="py-2 text-center">
+        <img class="d-block mx-auto mb-4" src="images/logo.png" alt="" width="100" height="70">
+        <h2>Ruiz Components. Examen AJAX Feb 2025</h2>
+      </div>
+
+
+      <!-- => AQUÍ VAN LAS CATEGORIAS (control inputCategorias) -->
+      <div id="inputCategorias" class="row">
+
+        <!-- <div class="col"><button class='btn btn-info'>Categoría 1</button></div>
+        <div class="col"><button class="btn btn-info">Categoría 2</button></div> -->
+        <!-- FIN DE LAS CATEGORIAS -->
+
+      </div>
+      <br>
+
+      <div class="row g-5">
+        <div class="col-md-12 col-lg-8">
+          <h4 class="mb-3">Productos</h4>
+          <div id="inputProductos" class="row">
+
+            <!-- AQUÍ VAN LOS PRODUCTOS (control inputProductos)-->
+            <!-- <div class="card col m-2" style="width: 18rem;">
+              <img src="images/monitor_lg.webp" class="card-img-top" alt="">
+              <div class="card-body">
+                <h3 class="card-title">Monitor LG 24GS50F</h3>
+                <h4 class="card-text">150.12 €</h4>
+                <a onclick="cargarDetalles(8)" class="btn btn-primary">Detalles</a>
+              </div>
+            </div>
+
+            <div class="card col m-2" style="width: 18rem;">
+              <img src="images/monitor_msi.webp" class="card-img-top" alt="">
+              <div class="card-body">
+                <h3 class="card-title">Monitor MSG G27</h3>
+                <h4 class="card-text">169.55 €</h4>
+                <a onclick="cargarDetalles(9)" class="btn btn-primary">Detalles</a>
+              </div>
+            </div> -->
+            <!-- FIN DE LOS PRODUCTOS -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Descripción</span>
+        </h4>
+        <ul class="list-group mb-3">
+
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+
+            <!-- => AQUÍ VA LA DESCRIPCIÓN (control inputDescripcion)-->
+            <h6 class="my-0" id="inputDescripcion">Descripción del producto</h6>
+
+          </li>
+        </ul>
+      </div>
+
+  </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2025 Ruiz Gijón</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+  </div>
+
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="funciones.js"></script>
+</body>
+
+</html>
