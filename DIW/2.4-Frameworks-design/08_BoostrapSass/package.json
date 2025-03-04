@@ -1,0 +1,19 @@
+{
+  "name": "08_boostrapsass",
+  "version": "1.0.0",
+  "description": "Meeti web boostrap con Sass",
+  "keywords": [
+    "boostrap"
+  ],
+  "license": "ISC",
+  "author": "Noelia Baños",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.85.1"
+  }
+}
