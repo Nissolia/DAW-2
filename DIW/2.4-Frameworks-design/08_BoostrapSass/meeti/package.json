@@ -7,10 +7,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilar": "sass --watch src/scss:build/css",
+    "purga": "purgecss --css build/css/styles.css --content index.html --output build/css/styles.min.css"
   },
   "devDependencies": {
     "bootstrap": "^5.3.3",
+    "purgecss": "^7.0.2",
     "sass": "^1.85.1"
   }
 }

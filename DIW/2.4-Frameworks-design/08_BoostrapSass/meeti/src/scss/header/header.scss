@@ -1,0 +1,17 @@
+// @use '../custom' as mix;
+@use '../custom'as *;
+
+// es mobile first
+.logo {
+    width: 10rem;
+}
+
+.header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}

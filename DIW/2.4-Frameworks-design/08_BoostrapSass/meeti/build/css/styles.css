@@ -595,7 +595,7 @@ progress {
 
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -606,7 +606,7 @@ progress {
 
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -617,7 +617,7 @@ progress {
 
 .display-3 {
   font-size: calc(1.525rem + 3.3vw);
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -628,7 +628,7 @@ progress {
 
 .display-4 {
   font-size: calc(1.475rem + 2.7vw);
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -639,7 +639,7 @@ progress {
 
 .display-5 {
   font-size: calc(1.425rem + 2.1vw);
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -650,7 +650,7 @@ progress {
 
 .display-6 {
   font-size: calc(1.375rem + 1.5vw);
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -3732,8 +3732,8 @@ textarea.form-control-lg {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: var(--bs-link-color);
-  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-color: #b5b5b5;
+  --bs-nav-link-hover-color: rgb(108.6, 108.6, 108.6);
   --bs-nav-link-disabled-color: var(--bs-secondary-color);
   display: flex;
   flex-wrap: wrap;
@@ -4297,7 +4297,7 @@ textarea.form-control-lg {
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: var(--bs-border-width);
-  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-color: transparent;
   --bs-card-border-radius: var(--bs-border-radius);
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
@@ -11843,6 +11843,30 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.logo {
+  width: 10rem;
+}
+
+.header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .header {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+.eventos .card:hover {
+  cursor: pointer;
+}
+.eventos .card img {
+  border-radius: 0.5rem;
+}
+.eventos .card .fecha {
+  color: #877457;
 }
 
 /*# sourceMappingURL=styles.css.map */
