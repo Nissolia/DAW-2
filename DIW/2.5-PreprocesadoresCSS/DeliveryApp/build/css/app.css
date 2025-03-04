@@ -115,4 +115,81 @@ img {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.form__content {
+  background-color: #e8505b;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.form__heading {
+  color: white;
+  text-align: center;
+}
+.form__field {
+  margin-bottom: 1rem;
+}
+.form__label {
+  color: white;
+  display: block;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+.form__input {
+  border: none;
+  padding: 1.5rem;
+  width: 100%;
+}
+.form__submit {
+  margin-top: 2rem;
+  background-color: #455a64;
+  border: 0;
+  border-radius: 1rem;
+  color: white;
+  padding: 1.2rem 3rem;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.4s ease;
+}
+.form__submit:hover {
+  background-color: rgb(48.1775147929, 62.8402366864, 69.8224852071);
+}
+@media screen and (min-width: 769px) {
+  .form__submit {
+    width: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .form__submit {
+    width: 100%;
+  }
+}
+.form__image-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .form__image-container {
+    margin-top: 0;
+  }
+}
+.form__image {
+  width: 30rem;
+}
+@media screen and (min-width: 1024px) {
+  .form__image {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
