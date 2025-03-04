@@ -1,10 +1,7 @@
 {
-  "name": "08_boostrapsass",
+  "name": "meeti",
   "version": "1.0.0",
-  "description": "Meeti web boostrap con Sass",
-  "keywords": [
-    "boostrap"
-  ],
+  "description": "",
   "license": "ISC",
   "author": "Noelia Baños",
   "type": "commonjs",

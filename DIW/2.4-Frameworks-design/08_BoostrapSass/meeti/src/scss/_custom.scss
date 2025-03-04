@@ -1,0 +1,14 @@
+// Reescribimos variables de Boostrap
+$rojo: #f34f51;
+$turquesa: #0098ae;
+$oscuro: #212121;
+$gris: #b5b5b5;
+
+// asignar paleta a cambiarlos
+// todos los colores primarios se va a cambiar al nuestro
+$primary:$rojo;
+$secondary: $turquesa;
+$dark: $oscuro;
+
+// importamos Boostrap de node_modules
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
