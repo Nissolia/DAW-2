@@ -1,40 +1,50 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
 public class Usuarios {
-	int id;
-	String nombre;
-	String perfil;
 
-// constructores
-	public Usuarios(int id, String nombre, String perfil) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.perfil = perfil;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Si usas MySQL, el id se generará automáticamente
+    private int id;
+    private String nombre;
+    private String perfil;
 
-// getter y setters
-	public int getId() {
-		return id;
-	}
+    // Constructores
+    public Usuario() {
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Usuario(String nombre, String perfil) {
+        this.nombre = nombre;
+        this.perfil = perfil;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    // Getters y Setters
+    public int getId() {
+        return id;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getPerfil() {
-		return perfil;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public void setPerfil(String perfil) {
-		this.perfil = perfil;
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(String perfil) {
+        this.perfil = perfil;
+    }
 }

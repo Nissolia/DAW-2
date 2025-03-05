@@ -6800,3 +6800,143 @@ Caused by: java.lang.Exception: The resource tree is locked for modifications.
 2025-02-21 18:16:27,238 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src\main\resources to target\classes
 2025-02-21 18:16:27,255 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria\src\test\resources
 >>>>>>> 9bc10321afa52c7069cc5e17d77f7b54c5fc076a
+2025-03-05 20:27:51,327 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-05 20:28:09,519 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej1\pom.xml.
+2025-03-05 20:28:14,958 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej2-2:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej2-2\pom.xml.
+2025-03-05 20:28:19,198 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej2-2:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej3-2\pom.xml.
+2025-03-05 20:28:21,698 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej4:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej4\pom.xml.
+2025-03-05 20:28:24,225 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3EjLibre:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3EjLibre\pom.xml.
+2025-03-05 20:28:27,895 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3EjLibre-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3EjLibre-1\pom.xml.
+2025-03-05 20:28:30,626 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria\pom.xml.
+2025-03-05 20:28:34,795 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\pom.xml.
+2025-03-05 20:28:35,646 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:28:37,343 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:WebTema3-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_Web1\pom.xml.
+2025-03-05 20:28:41,302 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:batallaFinal:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\batallaFinal\pom.xml.
+2025-03-05 20:28:54,859 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej2-2:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej3-2\pom.xml.
+2025-03-05 20:28:55,413 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\pom.xml.
+2025-03-05 20:28:55,871 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:28:55,986 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria\pom.xml.
+2025-03-05 20:28:56,203 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej4:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej4\pom.xml.
+2025-03-05 20:28:56,440 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:WebTema3-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_Web1\pom.xml.
+2025-03-05 20:28:56,666 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej2-2:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej2-2\pom.xml.
+2025-03-05 20:28:56,874 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3EjLibre:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3EjLibre\pom.xml.
+2025-03-05 20:28:57,218 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:batallaFinal:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\batallaFinal\pom.xml.
+2025-03-05 20:28:57,600 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3Ej1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3Ej1\pom.xml.
+2025-03-05 20:28:57,904 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3EjLibre-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3EjLibre-1\pom.xml.
+2025-03-05 20:30:23,169 [Worker-1: Launching Tema3_ProyectoLibreria-1 - Tema3ProyectoLibreria1Application] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier null to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:30:23,415 [Worker-1: Launching Tema3_ProyectoLibreria-1 - Tema3ProyectoLibreria1Application] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier null to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:30:23,654 [Worker-1: Launching Tema3_ProyectoLibreria-1 - Tema3ProyectoLibreria1Application] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier null to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:38:52,946 [Worker-0: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\pom.xml.
+2025-03-05 20:38:54,073 [Worker-0: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:46:47,206 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\pom.xml.
+2025-03-05 20:46:47,964 [Worker-6: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:46:48,014 [Worker-6: Building] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Could not read maven project
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:371)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readProject(MavenImpl.java:361)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.lambda$4(AbstractMavenArchiverConfigurator.java:576)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.loadParentHierarchy(AbstractMavenArchiverConfigurator.java:568)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:365)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:228)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:220)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:885)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1: C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1 (Acceso denegado) @ 
+ for project  at C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:180)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:123)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:369)
+	... 35 common frames omitted
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1: C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1 (Acceso denegado) @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:176)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:642)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:262)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:248)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:176)
+	... 37 common frames omitted
+2025-03-05 20:46:53,292 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Tema3_ProyectoLibreria-1:0.0.1-SNAPSHOT @ C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1\pom.xml.
+2025-03-05 20:46:53,996 [Worker-5: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Tema3_ProyectoLibreria: com.example:Tema3_ProyectoLibreria:0.0.1-SNAPSHOT with classifier  to /Tema3_ProyectoLibreria/target/classes
+2025-03-05 20:46:54,035 [Worker-5: Building] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Could not read maven project
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:371)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readProject(MavenImpl.java:361)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.lambda$4(AbstractMavenArchiverConfigurator.java:576)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.loadParentHierarchy(AbstractMavenArchiverConfigurator.java:568)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:365)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:228)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:220)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:885)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1: C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1 (Acceso denegado) @ 
+ for project  at C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:180)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:123)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:369)
+	... 35 common frames omitted
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1: C:\Dev\workspace-spring-tool-suite-4-4.25.0.RELEASE\Tema3_ProyectoLibreria-1 (Acceso denegado) @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:176)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:642)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:262)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:248)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:176)
+	... 37 common frames omitted
