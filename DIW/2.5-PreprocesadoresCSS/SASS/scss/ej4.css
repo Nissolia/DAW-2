@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 30px;
+  color: rgb(82, 19, 165);
+}
+
+ul {
+  color: rgb(243, 72, 20);
+  font-size: 25px;
+  padding-left: 10px;
+}
+ul ul {
+  color: rgb(20, 149, 158);
+  font-size: 20px;
+  padding-left: 20px;
+}
+ul ul ul {
+  color: rgb(82, 19, 165);
+  font-size: 12px;
+  padding-left: 30px;
+}
+
+li {
+  margin-bottom: 5px;
+}/*# sourceMappingURL=ej4.css.map */

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font-family: Calibri, sans-serif;
+  background-color: rgb(206, 243, 243);
+  color: black;
+  color: 1.8rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  color: pink;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #412b31;
+}/*# sourceMappingURL=ej2.css.map */
