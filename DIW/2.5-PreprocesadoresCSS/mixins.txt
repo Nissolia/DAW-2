@@ -1,0 +1,69 @@
+@use 'vars'as v;
+@use 'sass:color';
+
+// Mixins
+// Box sizing
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+//  crear flex
+@mixin flex-centrado(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//  crear grid
+@mixin crear-grid($nCol, $gap:10px) {
+    display: grid;
+    grid-template-columns: repeat($nCol, 1fr);
+    gap: $gap;
+}
+
+//  botones
+@mixin btn($bgColor, $fgColor) {
+    background-color: $bgColor;
+    border: 0;
+    border-radius: 1rem;
+    color: $fgColor;
+    padding: 1.2rem 3rem;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+        // para ajustar el color
+        background-color: color.adjust($bgColor, $lightness: -10%);
+    }
+
+    @include tablet() {
+        width: auto;
+    }
+
+
+}
+
+
+// media-queries
+@mixin mobile() {
+    @media screen and (min-width:v.$small) {
+        // no se puede dejar vacio
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (min-width:v.$medium) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (min-width:v.$big) {
+        @content;
+    }
+}
