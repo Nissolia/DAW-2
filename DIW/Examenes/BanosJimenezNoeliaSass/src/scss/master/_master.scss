@@ -1,0 +1,32 @@
+@use '../base/vars'as v;
+@use '../base/mixins'as m;
+
+.master {
+    &__container {
+        background-image: url('../img/chef_bg.jpg');
+        background-size: cover;
+        color:v.$white;
+        text-align: center;
+   
+        padding: v.$separation;
+
+        @include m.tablet() {
+          padding: 15rem;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    
+    &__text {
+        color:v.$white;
+        margin-bottom: 3rem;
+    }
+
+    &__button {
+        display: inline;
+        margin:0 auto;
+    }
+}

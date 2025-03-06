@@ -1,0 +1,84 @@
+@use '../base/vars'as v;
+@use '../base/mixins'as m;
+
+.card {
+    border: 1px solid v.$dark-grey;
+    margin: 1rem;
+    overflow: hidden;
+    background-color: v.$white;
+
+    &__img {
+        margin: 0;
+        transition: transform 0.3s;
+        overflow: hidden;
+        z-index: 0;
+
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    &__header {
+        z-index: 10;
+        background-color: v.$main-color;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        &--date {
+            color: v.$white;
+            align-items: start;
+        }
+
+        &--price {
+            background-color: v.$secondary-color;
+            font-size: 1.3rem;
+            border-radius: 1rem;
+            align-items: end;
+            @include m.flex-centrado();
+            padding: 5px;
+            font-weight: 700;
+        }
+    }
+
+    &__info {
+        padding: 2rem;
+        @include m.desktop() {
+            display: flex;
+            flex-direction: column;
+        justify-content: space-between;
+        }
+    }
+
+    &__button {
+        margin: 2rem;
+        width: 90%;
+        @include m.flex-centrado();
+        @include m.desktop() {
+           align-self:flex-end;
+        }
+    }
+}
+
+.info {
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+
+        &--red {
+            color: v.$main-color;
+        }
+    }
+
+}
+
+
+// __info
+// info
+// info
+// card__button

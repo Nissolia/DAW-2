@@ -1,0 +1,50 @@
+@use '../base/vars'as v;
+@use '../base/mixins'as m;
+
+.learn {
+    margin-top: v.$separation;
+    text-align: center;
+
+    &__card {
+        padding: 1rem;
+        @include m.flex-centrado();
+
+        @include m.tablet() {
+            justify-content: center;
+
+            &--containers {
+                @include m.crear-grid(3, 0);
+            }
+
+        }
+
+        @include m.desktop() {
+            &--containers {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+    }
+
+    &__icon {
+
+        height: 20%;
+        transition: transform 0.3s;
+        @include m.flex-centrado();
+
+        &:hover {
+            transform: rotate(-5deg) scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        font-family: v.$main-font;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+    }
+}

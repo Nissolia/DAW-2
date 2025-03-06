@@ -1,0 +1,33 @@
+// Variables
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+  }
+  @font-face {
+    font-family: RobotoLight;
+    src: url("../fonts/Roboto-Light.ttf");
+  }
+  @font-face {
+    font-family: RobotoBold;
+    src: url("../fonts/Roboto-Bold.ttf");
+  }
+// fuentes
+$main-font: 'Roboto';
+$light-font: 'RobotoLight';
+$bold-font: 'RobotoBold';
+
+// Colores
+$main-color: #f46669;
+$secondary-color:#c7c57d;
+$grey: #f5f5f5;
+$dark-grey: #dddddd;
+$black: #000000;
+$white: #ffff;
+
+//Separacion
+$separation: 5rem;
+
+// media-queries
+$small: 480px;
+$medium: 768px;
+$big: 1024px;
