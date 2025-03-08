@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,68 +10,92 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import jakarta.servlet.http.HttpSession;
-import java.util.ArrayList;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
 public class LibroController {
 
-    private List<Libro> libros = new ArrayList<>();
+	  @Autowired
+	    private ResenaRepository resenasRepository;
 
-    // Inicializar los libros en el constructor para tener algo previo
-    public LibroController() {
-        libros.add(new Libro("Cien años de soledad", "Gabriel García Márquez", "Realismo Mágico", "La obra narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo."));
-        libros.add(new Libro("1984", "George Orwell", "Distopía", "Una sociedad totalitaria controlada por el Partido que supervisa todos los aspectos de la vida de los ciudadanos, incluyendo sus pensamientos."));
-        libros.add(new Libro("Orgullo y prejuicio", "Jane Austen", "Romántico", "Cuenta la historia de Elizabeth Bennet y su relación con el arrogante Mr. Darcy."));
-        libros.add(new Libro("El alquimista", "Paulo Coelho", "Aventura", "Santiago, un joven pastor, inicia un viaje en busca de un tesoro personal, enfrentándose a desafíos que lo transforman en el proceso."));
-    }
+	   
+    @Autowired
+    private LibroRepository libroRepository;
 
     // Página principal que muestra la lista de libros
     @GetMapping("")
-    public String index(HttpSession session, Model model) {
-        model.addAttribute("libros", libros);
-        return "listaLibros"; // listaLibros.html
+    public String index(Model model) {
+        model.addAttribute("libros", libroRepository.findAll());
+        return "listaLibros"; // Vista que muestra la lista de libros
     }
 
- // Selecciona un libro y guarda su ID en la sesión
+    // Selecciona un libro y guarda su ID en la sesión
     @GetMapping("/seleccionar")
-    public String seleccionarLibro(@RequestParam(name = "id") int id, HttpSession session, Model model) {
-        if (id >= 0 && id < libros.size()) {
-            session.setAttribute("libroId", id);  
-            return "redirect:/detalle";  // Redirigimos a la página de detalle
-        }
-     // Si no existe el libro, mostramos error
-        model.addAttribute("error", "El libro seleccionado no existe.");
-        return "error";  
+    public String seleccionarLibro(@RequestParam(name = "id") Long id, HttpSession session) {
+        session.setAttribute("libroId", id); // Guarda el ID del libro en la sesión
+        return "redirect:/detalle"; // Redirige a la página de detalle
     }
 
- // Página para crear un nuevo libro (formulario)
-    @GetMapping("/formularioLibro")
+    // Página para crear un nuevo libro (formulario)
+    @GetMapping("/nuevo")
     public String formularioLibro(Model model) {
-    	// Creamos un objeto Libro vacío
-        model.addAttribute("libro", new Libro()); 
-        return "formularioLibro";
+        model.addAttribute("libro", new Libro());
+        return "formularioLibro"; // Vista para agregar un nuevo libro
     }
- // Guarda el libro y lo agrega a la lista
+
+    // Guarda el libro en la base de datos
     @PostMapping("/guardar")
     public String guardarLibro(@ModelAttribute Libro libro, RedirectAttributes attributes) {
-    	 // Agregamos el nuevo libro a la lista
-        libros.add(libro); 
-        attributes.addAttribute("mensaje", "¡Libro agregado exitosamente!"); 
-        return "/";
+        libroRepository.save(libro);
+        attributes.addFlashAttribute("mensaje", "¡Libro agregado exitosamente!");
+        return "redirect:/"; // Redirige a la lista de libros
     }
 
     // Muestra el detalle del libro usando el ID almacenado en la sesión
     @GetMapping("/detalle")
     public String detalleLibro(HttpSession session, Model model) {
-        Integer libroId = (Integer) session.getAttribute("libroId");
-        if (libroId != null && libroId >= 0 && libroId < libros.size()) {
-            Libro libro = libros.get(libroId);
+        Long libroId = (Long) session.getAttribute("libroId");
+
+        if (libroId != null) {
+            // Obtener el libro por ID
+            Libro libro = libroRepository.findById(libroId)
+                    .orElseThrow(() -> new RuntimeException("Libro no encontrado"));
+
+            // Obtener las reseñas del libro
+            List<Resenas> resenas = ResenaRepository.findByLibroId(libroId);
+
+            // Pasar el libro y sus reseñas al modelo
             model.addAttribute("libro", libro);
-            return "detalleLibro";
+            model.addAttribute("resenas", resenas);
+            return "detalleLibro"; // Vista para el detalle del libro
         }
-        // Si no hay libro en sesión, mostramos error
+
         model.addAttribute("error", "No se ha seleccionado un libro.");
-        return "error"; 
+        return "error"; // En caso de error
     }
+
+    // Filtrar libros por género
+    @GetMapping("/filtrarLibros")
+    public String filtrarLibros(@RequestParam(name = "genero", required = false) String genero, Model model) {
+        List<Libro> librosFiltrados;
+
+        if (genero == null || genero.trim().isEmpty()) {
+            librosFiltrados = libroRepository.findAll(); // Mostrar todos los libros
+        } else {
+            String generoNormalizado = genero.trim().toLowerCase();
+            librosFiltrados = libroRepository.findAll().stream()
+                    .filter(libro -> libro.getGenero().toLowerCase().contains(generoNormalizado))
+                    .toList();
+        }
+
+        model.addAttribute("libros", librosFiltrados);
+        return "listaLibros"; // Vista que muestra los libros filtrados
+    }
+    
+
+  
+
+
 }

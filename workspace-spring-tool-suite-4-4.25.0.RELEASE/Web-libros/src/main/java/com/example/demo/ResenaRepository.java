@@ -1,6 +1,18 @@
 package com.example.demo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public interface ResenaRepository extends JpaRepository<Resenas, Integer> {
-}
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ResenaRepository extends JpaRepository<Resenas, Long> {
+	    // Método para obtener las reseñas de un libro
+	    static List<Resenas> findByLibroId(Long libroId) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	    
+
+	}
+

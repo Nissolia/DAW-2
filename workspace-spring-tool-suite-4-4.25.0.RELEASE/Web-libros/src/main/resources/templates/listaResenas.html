@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas las Reseñas</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+  
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <!-- Texto a la izquierda: Biblioteca Virtual -->
+            <div class="logo">Biblioteca Virtual</div>
+
+            <!-- Menú de enlaces -->
+            <ul class="links">
+                <li><a href="/">Libros</a></li>
+                <li><a href="/resenas">Reseñas</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h1>Reseñas de Libros</h1>
+
+    <!-- Mostrar las reseñas -->
+    <div th:if="${resenas != null}">
+        
+            <div th:each="resena : ${resenas}">
+                <h2><strong th:text="${resena.libro.titulo}">Libro</strong></h2>
+			
+                <!-- Mostrar las estrellas como iconos -->
+				<div class="contenedor_estrellas">
+				    <div th:each="i : ${#numbers.sequence(1, 5)}" class="contenedor_div">
+				        <!-- Cambiar entre estrella llena o vacía según el valor de las estrellas -->
+				        <figure>
+				            <img th:src="@{/images/{img}}"
+				                 th:srcset="${i <= resena.estrellas ? 'estrella.png' : 'estrella_vacia.png'}" 
+				                 alt="Estrella"/>
+				        </figure>
+				    </div>
+				</div>
+
+                <p th:text="${resena.resena}">Reseña</p>
+				<p th:text="${#temporals.format(resena.fecha, 'dd MMMM')}">Fecha</p>
+
+
+            </div>
+      
+    </div>
+    <div th:if="${resenas == null}">
+        <p>No hay reseñas disponibles.</p>
+    </div>
+<hr>
+<a href="/nuevaResena">Nueva reseña</a>
+    <!-- Añadir font-awesome para las estrellas -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

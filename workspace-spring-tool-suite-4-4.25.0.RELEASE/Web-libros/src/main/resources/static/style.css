@@ -1,0 +1,240 @@
+:root {
+    --c1: #446f6a;
+    --c2: #263948;
+}
+
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-color: white; /* Fondo blanco */
+    color: black; /* Color oscuro para el texto */
+    line-height: 1.6;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Estilo para el título */
+h1 {
+    color: var(--c1); /* Color lavanda suave */
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    text-align: center;
+}
+
+/* Estilo para los enlaces */
+a {
+    display: inline-block;
+    padding: 10px;
+    color: var(--c1); /* Color base */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    border: none;  /* Sin borde */
+    background-color: transparent; /* Sin fondo */
+}
+
+a:hover {
+    color: white;
+    background-color: var(--c2); /* Oscurecer al pasar el mouse */
+}
+
+/* Estilo para enlaces específicos (como "Añadir nuevo libro" o "Ver detalles") */
+.agregar-libro,
+.enlace-detalle {
+    display: inline-block;
+    padding: 10px;
+    color: var(--c1);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: none; /* Sin borde */
+    background-color: transparent; /* Sin fondo */
+}
+
+.agregar-libro:hover,
+.enlace-detalle:hover {
+    color: white;
+    background-color: var(--c2); /* Oscurecer al pasar el mouse */
+}
+
+/* Estilo de los botones */
+button {
+    background-color: var(--c1);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button:hover {
+    color: white;
+    background-color: var(--c2);
+}
+
+/* Estilo de la tabla */
+.tabla-libros {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilo para los encabezados de la tabla */
+.encabezado-tabla {
+    text-align: left;
+    padding: 10px;
+    color: var(--c2);
+    font-weight: bold;
+}
+
+/* Estilo para las celdas de la tabla */
+.dato-tabla {
+    padding: 10px;
+    color: var(--c2);
+}
+
+/* Estilo para la columna de acción (Ver Detalles) */
+.accion-tabla {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Ajustes de estilo para formularios */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--c1); /* Color suave para los labels */
+}
+
+/* Estilo de los inputs y textareas */
+input,
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid grey; /* Borde suave */
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Error container */
+.error-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #FFF4E9;
+    border: 1px solid grey;
+    border-radius: 8px;
+    color: var(--c2);
+    text-align: center;
+}
+
+.error-container a {
+    color: var(--c2);
+}
+
+.error-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para cajas adicionales */
+.caja {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+/* Ajustes pequeños para pantallas móviles */
+@media (max-width: 600px) {
+    form,
+    .error-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* Estilos para la navegación */
+nav {
+    color: var(--c1);
+    padding: 10px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.links li {
+    margin-left: 20px;
+}
+
+.links a {
+    color: var(--c2);
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+}
+
+/* Estilo para las estrellas */
+.contenedor_estrellas {
+    display: flex; /* Alinea las estrellas en horizontal */
+    gap: 0.3rem; /* Espacio opcional entre las estrellas */
+}
+
+.contenedor_div {
+    display: inline-block; /* Permite que las estrellas sigan alineadas correctamente */
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+figure {
+    width: 2rem;
+    margin: 0; /* Elimina los márgenes por defecto de figure */
+}
+

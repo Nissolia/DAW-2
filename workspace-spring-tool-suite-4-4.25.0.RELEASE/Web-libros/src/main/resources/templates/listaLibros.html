@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Lista de Libros</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+
+<body>
+	<nav>
+		<div class="nav-container">
+			<!-- Texto a la izquierda: Biblioteca Virtual -->
+			<div class="logo">Biblioteca Virtual</div>
+
+			<!-- Menú de enlaces -->
+			<ul class="links">
+				<li><a href="/">Libros</a></li>
+				<li><a href="/resenas">Reseñas</a></li>
+				<li> <a href="/logout">Cerrar sesión</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	
+
+	<!-- Formulario para filtrar libros por género -->
+	<form action="/filtrarLibros" method="get">
+		<label for="genero">Filtrar por género:</label>
+		<input type="text" id="genero" name="genero" placeholder="Ingresa un género" />
+		<button type="submit">Filtrar</button>
+	</form>
+
+	<!-- Tabla para mostrar los libros -->
+	<table class="tabla-libros">
+		<thead>
+			<tr>
+				<th>Título</th>
+				<th>Autor</th>
+				<th colspan="2">Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Iterar sobre los libros -->
+			<th:block th:each="libro : ${libros}">
+				<tr>
+					<td class="dato-tabla" th:text="${libro.titulo}">Título</td>
+					<i>
+						<td class="dato-tabla" th:text="${libro.autor}">Autor</td>
+					</i>
+					<td class="accion-tabla">
+						<a class="enlace-detalle" th:href="@{/seleccionar(id=${libro.id})}">Ver detalles</a>
+
+
+
+
+					</td>
+				</tr>
+			</th:block>
+		</tbody>
+	</table>
+	<hr>
+	<!-- Enlace para añadir un nuevo libro -->
+		<a class="agregar-libro" th:href="@{/nuevo}">Añadir un nuevo libro</a>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas las Reseñas</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <!-- Texto a la izquierda: Biblioteca Virtual -->
+            <div class="logo">Biblioteca Virtual</div>
+
+            <!-- Menú de enlaces -->
+            <ul class="links">
+                <li><a href="/">Libros</a></li>
+                <li><a href="/resenas">Reseñas</a></li>
+			
+            </ul>
+        </div>
+    </nav>
+	<form action="/login" method="post">
+	    <label for="username">Usuario</label>
+	    <input type="text" id="username" name="username" required />
+	    <label for="password">Contraseña</label>
+	    <input type="password" id="password" name="password" required />
+	    <button type="submit">Iniciar sesión</button>
+	</form>
+
+
+</body>
+</html>

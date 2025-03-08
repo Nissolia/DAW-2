@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Libro</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+	<nav>
+	       <div class="nav-container">
+	           <!-- Texto a la izquierda: Biblioteca Virtual -->
+	           <div class="logo">Biblioteca Virtual</div>
+
+	           <!-- Menú de enlaces -->
+	           <ul class="links">
+	               <li><a href="/">Libros</a></li>
+	               <li><a href="/resenas">Reseñas</a></li>
+				   <li> <a href="/logout">Cerrar sesión</a>
+	           </ul>
+	       </div>
+	   </nav>
+    <div class="caja">
+        <a href="/">Volver a la lista de libros</a>
+
+        <h1>Detalle del Libro</h1>
+        <p><strong>Título:</strong><br> <span th:text="${libro.titulo}"></span></p>
+        <p><strong>Autor:</strong><br><span th:text="${libro.autor}"></span></p>
+        <p><strong>Género:</strong><br> <span th:text="${libro.genero}"></span></p>
+        <p><strong>Sinopsis:</strong><br><span th:text="${libro.sinopsis}"></span></p>
+
+        <!-- Mostrar las reseñas del libro -->
+        <h2>Reseñas:</h2>
+        <div th:if="${#lists.isEmpty(resenas)}">
+            <p>No hay reseñas para este libro.</p>
+        </div>
+        <div th:each="resena : ${resenas}">
+            <div class="resena">
+                <p><strong>Usuario:</strong> <span th:text="${resena.usuario.nombre}"></span></p>
+                <p><strong>Estrellas:</strong> <span th:text="${resena.estrellas}"></span></p>
+                <p><strong>Reseña:</strong> <span th:text="${resena.resena}"></span></p>
+                <p><strong>Fecha:</strong> <span th:text="${resena.fecha}"></span></p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

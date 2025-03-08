@@ -1,59 +1,86 @@
 package com.example.demo;
 
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "libros") 
 public class Libro {
-	private String titulo;
-	private String autor;
-	private String genero;
-	private String sinopsis;
 
-	// Constructor vacío
-	public Libro() {
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String titulo;
+    private String autor;
+    private String genero;
+    private String sinopsis;
+    
+    @OneToMany(mappedBy = "libro")
+    private List<Resenas> resenas;
 
-	// Constructor con todos los campos
-	public Libro(String titulo, String autor, String genero, String sinopsis) {
-		this.titulo = titulo;
-		this.autor = autor;
-		this.genero = genero;
-		this.sinopsis = sinopsis;
-	}
+    // Constructor vacío
+    public Libro() {
+    }
 
-	// Getters y Setters
-	public String getTitulo() {
-		return titulo;
-	}
+    // Constructor con todos los campos
+    public Libro(String titulo, String autor, String genero, String sinopsis) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+        this.sinopsis = sinopsis;
+    }
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
+    // Getters y Setters
+    public Long getId() {
+        return id;
+    }
 
-	public String getAutor() {
-		return autor;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
+    public String getTitulo() {
+        return titulo;
+    }
 
-	public String getGenero() {
-		return genero;
-	}
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
+    public String getAutor() {
+        return autor;
+    }
 
-	public String getSinopsis() {
-		return sinopsis;
-	}
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
-	public void setSinopsis(String sinopsis) {
-		this.sinopsis = sinopsis;
-	}
+    public String getGenero() {
+        return genero;
+    }
 
-	// Método toString para representar el objeto como cadena
-	@Override
-	public String toString() {
-		return "Título " + titulo + ", del Autor " + autor + ", género " + genero + ", sinopsis " + sinopsis + '.';
-	}
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getSinopsis() {
+        return sinopsis;
+    }
+
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
+    }
+
+    // Método toString para representar el objeto como cadena
+    @Override
+    public String toString() {
+        return "Título: " + titulo + ", Autor: " + autor + ", Género: " + genero + ", Sinopsis: " + sinopsis + '.';
+    }
 }

@@ -1,60 +1,54 @@
 package com.example.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import java.util.Date;
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Resenas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private int idLibro;
-    private int usuario;
-    private int estrellas;
-    private String resena;
-    private Date fecha;
+    private Long id;
+    
+    @ManyToOne
+    @JoinColumn(name = "libro_id", nullable = false)
+    private Libro libro;
+
+  
+
+    private int estrellas; // Estrellas (0-9)
+    private String resena; // Texto de la reseña
+    private LocalDateTime fecha; // Fecha de la reseña
 
     // Constructor vacío
-    public Resenas() {
-    }
+    public Resenas() {}
 
-    // Constructor con parámetros
-    public Resenas(int idLibro, int usuario, int estrellas, String resena, Date fecha) {
-        this.idLibro = idLibro;
-        this.usuario = usuario;
+    // Constructor con todos los campos
+    public Resenas(Libro libro, int estrellas, String resena, LocalDateTime fecha) {
+        this.libro = libro;
+   
         this.estrellas = estrellas;
         this.resena = resena;
         this.fecha = fecha;
     }
 
     // Getters y Setters
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public int getIdLibro() {
-        return idLibro;
+    public Libro getLibro() {
+        return libro;
     }
 
-    public void setIdLibro(int idLibro) {
-        this.idLibro = idLibro;
+    public void setLibro(Libro libro) {
+        this.libro = libro;
     }
 
-    public int getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(int usuario) {
-        this.usuario = usuario;
-    }
 
     public int getEstrellas() {
         return estrellas;
@@ -72,11 +66,11 @@ public class Resenas {
         this.resena = resena;
     }
 
-    public Date getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 }

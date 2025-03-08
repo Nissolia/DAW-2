@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+    <div class="error-container">
+        <h1>¡Oops! Algo salió mal</h1>
+        <p th:text="${error}">Parece que la página que buscas no existe o hubo un problema.</p>
+        <a class="button" th:href="@{/}">Volver a la página principal</a>
+    </div>
+</body>
+</html>
