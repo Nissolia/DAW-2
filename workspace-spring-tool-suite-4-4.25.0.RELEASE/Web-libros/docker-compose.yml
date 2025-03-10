@@ -1,13 +1,13 @@
 version: "3"
 
 services:
-  myapp-mysql:
+  mysql:
     image: mysql:8.0
+    container_name: mysql_db
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ALLOW_EMPTY_PASSWORD='yes'
       - MYSQL_DATABASE=biblioteca
-      - MYSQL_ROOT_PASSWORD=
-      
+      - MYSQL_ROOT_PASSWORD=''
     ports:
       - "3306:3306"
     volumes:
@@ -15,29 +15,30 @@ services:
     networks:
       - employee-mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       interval: 10s
       retries: 5
       timeout: 5s
 
-  myapp-main:
-    image: hansleolml/spring_docker:2.0
-    networks:
-      - employee-mysql
-    restart: on-failure
+  web_libros:
+    build: .
+    container_name: web_libros
     depends_on:
-      myapp-mysql:
-        condition: service_healthy
+      - mysql
     ports:
       - "8080:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://myapp-mysql:3306/biblioteca?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=
-      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=com.mysql.cj.jdbc.Driver
-
-networks:
-  employee-mysql:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/web_libros
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ""
+    volumes:
+      - .:/app
+    networks:
+      - employee-mysql
 
 volumes:
   mysql_data:
+
+networks:
+  employee-mysql:
+    driver: bridge

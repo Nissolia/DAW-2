@@ -11,6 +11,6 @@ RUN ls -l /home/app/target
 # Etapa de ejecución
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /home/app
-COPY --from=build /home/app/target/*.jar app.jar
+COPY --from=build "/home/app/target/CrudSpringAea_docker-1.0.jar" "app.jar"
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

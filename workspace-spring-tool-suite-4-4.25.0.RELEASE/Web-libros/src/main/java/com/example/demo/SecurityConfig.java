@@ -9,8 +9,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 @Configuration
 @EnableWebSecurity
@@ -19,18 +17,19 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         var userDetailsService = new InMemoryUserDetailsManager();
+
+        // Crear un UserDetails usando el método estático withUsername()
         UserDetails admin = User.withUsername("Noelia")
-                .password(passwordEncoder().encode("123456789"))
-                .authorities("ROLE_ADMIN")
-                .build();
-        userDetailsService.createUser(admin);
+                .password(passwordEncoder().encode("123456789")) // Codificar la contraseña
+                .authorities("ROLE_ADMIN") // Asignar el rol
+                .build(); // Construir el UserDetails
+
+        userDetailsService.createUser(admin); // Agregar el usuario al UserDetailsService
         return userDetailsService;
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return new BCryptPasswordEncoder(); // Configurar el codificador de contraseñas
     }
-
-  
 }

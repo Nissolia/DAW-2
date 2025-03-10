@@ -5,7 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.2</version>
+		<version>3.4.3</version>
+		
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
@@ -68,20 +69,15 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+		<!-- <dependency>
 			<groupId>com.example</groupId>
-			<artifactId>Tema3EjLibre</artifactId>
+			<artifactId>Web-libros</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.example</groupId>
-			<artifactId>Tema3_ProyectoLibreria</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
+		
 	</dependencies>
 
 	<build>
@@ -89,6 +85,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				  <configuration>
+                <source>21</source> <!-- Versión de Java -->
+                <target>21</target> <!-- Versión de Java -->
+            </configuration>
 			</plugin>
 		</plugins>
 	</build>
